@@ -26,13 +26,15 @@ background: linear-gradient(#37ebba, #72aed3);
 }
 
 .icon {
+  transform: scale(0.75);
   height: 1px;
   width : 1px;
   padding-bottom:10vh;
   margin-left: 30vw;
   p:hover{ position: relative;
-             left: -10px;
+             right: 5px;
              filter: contrast(130%);
+
          }
 }
 
