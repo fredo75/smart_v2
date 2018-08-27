@@ -6,4 +6,56 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Destroy"
+Survey.destroy_all
+User.destroy_all
+
+
+
+puts "Create User"
+
+fred = User.create(email: 'f@gmail.com', password: '123456')
+tiphaine = User.create(email: 't@gmail.com', password: '654321')
+camille = User.create(email: 'c@gmail.com', password: 'azerty')
+adrien = User.create(email: 'a@gmail.com', password: 'qwerty')
+
+
+
+puts "Create Survey"
+survey_1 = Survey.create(heat_type: "gaz",
+                         house_appartment: true,
+                         area: 200,
+                         isolated: true,
+                         house_inhabitants: 4,
+                         house_temp: 21,
+                         user: fred)
+
+
+
+survey_2 = Survey.create(heat_type: "fioul",
+                         house_appartment: false,
+                         area: 70,
+                         isolated: true,
+                         house_inhabitants: 3,
+                         house_temp: 19,
+                         user: tiphaine)
+
+
+survey_3 = Survey.create(heat_type: "bois",
+                         house_appartment: true,
+                         area: 100,
+                         isolated: true,
+                         house_inhabitants: 5,
+                         house_temp: 20,
+                         user: camille)
+
+
+survey_4 = Survey.create(heat_type: "gaz",
+                          house_appartment: false,
+                          area: 150,
+                          isolated: true,
+                          house_inhabitants: 4,
+                          house_temp: 21,
+                          user: adrien)
+
 
