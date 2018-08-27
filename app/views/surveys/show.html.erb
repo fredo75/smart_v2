@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Heat type:</strong>
+  <%= @survey.heat_type %>
+</p>
+
+<p>
+  <strong>House appartment:</strong>
+  <%= @survey.house_appartment %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @survey.area %>
+</p>
+
+<p>
+  <strong>Isolated:</strong>
+  <%= @survey.isolated %>
+</p>
+
+<p>
+  <strong>House inhabitants:</strong>
+  <%= @survey.house_inhabitants %>
+</p>
+
+<p>
+  <strong>House temp:</strong>
+  <%= @survey.house_temp %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @survey.user %>
+</p>
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>

@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@survey) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :heat_type %>
+    <%= f.input :house_appartment %>
+    <%= f.input :area %>
+    <%= f.input :isolated %>
+    <%= f.input :house_inhabitants %>
+    <%= f.input :house_temp %>
+    <%= f.association :user %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
