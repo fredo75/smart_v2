@@ -1,4 +1,7 @@
-<h1>Editing Survey</h1>
+<% case params[:category] %>
+<% when "energy" %>
+  <h1>My energy footprint</h1>
+<% end %>
 
 <%= render 'form', survey: @survey %>
 
