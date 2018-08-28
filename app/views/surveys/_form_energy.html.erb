@@ -1,6 +1,21 @@
 
 <%= f.input :house_appartment %>
+<%= f.button :button, "Let's go!", class: :btn %>
 <%= f.input :area %>
 <%= f.input :isolated %>
 <%= f.input :house_inhabitants %>
 <%= f.input :house_temp %>
+
+ <%= f.input :color, as: :radio_buttons, collection: Survey::COLOR, wrapper: :vertical_collection_inline %>
+
+<div class="input radio_buttons optional client_sex">
+  <label class="radio_buttons optional control-label">Sex</label>
+  <span class="radio">
+    <input class="radio_buttons optional" id="client_sex_male" name="client[sex]" type="radio" value="Male" />
+    <label class="collection_radio_buttons" for="client_sex_male">Male</label>
+  </span>
+  <span class="radio">
+    <input class="radio_buttons optional" id="client_sex_female" name="client[sex]" type="radio" value="Female" />
+    <label class="collection_radio_buttons" for="client_sex_female">Female</label>
+  </span>
+</div>
