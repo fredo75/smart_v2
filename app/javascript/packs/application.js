@@ -1,4 +1,7 @@
 import "bootstrap";
 
-import {homeAnimation} from '../components/home';
-homeAnimation();
+import {iconAnimation} from '../components/home';
+iconAnimation();
+
+import {textAnimation} from '../components/home';
+textAnimation();
