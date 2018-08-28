@@ -6,10 +6,18 @@ function iconAnimation () {
   const trash = document.querySelector ('.deg90');
   const house = document.querySelector ('.deg270');
   planet.addEventListener('click', () => {
-    transport.classList.toggle('move');
-    food.classList.toggle('move');
+    if (transport) {
+      transport.classList.toggle('move');
+    }
+    if (food) {
+      food.classList.toggle('move');
+    }
+    if (trash) {
     trash.classList.toggle('move');
-    house.classList.toggle('move');
+    }
+    if (house) {
+      house.classList.toggle('move');
+    }
     planet.classList.toggle('move');
   })
 }
@@ -21,33 +29,42 @@ function textAnimation () {
   const house = document.querySelector ('.deg270');
   const text = document.getElementById('titre_category')
 
-  food.addEventListener('mouseover', () => {
-    text.textContent="Food";
-  })
+  if (food) {
+    food.addEventListener('mouseover', () => {
+      text.textContent="Food";
+    })
+    food.addEventListener('mouseout', () => {
+      text.textContent="";
+    })
+  }
 
-  food.addEventListener('mouseout', () => {
-    text.textContent="";
-  })
+  if (transport) {
+    transport.addEventListener('mouseover', () => {
+      text.textContent="Transport";
+    })
+    transport.addEventListener('mouseout', () => {
+      text.textContent="";
+    })
+  }
 
-  transport.addEventListener('mouseover', () => {
-    text.textContent="Transport";
-  })
-  transport.addEventListener('mouseout', () => {
-    text.textContent="";
-  })
+  if (house) {
+    house.addEventListener('mouseover', () => {
+      text.textContent="Housing";
+    })
+    house.addEventListener('mouseout', () => {
+      text.textContent="";
+    })
+  }
 
-  house.addEventListener('mouseover', () => {
-    text.textContent="Housing";
-  })
-  house.addEventListener('mouseout', () => {
-    text.textContent="";
-  })
+  if(trash){
   trash.addEventListener('mouseout', () => {
     text.textContent="";
   })
   trash.addEventListener('mouseover', () => {
     text.textContent="Trash";
   })
+
+  }
 }
 
 export {iconAnimation}

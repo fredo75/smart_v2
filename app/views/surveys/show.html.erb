@@ -14,14 +14,15 @@
         <%= image_tag("Trash") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg180' do%>
-          <%= image_tag("Transport") %>
+        <%= image_tag("Transport") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
-          <%= image_tag("House") %>
+        <%= image_tag("House") %>
       <% end %>
   </div>
 </div>
 
   <%= link_to 'Back', member_path(current_user) %>
 </div>
+
 
