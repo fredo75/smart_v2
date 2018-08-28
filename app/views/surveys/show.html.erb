@@ -4,10 +4,10 @@
 
       <%= image_tag("Earth", class:'planet') %>
 
-      <%=  link_to design_path , class:'deg0' do%>
+      <%=  link_to edit_survey_path(@survey, category: 'food') , class:'deg0' do%>
         <%= image_tag("Food") %>
       <% end %>
-      <%=  link_to design_path, class:'deg90' do%>
+      <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg90' do%>
         <%= image_tag("Trash") %>
       <% end %>
 
@@ -20,11 +20,6 @@
   </div>
 </div>
 
-<div class="buttons-edit">
-
-  <%= link_to 'Edit food', edit_survey_path(@survey, category: 'food') %>
-  <%= link_to 'Edit investment', edit_survey_path(@survey, category: 'investment') %>
-  <%= link_to 'Edit waste', edit_survey_path(@survey, category: 'waste') %>
   <%= link_to 'Back', member_path(current_user) %>
 </div>
 
