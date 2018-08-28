@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :surveys, only: [:show, :edit, :create, :update]
+  resources :eco_actions
   devise_for :users
   root to: 'pages#home'
 
