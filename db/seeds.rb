@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 puts "Destroy"
 Survey.destroy_all
 User.destroy_all
@@ -56,6 +57,5 @@ survey_4 = Survey.create(heat_type: "gaz",
                           house_inhabitants: 4,
                           house_temp: 21,
                           user: adrien)
-
 
 
