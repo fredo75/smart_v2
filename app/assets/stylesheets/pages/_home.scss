@@ -1,10 +1,9 @@
 // Specific CSS for your home-page
 
 .planet {
-
+transform:scale(1.5);
 z-index: 10;
 }
-
 
 .wrapper {
 position:relative;
@@ -40,12 +39,18 @@ height: 24em;
 }
 .deg0, .deg90, .deg180, .deg270 {
  transform: translate(0, 0);
+ :hover{ position: relative;
+             top: 5px;
+             filter: contrast(130%);
+
+         }
  } /* 12em = half the width of the wrapper */
 
 .move {
   transition: all 0.5s ease-in-out;
 }
 // .circle-container img { display: block; width: 100%; }
+.planet.move{ transform:scale(1);}
 .deg0.move { transform: translate(0, 12em); } /* 12em = half the width of the wrapper */
 .deg90.move{ transform:  translate(0, -12em); }
 .deg180.move{ transform: translate(-12em, 0); }

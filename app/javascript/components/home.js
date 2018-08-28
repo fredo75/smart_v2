@@ -11,6 +11,7 @@ function homeAnimation () {
     food.classList.toggle('move');
     trash.classList.toggle('move');
     house.classList.toggle('move');
+    planet.classList.toggle('move');
   })
 }
 
