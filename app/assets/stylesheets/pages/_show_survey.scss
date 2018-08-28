@@ -1,0 +1,70 @@
+.gradient {
+ h1{
+  color:white;
+   text-shadow: 3px 3px grey;
+   height: 30px;
+   position:absolute;
+   margin:30px;
+ }
+ p{
+  position:absolute;
+  margin-top: 128px;
+  margin-left: 25vw;
+  font-size: 40px;
+  color:#363434;
+ }
+ }
+
+
+.planet {
+transform:scale(1.5);
+z-index: 10;
+}
+
+.wrapper {
+position:relative;
+width: 24em;
+height: 24em;
+}
+
+.circle-container {
+    position: relative;
+    top: 4em;
+    width: 25em;
+    height: 25em;
+    padding: 2em;
+    border-radius: 50%;
+    margin: auto 0;
+    margin-left: 30vw;
+}
+.circle-container a, .planet{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5em;
+    height: 5em;
+    margin: -2em;
+    img{
+      width: 5em;
+      height: 5em;
+    }
+}
+.deg0, .deg90, .deg180, .deg270 {
+    transform: translate(0, 0);
+ :hover{
+    position: relative;
+    transform:scale(1.2);
+    filter: contrast(130%);
+  }
+ }
+
+.move {
+  transition: all 0.5s ease-in-out;
+}
+
+.planet.move{ transform:scale(1);}
+.deg0.move { transform: translate(0, 12em); } /* 12em = half the width of the wrapper */
+.deg90.move{ transform:  translate(0, -12em); }
+.deg180.move{ transform: translate(-12em, 0); }
+.deg270.move { transform: translate(12em, 0); }
