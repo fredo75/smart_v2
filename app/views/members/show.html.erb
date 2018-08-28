@@ -1,4 +1,16 @@
+<div class='gradient'>
+  <div class='circle-container'>
 
 
+      <%= image_tag("Earth", class:'planet') %>
 
-<%= link_to 'create a survey', surveys_path, method: :post   %>
+      <%=  link_to surveys_path, method: :post, class:'deg90' do%>
+        <%= image_tag("Footprint") %>
+      <% end %>
+      <%=  link_to root_path, class:'deg0' do%>
+        <%= image_tag("Solutions") %>
+      <% end %>
+
+
+  </div>
+</div>
