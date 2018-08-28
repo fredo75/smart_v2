@@ -1,7 +1,10 @@
 // Specific CSS for your home-page
+
 .planet {
 
+z-index: 10;
 }
+
 
 .wrapper {
 position:relative;
@@ -9,33 +12,41 @@ width: 24em;
 height: 24em;
 }
 
-.icon {
-  position: absolute;
- top: 50%;
- left: 50%;
- margin: -2em;
-}
-
 
 .circle-container {
     position: relative;
+    top: 4em;
     width: 25em;
     height: 25em;
     padding: 2em;
-    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-    border: dashed 1px;
+    // border: solid 3px;
+    // color:white;
     border-radius: 50%;
-    margin: 1.75em auto 0;
+    margin: auto 0;
+    margin-left: 30vw;
 }
-.circle-container p {
+.circle-container a, .planet{
     display: block;
     position: absolute;
-    top: 50%; left: 50%;
-    width: 4em; height: 4em;
+    top: 50%;
+    left: 50%;
+    width: 5em;
+    height: 5em;
     margin: -2em;
+    img{
+      width: 5em;
+      height: 5em;
+    }
+}
+.deg0, .deg90, .deg180, .deg270 {
+ transform: translate(0, 0);
+ } /* 12em = half the width of the wrapper */
+
+.move {
+  transition: all 0.5s ease-in-out;
 }
 // .circle-container img { display: block; width: 100%; }
-.deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
-.deg90 { transform: rotate(90deg) translate(12em) rotate(-90deg); }
-.deg180 { transform: translate(-12em); }
-.deg270 { transform: rotate(270deg) translate(12em) rotate(-270deg); }
+.deg0.move { transform: translate(0, 12em); } /* 12em = half the width of the wrapper */
+.deg90.move{ transform:  translate(0, -12em); }
+.deg180.move{ transform: translate(-12em, 0); }
+.deg270.move { transform: translate(12em, 0); }
