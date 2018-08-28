@@ -5,6 +5,7 @@ class SurveysController < ApplicationController
   # GET /surveys.json
   def index
     @surveys = Survey.all
+    @users = User.all
   end
 
   # GET /surveys/1
@@ -14,17 +15,21 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1/edit
   def edit
+
   end
 
   # POST /surveys
   # POST /surveys.json
   def create
-    @survey = Survey.create.save
+    @survey = Survey.create(user: current_user)
+    redirect_to survey_path(@survey)
   end
 
   # PATCH/PUT /surveys/1
   # PATCH/PUT /surveys/1.json
   def update
+    @survey.update(survey_params)
+    redirect_to survey_path(@survey)
   end
 
   private

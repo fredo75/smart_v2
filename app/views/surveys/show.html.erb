@@ -2,5 +2,6 @@
 
 
 
-<%= link_to 'Edit energy', edit_survey_path(@survey) %> |
+<%= link_to 'Edit energy', edit_survey_path(@survey, category: 'energy') %>
+<%= link_to 'Edit transport', edit_survey_path(@survey, category: 'transport') %> |
 <%= link_to 'Back', surveys_path %>

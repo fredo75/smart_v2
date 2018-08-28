@@ -4,7 +4,9 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <% case params[:category] %>
   <% when "energy" %>
-    <%= render 'surveys/form_energy', survey: survey %>
+    <%= render 'surveys/form_energy', f: f, survey: @survey %>
+  <% when "transport" %>
+    <%= render 'surveys/form_transport', f: f, survey: @survey %>
   <% end %>
 
 
