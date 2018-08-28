@@ -32,6 +32,8 @@ class SurveysController < ApplicationController
     redirect_to survey_path(@survey)
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_survey
