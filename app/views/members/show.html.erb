@@ -1,12 +1,13 @@
 <div class='gradient'>
   <h1>Dashboard</h1>
   <div class='circle-container'>
+        <%= image_tag "http://kitt.lewagon.com/placeholder/users/camilleFr", class:'user' %>
       <%= image_tag("Earth", class:'planet') %>
+
+        <%= image_tag("Footprint", class:'footprint') %>
+
+        <%= image_tag("Solutions", class:'solutions') %>
   </div>
-      <%=  link_to surveys_path, method: :post, class:'footprint' do%>
-        <%= image_tag("Footprint") %>
-      <% end %>
-      <%=  link_to root_path, class:'solutions' do%>
-        <%= image_tag("Solutions") %>
-      <% end %>
 </div>
+
+<%=  link_to 'questions', surveys_path, method: :post%>
