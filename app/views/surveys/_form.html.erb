@@ -3,10 +3,16 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <% case params[:category] %>
-  <% when "energy" %>
+    <% when "energy" %>
     <%= render 'surveys/form_energy', f: f, survey: @survey %>
-  <% when "transport" %>
+    <% when "transport" %>
     <%= render 'surveys/form_transport', f: f, survey: @survey %>
+    <% when "food" %>
+    <%= render 'surveys/form_food', f: f, survey: @survey %>
+    <% when "investment" %>
+    <%= render 'surveys/form_investment', f: f, survey: @survey %>
+    <% when "waste" %>
+    <%= render 'surveys/form_waste', f: f, survey: @survey %>
   <% end %>
 
 
