@@ -32,6 +32,7 @@ survey_1 = Survey.create(heat_type: "gaz",
 
 
 
+
 survey_2 = Survey.create(heat_type: "fioul",
                          house_appartment: false,
                          area: 70,
