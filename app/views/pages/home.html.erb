@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <div class='circle-container'>
+      <p class='center'> <%=  link_to design_path do%>
+          <%= image_tag("Earth") %>
+        <% end %>
+      </p>
+      <p class='deg0'> <%=  link_to design_path do%>
+          <%= image_tag("Food") %>
+        <% end %>
+      </p>
+        <p  class='deg90'> <%=  link_to design_path do%>
+          <%= image_tag("House") %>
+        <% end %>
+      </p>
+      <p class='deg180'> <%=  link_to design_path do%>
+          <%= image_tag("Transport") %>
+        <% end %>
+      </p>
+       <p class='deg270'> <%=  link_to design_path do%>
+          <%= image_tag("Trash") %>
+        <% end %>
+      </p>
+  </div>
+  <!--   <a href='#' class='deg0'><img src='image.jpg'></a>
+    <a href='#' class='deg45'><img src='image.jpg'></a>
+    <a href='#' class='deg135'><img src='image.jpg'></a>
+    <a href='#' class='deg180'><img src='image.jpg'></a>
+    <a href='#' class='deg225'><img src='image.jpg'></a>
+    <a href='#' class='deg315'><img src='image.jpg'></a> -->
