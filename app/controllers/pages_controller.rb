@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def home
     @member = current_user
   end
+
+  def design
+  end
 end
