@@ -15,6 +15,12 @@
   height: 50px;
 }
 
+.navbar-wagon-brand :hover {
+  position:relative;
+  left: 5px;
+  transform: scale(1.25);
+}
+
 /* User Avatar */
 .navbar-wagon .avatar {
   height: 35px;

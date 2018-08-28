@@ -1,39 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class='gradient'>
+    <h1> Evaluate <br> your <br> impact :
+    </h1>
+    <p id="titre_category"></p>
+  <div class='circle-container'>
 
-<p>
-  <strong>Heat type:</strong>
-  <%= @survey.heat_type %>
-</p>
 
-<p>
-  <strong>House appartment:</strong>
-  <%= @survey.house_appartment %>
-</p>
+      <%= image_tag("Earth", class:'planet') %>
 
-<p>
-  <strong>Area:</strong>
-  <%= @survey.area %>
-</p>
+      <%=  link_to edit_survey_path(@survey, category: 'food') , class:'deg0' do%>
+        <%= image_tag("Food") %>
+      <% end %>
+      <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg90' do%>
+        <%= image_tag("Trash") %>
+      <% end %>
+      <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg180' do%>
+          <%= image_tag("Transport") %>
+      <% end %>
+      <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
+          <%= image_tag("House") %>
+      <% end %>
+  </div>
+</div>
 
-<p>
-  <strong>Isolated:</strong>
-  <%= @survey.isolated %>
-</p>
+  <%= link_to 'Back', member_path(current_user) %>
+</div>
 
-<p>
-  <strong>House inhabitants:</strong>
-  <%= @survey.house_inhabitants %>
-</p>
-
-<p>
-  <strong>House temp:</strong>
-  <%= @survey.house_temp %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @survey.user %>
-</p>
-
-<%= link_to 'Edit', edit_survey_path(@survey) %> |
-<%= link_to 'Back', surveys_path %>
