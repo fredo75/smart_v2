@@ -40,7 +40,7 @@ height: 24em;
 .deg0, .deg90, .deg180, .deg270 {
  transform: translate(0, 0);
  :hover{ position: relative;
-             top: 5px;
+             transform:scale(1.2);
              filter: contrast(130%);
 
          }

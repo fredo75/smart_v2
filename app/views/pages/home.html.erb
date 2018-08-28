@@ -1,24 +1,4 @@
-<div class='gradient'>
-  <div class='circle-container'>
 
-
-      <%= image_tag("Earth", class:'planet') %>
-
-      <%=  link_to design_path , class:'deg0' do%>
-        <%= image_tag("Food") %>
-      <% end %>
-      <%=  link_to design_path, class:'deg90' do%>
-        <%= image_tag("Trash") %>
-      <% end %>
-
-      <%=  link_to design_path, class:'deg180' do%>
-          <%= image_tag("Transport") %>
-      <% end %>
-      <%=  link_to design_path, class:'deg270' do%>
-          <%= image_tag("House") %>
-      <% end %>
-  </div>
-</div>
 
 <%= link_to "member dashboard", member_path(@member) %>
 
