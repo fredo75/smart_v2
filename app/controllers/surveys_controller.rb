@@ -42,6 +42,6 @@ class SurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def survey_params
-      params.require(:survey).permit(:heat_type, :house_appartment, :area, :isolated, :house_inhabitants, :house_temp)
+      params.require(:survey).permit(:heat_type, :house_appartment, :area, :house_inhabitants, :adults_inhabitants, :children_inhabitants, :house_temp, :housing_type, :energy_class, :vegetable_season, :eating_habits, :bio_buyings, :vehicule_km, :fuel_type, :public_transp, :upcycling, :green_invest )
     end
 end
