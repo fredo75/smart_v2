@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
 
 
-  def show
-    @user = current_user
-  end
 
   def update
     @user = current_user
@@ -14,5 +11,12 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:mybio, :photo)
   end
+
+  def show
+    @user = current_user
+    # @users = policy_scope(User).order(created_at: :desc)
+    authorize @user
+  end
+
 
 end

@@ -1,23 +1,33 @@
-<h1>Special: Added direct to user#show</h1>
+<div class='gradient'>
+  <div class='circle-container' style="top:15em;">
+    <%= image_tag("Earth", class:'planet small') %>
+  </div>
+  <h1 id="Welcome">Welcome</h1>
+   <!--  <p id='footprint_title'>footprint</p> -->
+    <%= link_to surveys_path, method: :post, class:'footprint' do   %>
+    <%= image_tag("Footprint") %>
+    <% end %>
 
+    <%= link_to eco_actions_path, class:'solutions' do %>
+    <%= image_tag("Solutions") %>
+    <% end %>
 
+<<<<<<< HEAD
 <%= link_to 'create a survey', surveys_path, method: :post   %>
 <hr>
 <%= link_to 'my eco_actions', eco_actions_path(current_user)  %>
 <hr>
 <%= link_to 'my profile', profile_path(current_user)  %>
 
+=======
+>>>>>>> master
 
-<div class='gradient'>
-  <h1>Dashboard</h1>
-  <div class='circle-container'>
-      <%= image_tag("Earth", class:'planet') %>
-  </div>
-      <%=  link_to surveys_path, method: :post, class:'footprint' do%>
-        <%= image_tag("Footprint") %>
-      <% end %>
-      <%=  link_to root_path, class:'solutions' do%>
-        <%= image_tag("Solutions") %>
-      <% end %>
+   <!--  <p id='solutions_title'>solutions</p> -->
+    <%= image_tag("Stat",class:'stat') %>
+    <%= image_tag("Profile", class:'user') %>
 </div>
+
+<%= link_to 'create an Eco action', new_eco_action_path  %>
+<%=  link_to 'questions', surveys_path, method: :post%>
+<hr>
 
