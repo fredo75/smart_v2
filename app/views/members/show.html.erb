@@ -1,4 +1,19 @@
 
 
-
 <%= link_to 'create a survey', surveys_path, method: :post   %>
+<hr>
+<%= link_to 'create an Eco action', eco_actions_path  %>
+
+<div class='gradient'>
+  <h1>Dashboard</h1>
+  <div class='circle-container'>
+      <%= image_tag("Earth", class:'planet') %>
+  </div>
+      <%=  link_to surveys_path, method: :post, class:'footprint' do%>
+        <%= image_tag("Footprint") %>
+      <% end %>
+      <%=  link_to root_path, class:'solutions' do%>
+        <%= image_tag("Solutions") %>
+      <% end %>
+</div>
+
