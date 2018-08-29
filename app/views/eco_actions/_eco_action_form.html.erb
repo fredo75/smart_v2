@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <%= simple_form_for @eco_action do |f| %>
+        <%= f.input :title, label: false, placeholder: 'Title' %>
+        <%= f.input :description, label: false, placeholder: 'Description' %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.button :submit, class: "btn btn-purple"%>
+      <% end %>
+    </div>
+  </div>
+</div>
