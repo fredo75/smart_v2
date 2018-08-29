@@ -22,6 +22,8 @@ class EcoActionPolicy < ApplicationPolicy
   end
 
   def update?
+
+
     record.user == user
   end
 

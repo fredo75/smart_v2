@@ -24,6 +24,7 @@ class UserPolicy < ApplicationPolicy
   def update?
     # record.user == user
     return true
+
   end
 
   def edit?

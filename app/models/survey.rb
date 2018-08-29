@@ -42,8 +42,10 @@ class Survey < ApplicationRecord
   end
 
   def house_temp_calculation
-    av_inhab_cons = 1334
-    @house_temp_calculation = av_inhab_cons * (@children_inhabitants + @parents_inhabitants) * self.house_temp
+    av_inhab_cons = 1.334
+    new_children_inhabitants = self.children_inhabitants
+    new_adults_inhabitants = self.adults_inhabitants
+    @house_temp_calculation = av_inhab_cons * (new_children_inhabitants + new_adults_inhabitants) + self.house_temp + self.heat_type
   end
 
   def energy_score
