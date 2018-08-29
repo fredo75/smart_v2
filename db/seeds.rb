@@ -22,41 +22,67 @@ adrien = User.create(email: 'a@gmail.com', password: 'qwerty')
 
 
 puts "Create Survey"
+
 survey_1 = Survey.create(heat_type: "gaz",
-                         house_appartment: true,
                          area: 200,
                          isolated: true,
+                         children_inhabitants: 2,
+                         adults_inhabitants: 2,
                          house_inhabitants: 4,
-                         house_temp: 21,
+                         house_temp: 0.03,
+                         energy_class: 0.06,
+                         vegetable_season: 0.44,
+                         eating_habits: 0.63,
+                         bio_buyings: -0.13,
+                         vehicule_km: 15000,
+                         fuel_type: 1,
+                         public_transp: 5000,
+                         upcycling: 1,
+                         green_invest: 0,
                          user: fred)
 
 
 
 
-survey_2 = Survey.create(heat_type: "fioul",
-                         house_appartment: false,
-                         area: 70,
-                         isolated: true,
-                         house_inhabitants: 3,
-                         house_temp: 19,
-                         user: tiphaine)
+
+# survey_2 = Survey.create(heat_type: "gaz",
+#                          housing_type: ,
+#                          area: 200,
+#                          isolated: true,
+#                          children_inhabitants: ,
+#                          adults_inhabitants: ,
+#                          house_inhabitants: 4,
+#                          house_temp: 21,
+#                          energy_class: ,
+#                          vegetable_season: ,
+#                          eating_habits: ,
+#                          bio_buyings: ,
+#                          vehicle_km: ,
+#                          fuel_type: ,
+#                          public_transp: ,
+#                          upcycling: ,
+#                          green_invest: ,
+#                          user: tiphaine)
 
 
-survey_3 = Survey.create(heat_type: "bois",
-                         house_appartment: true,
-                         area: 100,
-                         isolated: true,
-                         house_inhabitants: 5,
-                         house_temp: 20,
-                         user: camille)
+# survey_3 = Survey.create(heat_type: "gaz",
+#                          housing_type: ,
+#                          area: 200,
+#                          isolated: true,
+#                          children_inhabitants: ,
+#                          adults_inhabitants: ,
+#                          house_inhabitants: 4,
+#                          house_temp: 21,
+#                          energy_class: ,
+#                          vegetable_season: ,
+#                          eating_habits: ,
+#                          bio_buyings: ,
+#                          vehicle_km: ,
+#                          fuel_type: ,
+#                          public_transp: ,
+#                          upcycling: ,
+#                          green_invest: ,
+#                          user: camille)
 
-
-survey_4 = Survey.create(heat_type: "gaz",
-                          house_appartment: false,
-                          area: 150,
-                          isolated: true,
-                          house_inhabitants: 4,
-                          house_temp: 21,
-                          user: adrien)
 
 
