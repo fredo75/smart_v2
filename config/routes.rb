@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
 
   resources :users, only: [:show]
-  resources :members, only: [:show]
   # For details on the DSL available within this file, see http:key => "value", //guides.rubyonrails.org/routing.html
 
   get '/design', to:'pages#design'
