@@ -3,7 +3,8 @@
     <%= image_tag("earth", class:'planet small') %>
   </div>
   <h1 id="Welcome">Welcome</h1>
-   <p id='result_title'>My results</p>
+
+    <p id='footprint_title'>Get started !</p>
     <%= link_to surveys_path, method: :post, class:'footprint' do   %>
     <%= image_tag("footprint") %>
     <% end %>
@@ -13,10 +14,12 @@
     <%= image_tag("solutions") %>
     <% end %>
 
+    <p id='profile_title'>My profile</p>
     <%= link_to profile_path(current_user), class:'user' do  %>
     <%= image_tag("profile") %>
     <% end %>
 
+    <p id='result_title'>My results</p>
     <%= image_tag("stat",class:'stat') %>
 </div>
 

@@ -6,6 +6,9 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update!(user_params)
     redirect_to profile_path(@user.id)
+    @user.username = params[:username]
+    authorize @user
+
   end
 
   def user_params
@@ -17,6 +20,5 @@ class UsersController < ApplicationController
     # @users = policy_scope(User).order(created_at: :desc)
     authorize @user
   end
-
 
 end
