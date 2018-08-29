@@ -1,0 +1,23 @@
+
+<h1> hello show eco action</h1>
+
+    <div class="loc">
+      <div class="card" style="background-image: url('<%= cl_image_path @eco_action.photo if @eco_action.photo.present? %>'); background-size:cover;">
+      </div>
+      <div class="box">
+          <h2> Details of your Eco Action:</h2>
+            <p><strong>created at:  </strong> <%= @eco_action.created_at %></p>
+            <p><strong>Title:  </strong><%= @eco_action.title %></p>
+            <p><strong>Description:  </strong><%= @eco_action.description %></p>
+            <%= cl_image_tag @eco_action.photo if @eco_action.photo.present? %>
+      </div>
+      <div class="but">
+        <div class = "button" style="margin-left: 30px;">
+           <%= link_to("Back to dashboard", user_path(@eco_action.user), class: "btn-medium") %>
+        </div>
+        <div class = "button" style="margin-left: 30px;">
+           <%= link_to("Back to My Eco Actions", eco_actions_path, class: "btn-medium") %>
+        </div>
+      </div>
+
+    </div>
