@@ -26,6 +26,7 @@ class Survey < ApplicationRecord
     @eating_habits_calculation = self.eating_habits * 1000
   end
 
+
   def bio_buying_calculation
     @bio_buying_calculation = self.bio_buyings
   end
