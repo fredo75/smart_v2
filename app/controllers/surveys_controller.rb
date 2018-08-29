@@ -5,7 +5,6 @@ class SurveysController < ApplicationController
   # GET /surveys.json
   def index
     @surveys = Survey.all
-    @users = User.all
   end
 
   # GET /surveys/1
@@ -31,8 +30,6 @@ class SurveysController < ApplicationController
     @survey.update(survey_params)
     redirect_to survey_path(@survey)
   end
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
