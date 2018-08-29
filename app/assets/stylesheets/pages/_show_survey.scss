@@ -18,6 +18,9 @@
  }
  }
 
+.margin {
+  top: 2em;
+}
 #pick {
   position:absolute;
   text-align:center;
@@ -25,6 +28,12 @@
   right:4em;
   opacity:0;
   font-size: 25px;
+}
+
+.back{
+font-size: 30px;
+padding: 0.5em;
+opacity: 0.3;
 }
 
 .show {
@@ -44,7 +53,7 @@ z-index: 10;
 
 .circle-container {
     position: relative;
-    top: 15em;
+    top: 14em;
     width: 10em;
     height: 10em;
     border-radius: 50%;
