@@ -1,5 +1,23 @@
+<%= link_to user_path(current_user), class:'back' do %>
+      <i class="far fa-times-circle"></i>
+    <% end %>
+<%= link_to 'create an Eco action', new_eco_action_path  %>
+
+<%= link_to 'create an Eco action', new_eco_action_path  %>
 
 
-<h1>hello this is index</h1>
-
-
+<div class="container">
+    <div class="row">
+      <% @eco_actions.each do |eco_action|  %>
+      <div class="col-xs-6">
+          <div class="card" style="background-image:url('<%= cl_image_path eco_action.photo if eco_action.photo.present? %>');" data-toggle="modal" data-target="eco_action_details_modal">
+              <%#= link_to '', instrument_path(instrument), class: "card-link " %>
+            <div class="card-description">
+              <h2><%= eco_action.title %></h2>
+            </div>
+          </div>
+          <%= render 'eco_actions/', location: @location, instrument: instrument, id: instrument.id, class:"date-picker" %>
+      </div>
+        <% end %>
+    </div>
+  </div>

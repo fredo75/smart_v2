@@ -1,26 +1,28 @@
 <div class='gradient'>
-    <h1 class='header'> Evaluate <br> your <br> impact
-    </h1> <p id='pick'>Pick a category</p>
-  <div class='circle-container'>
+    <h1 class='header margin'> Evaluate <br> your <br> impact</h1>
+     <p id='pick'>Pick a category</p>
+    <%= link_to user_path(current_user), class:'back' do %>
+      <i class="far fa-times-circle"></i>
+    <% end %>
+    <div class='circle-container'>
 
-      <%= image_tag("Earth", class:'planet') %>
+      <%= image_tag("earth", class:'planet') %>
 
       <%=  link_to edit_survey_path(@survey, category: 'food') , class:'deg0' do%>
-        <%= image_tag("Food") %>
+        <%= image_tag("food") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg90' do%>
-        <%= image_tag("Transport") %>
+        <%= image_tag("transport") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: ' waste'), class:'deg180' do%>
-        <%= image_tag("Trash") %>
+        <%= image_tag("trash") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
-        <%= image_tag("House") %>
+        <%= image_tag("house") %>
       <% end %>
   </div>
 </div>
 
-  <%= link_to 'Back', member_path(current_user) %>
 </div>
 
 
