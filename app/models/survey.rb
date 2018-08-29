@@ -39,6 +39,25 @@ class Survey < ApplicationRecord
     @housing_type_area_calculation = new_housing * new_area
   end
 
+  def heat_type_calculation
+    average_inhab_cons = 1334
+    @heat_type_calculation = average_inhab_cons * (children_inhabitants + adults_inhabitants) * heat_type
+  end
+
+  # # def house_temp_calculation --> quelle valeur remplie par Adrien ??
+  #   @house_type_calculation = self.house_temp
+  # end
+
+  def upcycling_calculation
+    inhab_waste = 345
+    compost_ratio = 0.7
+
+  end
+
+
+
+
+
   TYPE_HOUSE = [["building", 16], ["house", 22]]
   AREA = [["Less than 30m2", 30], ["Between 30 and 50m2", 50], ["between 50 and 70m2", 70], ["Between 70 and 100m2", 100], ["Between 100 and 130m2", 130], ["+130m2", 160]]
   HEAT_TYPE = [["Fioul", 3290], ["Gas", 2410], ["Electric standard", 3250], ["Electric Green", 70], ["Wood", 150]]
