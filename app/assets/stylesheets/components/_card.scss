@@ -1,0 +1,91 @@
+.card {
+  background-position:center;
+  overflow:hidden;
+  background: white;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14);
+  border-radius : 3px;
+  width: 80vw;
+  height: 150px;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 10px;
+  background-size: 250px;
+  opacity:0.9;
+  display:flex;
+  align-items:center;
+}
+
+.buttons-eco {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 60px;
+}
+
+.eco-photo {
+  height:100px;
+  width:100px;
+}
+
+.card-description {
+  position:absolute;
+  top:0;
+  right:3px;
+  padding:15px;
+  text-align:right;
+}
+.card-description h2 {
+  color: black;
+  border-radius: 3px;
+  font-size: 18px;
+  text-align:right;
+  font-family:'Montserrat', sans-serif;
+  font-weight: light;
+  padding: 30px;
+}
+.card-description p {
+  color:grey;
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: #ffffff;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+// .fa {
+//   font-size: 5px;
+// }
+.delete-link {
+  position: absolute;
+  top:2px;
+  left:10px;
+  z-index: 3;
+  font-color:white;
+}
+
+.edit-link {
+  position: absolute;
+  top:30px;
+  left:10px;
+  z-index: 4;
+  font-color:white;
+}
+
+.loc {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  background-color: rgb(211,211,211);
+  box-shadow: 2px 2px 2px 2px rgba(200,200,200,0.9);
+}
