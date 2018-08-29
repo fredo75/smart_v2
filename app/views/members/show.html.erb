@@ -1,20 +1,23 @@
-
-
-<%= link_to 'create a survey', surveys_path, method: :post   %>
-<hr>
-<%= link_to 'create an Eco action', eco_actions_path  %>
-
 <div class='gradient'>
   <h1>Welcome</h1>
   <div class='circle-container'>
-    <p id='footprint_title'>footprint</p>
-    <%= image_tag("Earth", class:'planet') %>
-    <%= image_tag("Footprint", class:'footprint deg0') %>
-    <p id='solutions_title'>solutions</p>
-    <%= image_tag("Solutions", class:'solutions deg90') %>
-        <%= image_tag "http://kitt.lewagon.com/placeholder/users/camilleFr", class:'user' %>
+    <%= image_tag("Earth", class:'planet small') %>
   </div>
+   <!--  <p id='footprint_title'>footprint</p> -->
+    <%= link_to surveys_path, method: :post, class:'footprint' do   %>
+    <%= image_tag("Footprint") %>
+    <% end %>
+
+    <%= link_to eco_actions_path, class:'solutions' do %>
+    <%= image_tag("Solutions") %>
+    <% end %>
+
+
+   <!--  <p id='solutions_title'>solutions</p> -->
+    <%= image_tag("Stat",class:'stat') %>
+    <%= image_tag "http://kitt.lewagon.com/placeholder/users/camilleFr", class:'user' %>
 </div>
 
 <%=  link_to 'questions', surveys_path, method: :post%>
+<hr>
 
