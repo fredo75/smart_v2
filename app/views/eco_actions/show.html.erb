@@ -1,21 +1,7 @@
 
-<h1> hello show eco action</h1>
+  <h4> My Eco action</h4>
 
-
-
-
-
-    <div class="loc">
-      <div class="card" style="background-image: url('<%= cl_image_path @eco_action.photo if @eco_action.photo.present? %>'); background-size:cover;">
-      </div>
-      <div class="box">
-          <h2> Details of your Eco Action:</h2>
-            <p><strong>created at:  </strong> <%= @eco_action.created_at %></p>
-            <p><strong>Title:  </strong><%= @eco_action.title %></p>
-            <p><strong>Description:  </strong><%= @eco_action.description %></p>
-            <%= cl_image_tag @eco_action.photo if @eco_action.photo.present? %>
-      </div>
-      <div class="but">
+      <div class="buttons-eco">
         <div class = "button" style="margin-left: 30px;">
            <%= link_to("Back to dashboard", user_path(@eco_action.user), class: "btn-medium") %>
         </div>
@@ -23,5 +9,24 @@
            <%= link_to("Back to My Eco Actions", eco_actions_path, class: "btn-medium") %>
         </div>
       </div>
-
     </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+          <div class="card" >
+            <% if @eco_action.photo.present? %>
+              <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @eco_action.photo, height: 100, width: 100, crop: :fill %>')">
+              </div>
+            <% else  %>
+            <% end %>
+            <div class="card-description">
+              <h2><%= @eco_action.title %></h2>
+              <p><strong>created at:  </strong> <%= @eco_action.created_at %></p>
+              <p><strong>Title:  </strong><%= @eco_action.title %></p>
+              <p><strong>Description:  </strong><%= @eco_action.description %></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

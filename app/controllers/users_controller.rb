@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update!(user_params)
     redirect_to profile_path(@user.id)
+    authorize @user
   end
 
   def user_params
