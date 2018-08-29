@@ -23,7 +23,8 @@ adrien = User.create(email: 'a@gmail.com', password: 'qwerty')
 
 puts "Create Survey"
 
-survey_1 = Survey.create(heat_type: "gaz",
+survey_1 = Survey.create(heat_type: 0.2410,
+                          housing_type: 16,
                          area: 200,
                          isolated: true,
                          children_inhabitants: 2,
