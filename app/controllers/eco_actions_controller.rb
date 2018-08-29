@@ -25,7 +25,6 @@ class EcoActionsController < ApplicationController
 
     @eco_action = EcoAction.new(eco_action_params)
     @eco_action.user = current_user
-    @eco_action.save!
     if @eco_action.save
       redirect_to eco_action_path(@eco_action)
     else
