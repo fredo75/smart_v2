@@ -112,7 +112,7 @@ class Survey < ApplicationRecord
   UPCYCLING =[["I have a compost", 0.7], ["I sort garbage most part of the time", 0.8], ["I sort garbage from time to time", 0.9], ["no effort at all!", 1]]
 
   INVEST = [["I don't know", 0], ["few investment", -0.02], ["Yes I invest regurlarly in green Eco", -0.05], ["All my money is invested into Green", -0.07]]
-
+  TYPE_HOUSE = [["house", 22], ["appartment", 16]]
 
 
 end
