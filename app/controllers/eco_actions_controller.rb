@@ -3,19 +3,24 @@ class EcoActionsController < ApplicationController
 
   def index
     @eco_actions = EcoAction.all
+    @eco_actions = policy_scope(@eco_actions).order(created_at: :desc)
+    authorize @eco_actions
   end
 
   # GET /eco_actions/1
   # GET /eco_actions/1.json
   def show
+    authorize @eco_action
   end
 
   # GET /eco_actions/1/edit
   def edit
+    authorize @eco_action
   end
 
   def new
     @eco_action = EcoAction.new
+    authorize @eco_action
   end
 
 
@@ -32,6 +37,7 @@ class EcoActionsController < ApplicationController
       flash.now[:error] = "Something is wrong! try again"
       render :new
     end
+    authorize @eco_action
   end
 
   # PATCH/PUT /eco_actions/1
@@ -56,3 +62,4 @@ class EcoActionsController < ApplicationController
       params.require(:eco_action).permit(:title, :description, :user, :photo)
     end
 end
+

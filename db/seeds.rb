@@ -23,7 +23,6 @@ adrien = User.create(email: 'a@gmail.com', password: 'qwerty')
 
 puts "Create Survey"
 survey_1 = Survey.create(heat_type: "gaz",
-                         house_appartment: true,
                          area: 200,
                          isolated: true,
                          house_inhabitants: 4,
@@ -34,7 +33,6 @@ survey_1 = Survey.create(heat_type: "gaz",
 
 
 survey_2 = Survey.create(heat_type: "fioul",
-                         house_appartment: false,
                          area: 70,
                          isolated: true,
                          house_inhabitants: 3,
@@ -43,7 +41,6 @@ survey_2 = Survey.create(heat_type: "fioul",
 
 
 survey_3 = Survey.create(heat_type: "bois",
-                         house_appartment: true,
                          area: 100,
                          isolated: true,
                          house_inhabitants: 5,
@@ -52,7 +49,6 @@ survey_3 = Survey.create(heat_type: "bois",
 
 
 survey_4 = Survey.create(heat_type: "gaz",
-                          house_appartment: false,
                           area: 150,
                           isolated: true,
                           house_inhabitants: 4,
