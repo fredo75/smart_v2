@@ -24,6 +24,7 @@ class SurveysController < ApplicationController
   # POST /surveys.json
   def create
     @survey = Survey.create(user: current_user)
+    # raise
     redirect_to survey_path(@survey)
     authorize @survey
   end
