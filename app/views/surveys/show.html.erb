@@ -1,20 +1,18 @@
 <div class='gradient'>
-    <h1> Evaluate <br> your <br> impact :
-    </h1>
-    <p id="titre_category"></p>
+    <h1 class='header'> Evaluate <br> your <br> impact
+    </h1> <p id='pick'>Pick a category</p>
   <div class='circle-container'>
-
 
       <%= image_tag("Earth", class:'planet') %>
 
       <%=  link_to edit_survey_path(@survey, category: 'food') , class:'deg0' do%>
         <%= image_tag("Food") %>
       <% end %>
-      <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg90' do%>
-        <%= image_tag("Trash") %>
-      <% end %>
-      <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg180' do%>
+      <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg90' do%>
         <%= image_tag("Transport") %>
+      <% end %>
+      <%=  link_to edit_survey_path(@survey, category: ' waste'), class:'deg180' do%>
+        <%= image_tag("Trash") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
         <%= image_tag("House") %>
