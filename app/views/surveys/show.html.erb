@@ -1,7 +1,10 @@
 <div class='gradient'>
-    <h1 class='header'> Evaluate <br> your <br> impact
-    </h1> <p id='pick'>Pick a category</p>
-  <div class='circle-container'>
+    <h1 class='header margin'> Evaluate <br> your <br> impact</h1>
+     <p id='pick'>Pick a category</p>
+    <%= link_to member_path(current_user), class:'back' do %>
+      <i class="far fa-times-circle"></i>
+    <% end %>
+    <div class='circle-container'>
 
       <%= image_tag("Earth", class:'planet') %>
 
@@ -20,7 +23,6 @@
   </div>
 </div>
 
-  <%= link_to 'Back', member_path(current_user) %>
 </div>
 
 
