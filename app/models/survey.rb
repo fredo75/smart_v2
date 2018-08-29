@@ -87,7 +87,12 @@ class Survey < ApplicationRecord
     @total_user_score = society_factor + @food_score + @energy_score + @transportation_score + @upcycling_calculation + @new_green_invest
   end
 
-  TYPE_HOUSE = [["appartment", 16], ["house", 22]]
+
+  def heat_type_calculation
+    average_inhab_cons = 1334
+    @heat_type_calculation = average_inhab_cons * (children_inhabitants + adults_inhabitants) * heat_type
+  end
+
   AREA = [["Less than 30m2", 30], ["Between 30 and 50m2", 50], ["between 50 and 70m2", 70], ["Between 70 and 100m2", 100], ["Between 100 and 130m2", 130], ["+130m2", 160]]
   HEAT_TYPE = [["Fioul", 0.329], ["Gas", 0.241], ["Electric standard", 0.325], ["Electric Green", 0.007], ["Wood", 0.015]]
   CHILDREN_INHABITANTS = [["zero", 0], ["one", 1], ["two", 2], ["three", 3], ["4", 4], ["+4", 5]]

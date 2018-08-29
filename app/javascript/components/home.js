@@ -5,7 +5,9 @@ function iconAnimation () {
   const transport = document.querySelector ('.deg180');
   const trash = document.querySelector ('.deg90');
   const house = document.querySelector ('.deg270');
-  planet.addEventListener('click', () => {
+  const header = document.querySelector('.header');
+  const text = document.getElementById('pick')
+  planet.addEventListener('touchend', () => {
     if (transport) {
       transport.classList.toggle('move');
     }
@@ -18,54 +20,62 @@ function iconAnimation () {
     if (house) {
       house.classList.toggle('move');
     }
+    if (header) {
+      header.classList.toggle('hide_title');
+    }
+
+    if (text) {
+      text.classList.toggle('show')
+    }
     planet.classList.toggle('move');
   })
+
 }
 
-function textAnimation () {
-  const food = document.querySelector ('.deg0');
-  const transport = document.querySelector ('.deg180');
-  const trash = document.querySelector ('.deg90');
-  const house = document.querySelector ('.deg270');
-  const text = document.getElementById('titre_category')
+// function textAnimation () {
+//   const food = document.querySelector ('.deg0');
+//   const transport = document.querySelector ('.deg180');
+//   const trash = document.querySelector ('.deg90');
+//   const house = document.querySelector ('.deg270');
+//   const text = document.getElementById('titre_category')
 
-  if (food) {
-    food.addEventListener('mouseover', () => {
-      text.textContent="Food";
-    })
-    food.addEventListener('mouseout', () => {
-      text.textContent="";
-    })
-  }
+//   if (food) {
+//     food.addEventListener('mouseover', () => {
+//       text.textContent="Food";
+//     })
+//     food.addEventListener('mouseout', () => {
+//       text.textContent="";
+//     })
+//   }
 
-  if (transport) {
-    transport.addEventListener('mouseover', () => {
-      text.textContent="Transport";
-    })
-    transport.addEventListener('mouseout', () => {
-      text.textContent="";
-    })
-  }
+//   if (transport) {
+//     transport.addEventListener('mouseover', () => {
+//       text.textContent="Transport";
+//     })
+//     transport.addEventListener('mouseout', () => {
+//       text.textContent="";
+//     })
+//   }
 
-  if (house) {
-    house.addEventListener('mouseover', () => {
-      text.textContent="Housing";
-    })
-    house.addEventListener('mouseout', () => {
-      text.textContent="";
-    })
-  }
+//   if (house) {
+//     house.addEventListener('mouseover', () => {
+//       text.textContent="Housing";
+//     })
+//     house.addEventListener('mouseout', () => {
+//       text.textContent="";
+//     })
+//   }
 
-  if(trash){
-  trash.addEventListener('mouseout', () => {
-    text.textContent="";
-  })
-  trash.addEventListener('mouseover', () => {
-    text.textContent="Trash";
-  })
+//   if(trash){
+//   trash.addEventListener('mouseout', () => {
+//     text.textContent="";
+//   })
+//   trash.addEventListener('mouseover', () => {
+//     text.textContent="Trash";
+//   })
 
-  }
-}
+//   }
+// }
 
 export {iconAnimation}
-export {textAnimation}
+// export {textAnimation}

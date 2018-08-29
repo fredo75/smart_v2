@@ -1,7 +1,67 @@
 .solutions {
-position:relative;
+  position:absolute;
+  top:8em;
+  img {
+
+  width: 6em;
+  height: 6em;
+  }
+  left:2.5em;
+}
+
+#solutions_title {
+  font-size: 20px;
+  position:absolute;
+  bottom:0px;
+
+}
+
+#welcome {
+  z-index:20;
+}
+
+.small {
+  transform:scale(1);
+  opacity: 0.6;
+}
+
+.stat {
+  width: 8em;
+  height: 8em;
+  position:absolute;
+  bottom:2em;
+  right:2em;
+
 }
 
 .footprint {
+  position:absolute;
+  img {
+
+  height: 6.5em;
+  width: 6.5em;
+  }
+  right: 1.5em;
+  top: 5em;
+
+}
+
+.user {
+  position:absolute;
+  width: 5em;
+  height: 5em;
+  bottom:8em;
+  left:2em;
+
+
+}
+
+#solutions_title {
+  position:absolute;
+  top: 2em;
+
+}
+
+#footprint_title {
 
 }

@@ -5,15 +5,18 @@ class SurveysController < ApplicationController
   # GET /surveys.json
   def index
     @surveys = Survey.all
+    @surveys = policy_scope(Survey).order(created_at: :desc)
   end
 
   # GET /surveys/1
   # GET /surveys/1.json
   def show
+    authorize @survey
   end
 
   # GET /surveys/1/edit
   def edit
+    authorize @survey
 
   end
 
@@ -22,6 +25,7 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.create(user: current_user)
     redirect_to survey_path(@survey)
+    authorize @survey
   end
 
   # PATCH/PUT /surveys/1
@@ -29,6 +33,7 @@ class SurveysController < ApplicationController
   def update
     @survey.update(survey_params)
     redirect_to survey_path(@survey)
+    authorize @survey
   end
 
   private
