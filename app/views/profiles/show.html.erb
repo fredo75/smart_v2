@@ -1,4 +1,13 @@
-<button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-profile">button to</button>
-<%= render 'form', user: @user %>
-
+<div class='gradient'>
+  <%= link_to user_path(current_user), class:'back' do %>
+      <i class="far fa-times-circle"></i>
+    <% end %>
+  <div class='circle-container' style="top:15em;">
+    <%= image_tag("earth", class:'planet small') %>
+  </div>
+   <h1 id="Welcome"> <%= @user.email %></h1>
 <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar') %>
+<button class="btn btn-primary" data-toggle="modal" data-target="#edit-user-profile">button to</button>
+
+</div>
+<%= render 'form', user: @user %>
