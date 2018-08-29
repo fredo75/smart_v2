@@ -12,22 +12,14 @@
     <%= image_tag("Solutions") %>
     <% end %>
 
-<<<<<<< HEAD
-<%= link_to 'create a survey', surveys_path, method: :post   %>
-<hr>
-<%= link_to 'my eco_actions', eco_actions_path(current_user)  %>
-<hr>
-<%= link_to 'my profile', profile_path(current_user)  %>
-
-=======
->>>>>>> master
+    <%= link_to profile_path(current_user), class:'user' do  %>
+    <%= image_tag("Profile") %>
+    <% end %>
 
    <!--  <p id='solutions_title'>solutions</p> -->
     <%= image_tag("Stat",class:'stat') %>
-    <%= image_tag("Profile", class:'user') %>
 </div>
 
-<%= link_to 'create an Eco action', new_eco_action_path  %>
-<%=  link_to 'questions', surveys_path, method: :post%>
 <hr>
+
 
