@@ -1,8 +1,8 @@
 <div class='gradient'>
-  <h1>Welcome</h1>
   <div class='circle-container'>
     <%= image_tag("Earth", class:'planet small') %>
   </div>
+  <h1 id="Welcome">Welcome</h1>
    <!--  <p id='footprint_title'>footprint</p> -->
     <%= link_to surveys_path, method: :post, class:'footprint' do   %>
     <%= image_tag("Footprint") %>
@@ -15,7 +15,7 @@
 
    <!--  <p id='solutions_title'>solutions</p> -->
     <%= image_tag("Stat",class:'stat') %>
-    <%= image_tag "http://kitt.lewagon.com/placeholder/users/camilleFr", class:'user' %>
+    <%= image_tag("Profile", class:'user') %>
 </div>
 
 <%=  link_to 'questions', surveys_path, method: :post%>
