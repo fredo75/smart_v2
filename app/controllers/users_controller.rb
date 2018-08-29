@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user.update!(user_params)
     redirect_to profile_path(@user.id)
     @user.username = params[:username]
+    @user.mybio = params[:mybio]
     authorize @user
 
   end
