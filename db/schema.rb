@@ -10,43 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_28_100410) do
+ActiveRecord::Schema.define(version: 2018_08_28_155106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "eco_actions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "surveys", force: :cascade do |t|
     t.string "heat_type"
     t.integer "area"
+    t.boolean "isolated"
     t.integer "house_inhabitants"
     t.integer "house_temp"
-    t.integer "housing_type"
-    t.string "energy_class"
-
-    t.string "vegetable_season"
-    t.string "eating_habits"
-    t.string "bio_buyings"
-
-    t.integer "vehicule_km"
-    t.string "fuel_type"
-    t.integer "public_transp"
-
-    t.integer "upcycling"
-
-    t.string "green_invest"
-
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
-
-
+    t.integer "housing_type"
     t.integer "children_inhabitants"
     t.integer "adults_inhabitants"
-    t.boolean "isolated"
-
-
-
+    t.string "energy_class"
+    t.string "vegetable_season"
+    t.string "eating_habits"
+    t.string "bio_buyings"
+    t.integer "vehicule_km"
+    t.string "fuel_type"
+    t.integer "public_transp"
+    t.integer "upcycling"
+    t.string "green_invest"
     t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
