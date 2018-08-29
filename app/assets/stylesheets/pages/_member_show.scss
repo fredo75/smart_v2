@@ -1,18 +1,33 @@
 .solutions {
+  width: 5em;
+    height: 5em;
 
 }
 
 .footprint {
-  padding-bottom: 80px;
+position:absolute;
+  width: 5em;
+    height: 5em;
 
 }
 
 .user {
-  margin-top: 80px;
-  height: 110px;
-  width: 110px;
+  position:absolute;
+  height: 5em;
+  width: 5em;
+  right: 5em;
   border-radius: 50%;
   border-style: solid;
   border-color: white;
   border-width: 4px;
+}
+
+#solutions_title {
+  position:absolute;
+  top: 2em;
+
+}
+
+#footprint_title {
+
 }
