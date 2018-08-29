@@ -21,27 +21,27 @@ ActiveRecord::Schema.define(version: 2018_08_28_155106) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.string "heat_type"
+    t.integer "housing_type"
+    t.integer "adults_inhabitants"
+    t.integer "children_inhabitants"
+    t.integer "vehicule_km"
+    t.integer "public_transp"
+    t.float "upcycling"
+    t.float "heat_type"
     t.integer "area"
     t.boolean "isolated"
     t.integer "house_inhabitants"
-    t.integer "house_temp"
+    t.float "house_temp"
+    t.float "vegetable_season"
+    t.float "eating_habits"
+    t.float "bio_buyings"
+    t.float "green_invest"
+    t.float "fuel_type"
+    t.string "energy_class"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
-    t.integer "housing_type"
-    t.integer "children_inhabitants"
-    t.integer "adults_inhabitants"
-    t.string "energy_class"
-    t.string "vegetable_season"
-    t.string "eating_habits"
-    t.string "bio_buyings"
-    t.integer "vehicule_km"
-    t.string "fuel_type"
-    t.integer "public_transp"
-    t.integer "upcycling"
-    t.string "green_invest"
     t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
