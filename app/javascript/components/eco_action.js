@@ -14,3 +14,12 @@ function selectCategory() {
 }
 
 export {selectCategory}
+
+function calculEcoAction() {
+
+    const number = 2;
+    const unit = 3 ;
+    const total = number*unit ;
+    document.getElementById('eco_action_eco_scoring').value = total;
+}
+export {calculEcoAction}

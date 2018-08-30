@@ -10,7 +10,9 @@ import {selectCategory} from '../components/eco_action';
 
 selectCategory()
 
-
 import {testChart} from '../components/chart';
 testChart();
 
+import {calculEcoAction} from '../components/eco_action';
+
+calculEcoAction();
