@@ -1,5 +1,5 @@
 class EcoActionsController < ApplicationController
-  before_action :set_eco_action, only: [:show, :edit, :update]
+  before_action :set_eco_action, only: [:show, :edit, :update, :destroy]
 
   def index
     @eco_actions = EcoAction.all
@@ -23,6 +23,11 @@ class EcoActionsController < ApplicationController
     authorize @eco_action
   end
 
+  def destroy
+    @eco_action.destroy
+    redirect_to eco_actions_path
+    authorize @eco_action
+  end
 
   # POST /eco_actions
   # POST /eco_actions.json
@@ -42,8 +47,9 @@ class EcoActionsController < ApplicationController
   # PATCH/PUT /eco_actions/1
   # PATCH/PUT /eco_actions/1.json
   def update
-    @eco_action.update(eco_actions_params)
+    @eco_action.update(eco_action_params)
     redirect_to eco_action_path(@eco_action)
+    authorize @eco_action
   end
 
   private
@@ -58,7 +64,7 @@ class EcoActionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eco_action_params
-      params.require(:eco_action).permit(:title, :description, :user, :photo)
+      params.require(:eco_action).permit(:title, :description, :user, :photo, :eco_category, :eco_scoring)
     end
 end
 
