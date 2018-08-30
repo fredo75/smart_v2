@@ -1,9 +1,10 @@
+<div class="gradient">
 
 <%= link_to user_path(current_user), class:'back' do %>
   <i class="far fa-times-circle"></i>
 <% end %>
-<canvas id="myChart">
-</canvas>
-
-
-<%= @user.surveys.first.food_score %>
+  <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
+  </canvas>
+  <canvas id="myChart2" align="center" style="margin-top: 5em;">
+  </canvas>
+</div>
