@@ -64,7 +64,7 @@ class Survey < ApplicationRecord
   end
 
   def fuel_calculation
-    new_fuel_type = self.fuel_type
+    new_fuel_type = (self.fuel_type || 0)
     @fuel_calculation = new_fuel_type * transportation_calculation
   end
 
