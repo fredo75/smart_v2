@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_30_083520) do
+ActiveRecord::Schema.define(version: 2018_08_30_142044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2018_08_30_083520) do
     t.datetime "updated_at", null: false
     t.string "eco_category"
     t.integer "eco_scoring"
+    t.string "eco_scoring_unit"
+    t.integer "eco_scoring_total"
     t.index ["user_id"], name: "index_eco_actions_on_user_id"
   end
 

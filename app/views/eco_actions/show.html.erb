@@ -33,6 +33,12 @@
                 <h5><strong>Description:  </strong>
                   <br>
                   <%= @eco_action.description %></h5>
+                <h5><strong>Scoring:</strong>
+                  <div class="score">
+                    <%= @eco_action.eco_scoring_total %>
+                  </div>
+
+                  </h5>
                 <div class="link">
                   <%= link_to eco_action_path(@eco_action.id), method: :delete, :class => 'lilink' do %>
                     <i class='fas fa-trash-alt'></i>

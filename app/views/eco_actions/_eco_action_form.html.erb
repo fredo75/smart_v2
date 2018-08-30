@@ -2,9 +2,6 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4">
       <%= simple_form_for @eco_action do |f| %>
-        <%= f.input :title, label: false, placeholder: 'Title' %>
-        <%= f.input :description, label: false, placeholder: 'Description' %>
-
         <div class="button-icons">
           <h4>Category:</h4>
           <% EcoAction::CATEGORIES.each do |category| %>
@@ -14,10 +11,16 @@
           <% end %>
         </div>
         <%= f.input :eco_category, as: :hidden, label: false %>
-
         <%= f.input :title, label: false, placeholder: 'Title' %>
+        <%= f.input :description, label: false, placeholder: 'Description' %>
 
+        <div class="sentence">What is the impact of your Eco Action (yearly basis)?</div>
+        <div class="impact">
+          <%= f.input :eco_scoring, label: false, :input_html => {:style => 'width: 100px'} %>
 
+          <%= f.input :eco_scoring_unit, include_blank: false, collection: EcoAction::UNITS, label: false %>
+
+        </div>
 
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
