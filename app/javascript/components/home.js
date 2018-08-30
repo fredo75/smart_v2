@@ -6,6 +6,7 @@ function iconAnimation () {
   const trash = document.querySelector ('.deg90');
   const house = document.querySelector ('.deg270');
   const header = document.querySelector('.header');
+
   const text = document.getElementById('pick');
 
   if (planet) {
@@ -32,6 +33,7 @@ function iconAnimation () {
     planet.classList.toggle('move');
   })
   }
+
 
 }
 

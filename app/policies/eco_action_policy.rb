@@ -1,4 +1,5 @@
 class EcoActionPolicy < ApplicationPolicy
+
   class Scope < Scope
     def resolve
       scope.all
@@ -22,15 +23,12 @@ class EcoActionPolicy < ApplicationPolicy
   end
 
   def update?
-
-
     record.user == user
   end
 
   def edit?
     record.user == user
   end
-
 
   def destroy?
     record.user == user
