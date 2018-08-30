@@ -15,7 +15,7 @@ function iconAnimation () {
       food.classList.toggle('move');
     }
     if (trash) {
-    trash.classList.toggle('move');
+      trash.classList.toggle('move');
     }
     if (house) {
       house.classList.toggle('move');
