@@ -11,6 +11,12 @@ import {selectCategory} from '../components/eco_action';
 selectCategory()
 
 
-import {testChart} from '../components/chart';
-testChart();
+// import {testChart} from '../components/chart';
+// testChart();
+
+import{formSlider} from '../components/form_slider';
+ if (document.getElementById('step_1')){
+  formSlider();
+ }
+
 
