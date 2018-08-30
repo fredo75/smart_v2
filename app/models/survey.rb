@@ -98,8 +98,8 @@ class Survey < ApplicationRecord
   # ISOLATION = [["I don't care!", 8], ["I don't know, more than 10 years", 7], ["I don't know, more than 10 years", 5], ["minimum A", 6], ["minimum A+", 4], ["Minimum A++", 3]]
 
 
-  VEG_SEASON = [["Less than 25%, I don't make any effort!", 0.59], ["Around 25%", 0.44], ["Around 50%", 0.3], ["Around 75%", 0.15], ["100%: I live with the seasons!", 0.04]]
-  EATING_HAB = [["3 times everay day, I am a tiger!", 1.45], ["2/day", 1.21], ["1/day", 0.63], ["4 to 6/week", 0.34], ["1 to 3/week", 0.14], ["1/week", 0.06], ["I am Vegi!", 0.03]]
+  VEG_SEASON = [["Less than 25%!", 0.59], ["Around 25%", 0.44], ["Around 50%", 0.3], ["Around 75%", 0.15], ["100%: I'm so seasonal!", 0.04]]
+  EATING_HAB = [["2 times/day", 1.21], ["1 time/day", 0.63], ["1 to 3 times/week", 0.14], ["1/week", 0.06], ["I am Vegi!", 0.03]]
   BIO = [["I purchase only organic food!", -0.18], ["75%", -0.13], ["50%", -0.08], ["25%", -0.03], ["Never, the cheaper the better!", 0.01]]
 
   VEHICULE_KM = [["More than 30,000 km", 30000], ["Between 7,500 and  12,500", 12500], ["Between 2000 and  7,500", 7500],["Less than 2000", 2000], ["No car!!!!", 0]]

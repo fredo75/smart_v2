@@ -1,5 +1,9 @@
-
-
-  <%= f.input :vehicule_km, as: :radio_buttons, collection: Survey::VEHICULE_KM, wrapper: :vertical_collection_inline %>
- <%= f.input :fuel_type, as: :radio_buttons, collection: Survey::FUEL, wrapper: :vertical_collection_inline %>
-<%= f.input :public_transp, as: :radio_buttons, collection: Survey::PUBLIC_TRANSP, wrapper: :vertical_collection_inline %>
+<div class="choices" id="choices_button">
+  <%= f.input :vehicule_km, as: :radio_buttons, collection: Survey::VEHICULE_KM, wrapper: :vertical_collection_inline, label: "KM travelled with your car/ year?" %>
+</div>
+<div class="choices" id="choices_button">
+  <%= f.input :fuel_type, as: :radio_buttons, collection: Survey::FUEL, wrapper: :vertical_collection_inline, label: "Fuel used?" %>
+</div>
+<div class="choices" id="choices_button">
+  <%= f.input :public_transp, as: :radio_buttons, collection: Survey::PUBLIC_TRANSP, wrapper: :vertical_collection_inline, label: "Your usage of public transport?" %>
+</div>
