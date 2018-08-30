@@ -10,7 +10,7 @@ class SurveyPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    return true
   end
 
   def new?
