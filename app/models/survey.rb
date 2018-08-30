@@ -111,6 +111,5 @@ class Survey < ApplicationRecord
   INVEST = [["I don't know", 0], ["few investment", -0.02], ["Yes I invest regurlarly in green Eco", -0.05], ["All my money is invested into Green", -0.07]]
   TYPE_HOUSE = [["house", 22], ["appartment", 16]]
 
-
 end
 

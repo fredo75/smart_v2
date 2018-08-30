@@ -25,13 +25,18 @@
               <div class="title">
                 <h5><%= eco_action.title %></h5>
               </div>
+              <div class="inline">
+                <div class="score">
+                  <%= eco_action.eco_scoring_total %>
+                </div>
                 <div class="category">
                   <% if eco_action.eco_category.present? %>
-                  <%= image_tag "#{eco_action.eco_category}.png", height: 40 %>
+                  <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
                   <% else  %>
-                  <%= image_tag "interogation.jpeg", height: 30 %>
+                  <%= image_tag "interogation.jpeg", height: 20 %>
                   <% end %>
                 </div>
+              </div>
             </div>
             <%= link_to '', eco_action_path(eco_action.id), class: "card-link" %>
           </div>
