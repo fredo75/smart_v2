@@ -14,7 +14,7 @@
       <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg90' do%>
         <%= image_tag("transport.png") %>
       <% end %>
-      <%=  link_to edit_survey_path(@survey, category: ' waste'), class:'deg180' do%>
+      <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg180' do%>
         <%= image_tag("trash.png") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
@@ -26,4 +26,4 @@
 
 </div>
 
-<%= @survey.food_score %>
+
