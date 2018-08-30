@@ -2,10 +2,10 @@ import Chart from 'chart.js'
 
 function testChart (){
   const c = document.getElementById('myChart');
+  if (c) {
   const points = JSON.parse(c.dataset.points)
   console.log(points);
 
-  if (c) {
     const ctx = c.getContext('2d');
     const chart2 = new Chart(ctx, {
       type: 'pie',
