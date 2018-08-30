@@ -1,4 +1,24 @@
-.avatar {
-width: 30px;
-  border-radius: 50%;
+.button_position {
+position:absolute;
+bottom:1em;
+left: 5em;
+}
+
+#bio {
+  position:absolute;
+  margin-left: 25vw;
+  font-size:15px;
+  top: 14em;
+  width: 50vw;
+}
+
+#username {
+  position:absolute;
+  top: 2em;
+}
+
+.avatar_position {
+  position:absolute;
+  top:6em;
+  right:3em;
 }

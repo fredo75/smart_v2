@@ -9,10 +9,38 @@
 }
 
 #solutions_title {
-  font-size: 20px;
   position:absolute;
-  bottom:0px;
+  font-size: 15px;
+  left:3em;
+  top:7em;
 
+
+}
+
+#result_title {
+  font-size: 15px;
+  position:absolute;
+  bottom:10em;
+  right:3em;
+  z-index: 30;
+
+}
+
+#profile_title {
+  font-size: 15px;
+  position:absolute;
+  bottom:4em;
+  left:3em;
+  z-index: 30;
+
+}
+
+#footprint_title {
+  font-size: 15px;
+  position:absolute;
+  top:15em;
+  right:1.5em;
+  z-index: 30;
 }
 
 #welcome {
@@ -25,8 +53,8 @@
 }
 
 .stat {
-  width: 8em;
-  height: 8em;
+  width: 6em;
+  height: 6em;
   position:absolute;
   bottom:2em;
   right:2em;

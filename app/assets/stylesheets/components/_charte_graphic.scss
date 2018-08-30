@@ -6,6 +6,12 @@ background: -o-linear-gradient(#37ebba, #72aed3);
 background: linear-gradient(#37ebba, #72aed3);
 }
 
+.avatar {
+width: 70px;
+  border-radius: 50%;
+}
+
+
 .typo {
   margin-left:20px;
   font-family: 'Amiri', serif;
@@ -47,6 +53,7 @@ background: linear-gradient(#37ebba, #72aed3);
          }
 }
 
+
 .button {
   color: black;
   border: 3px solid white;
@@ -66,3 +73,4 @@ background: linear-gradient(#37ebba, #72aed3);
   align-items:center;
   height: 60px;
 }
+
