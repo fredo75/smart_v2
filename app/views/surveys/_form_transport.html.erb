@@ -1,9 +1,13 @@
-<div class="choices" id="choices_button">
+<div class="choices" id="step_1">
   <%= f.input :vehicule_km, as: :radio_buttons, collection: Survey::VEHICULE_KM, wrapper: :vertical_collection_inline, label: "KM travelled with your car/ year?" %>
+  <p id="step_1_button">NEXT</p>
 </div>
-<div class="choices" id="choices_button">
+<div class="choices hidden" id="step_2">
   <%= f.input :fuel_type, as: :radio_buttons, collection: Survey::FUEL, wrapper: :vertical_collection_inline, label: "Fuel used?" %>
+  <p id="step_2_button">NEXT</p>
+
 </div>
-<div class="choices" id="choices_button">
+<div class="choices hidden" id="step_3">
   <%= f.input :public_transp, as: :radio_buttons, collection: Survey::PUBLIC_TRANSP, wrapper: :vertical_collection_inline, label: "Your usage of public transport?" %>
+  <p id="step_3_button">NEXT</p>
 </div>
