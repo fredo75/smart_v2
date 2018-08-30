@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http:key => "value", //guides.rubyonrails.org/routing.html
 
   get '/design', to:'pages#design'
+  get '/results', to: 'pages#results'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
