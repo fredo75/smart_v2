@@ -15,6 +15,13 @@ class UsersController < ApplicationController
   def results
     @user = User.find(params[:id])
     authorize @user
+    @points = [
+      @user.surveys.first.transportation_score,
+      @user.surveys.first.food_score,
+      @user.surveys.first.upcycling_calculation,
+      @user.surveys.first.energy_score,
+    ]
+      @final_score = @user.surveys.first.total_user_score
   end
 
 

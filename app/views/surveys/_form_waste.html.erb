@@ -1,8 +1,6 @@
 
-<%= f.input :upcycling, as: :radio_buttons, collection: Survey::UPCYCLING, wrapper: :vertical_collection_inline %>
+<div class="choices" id="choices_button">
+  <%= f.input :upcycling, as: :radio_buttons, collection: Survey::UPCYCLING, wrapper: :vertical_collection_inline, label: "How much do you recycle?" %>
+</div>
 
 <%= f.input :green_invest, as: :radio_buttons, collection: Survey::INVEST, wrapper: :vertical_collection_inline %>
-
-
-
-
