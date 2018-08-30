@@ -20,9 +20,12 @@
     <% end %>
 
     <p id='result_title'>My results</p>
-    <% @user.surveys.first.total_user_score %>
-    <%= link_to results_user_path(@user),class:'stat' do %>
-    <%= image_tag("stat.png") %>
+    <% if @user.surveys.present? %>
+      <% @user.surveys.first.total_user_score %>
+      <%= link_to results_user_path(@user),class:'stat' do %>
+      <%= image_tag("stat.png") %>
+      <% end %>
+    <% else %>
     <% end %>
 </div>
 
