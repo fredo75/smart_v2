@@ -12,26 +12,40 @@ function formSlider() {
   const step_5 = document.getElementById('step_5');
   const step_6 = document.getElementById('step_6');
 
+   if (step_1){
     nextButton1.addEventListener('click', (event) => {
       step_1.classList.add("hidden");
       step_2.classList.remove("hidden");
     });
-    nextButton2.addEventListener('click', (event) => {
+    };
+
+    if (step_2){
+      nextButton2.addEventListener('click', (event) => {
       step_2.classList.add("hidden");
       step_3.classList.remove("hidden");
     });
-    nextButton3.addEventListener('click', (event) => {
+    };
+
+    if (step_3){
+      nextButton3.addEventListener('click', (event) => {
       step_3.classList.add("hidden");
       step_4.classList.remove("hidden");
     });
-    nextButton4.addEventListener('click', (event) => {
+    };
+
+    if(step_4){
+      nextButton4.addEventListener('click', (event) => {
       step_4.classList.add("hidden");
       step_5.classList.remove("hidden");
     });
-    nextButton5.addEventListener('click', (event) => {
+    };
+
+    if (step_5){nextButton5.addEventListener('click', (event) => {
       step_5.classList.add("hidden");
       step_6.classList.remove("hidden");
     });
+  };
+
 }
 
 export {formSlider};
