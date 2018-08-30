@@ -32,7 +32,7 @@ class Survey < ApplicationRecord
   end
 
   def food_score
-    @food_score = food_calculation_adult + food_calculation_children + vegetable_calculation + eating_habits_calculation + bio_buying_calculation
+    @food_score = (food_calculation_adult || 0) + (food_calculation_children || 0) + (vegetable_calculation || 0) + (eating_habits_calculation || 0) + (bio_buying_calculation || 0)
   end
 
   def housing_type_area_calculation
