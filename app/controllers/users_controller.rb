@@ -24,14 +24,16 @@ class UsersController < ApplicationController
       @final_score = @user.surveys.first.total_user_score
   end
 
-  def user_params
-    params.require(:user).permit(:mybio, :photo, :username)
-  end
 
   def show
+    # @user = User.find(params[:id])
     @user = current_user
-    # @users = policy_scope(User).order(created_at: :desc)
     authorize @user
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:mybio, :photo, :username)
+  end
 end

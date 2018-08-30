@@ -36,9 +36,7 @@ class Survey < ApplicationRecord
   end
 
   def housing_type_area_calculation
-    new_housing = self.housing_type
-    new_area = self.area
-    @housing_type_area_calculation = (new_housing * new_area) / 1000
+    (self.housing_type * self.area).fdiv(1000)
   end
 
   def house_temp_calculation

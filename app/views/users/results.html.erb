@@ -3,6 +3,7 @@
 <%= link_to user_path(current_user), class:'back' do %>
   <i class="far fa-times-circle"></i>
 <% end %>
+
 <p style="margin-left: 2em; margin-top: 1em;"> My score </p>
   <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
   </canvas>

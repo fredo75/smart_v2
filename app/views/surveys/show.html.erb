@@ -14,17 +14,16 @@
       <%=  link_to edit_survey_path(@survey, category: 'transport'), class:'deg90' do%>
         <%= image_tag("transport.png") %>
       <% end %>
-      <%=  link_to edit_survey_path(@survey, category: ' waste'), class:'deg180' do%>
+      <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg180' do%>
         <%= image_tag("trash.png") %>
       <% end %>
       <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
         <%= image_tag("house.png") %>
       <% end %>
   </div>
+    <p> <%#= @survey.energy_score %></p>
 </div>
 
 </div>
 
-<!--
-<%= @survey.food_score %>
- -->
+
