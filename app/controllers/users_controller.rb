@@ -12,6 +12,11 @@ class UsersController < ApplicationController
 
   end
 
+  def results
+    @user = User.find(params[:id])
+    authorize @user
+  end
+
   def user_params
     params.require(:user).permit(:mybio, :photo, :username)
   end
