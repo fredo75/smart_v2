@@ -1,0 +1,13 @@
+
+<%= link_to user_path(current_user), class:'back' do %>
+  <i class="far fa-times-circle"></i>
+<% end %>
+<canvas id="myChart">
+</canvas>
+
+
+<%= @user.surveys.last.energy_score %>
+<%= @user.surveys.last.food_score %>
+<%= @user.surveys.last.transportation_score %>
+<%= @user.surveys.last.upcycling_calculation %>
+<%= @user.surveys.last.total_user_score %>

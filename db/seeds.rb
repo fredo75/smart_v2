@@ -23,7 +23,8 @@ adrien = User.create(email: 'a@gmail.com', password: 'qwerty')
 
 puts "Create Survey"
 
-survey_1 = Survey.create(heat_type: "gaz",
+survey_1 = Survey.create(heat_type: 0.2410,
+                          housing_type: 16,
                          area: 200,
                          isolated: true,
                          children_inhabitants: 2,
@@ -45,24 +46,24 @@ survey_1 = Survey.create(heat_type: "gaz",
 
 
 
-# survey_2 = Survey.create(heat_type: "gaz",
-#                          housing_type: ,
-#                          area: 200,
-#                          isolated: true,
-#                          children_inhabitants: ,
-#                          adults_inhabitants: ,
-#                          house_inhabitants: 4,
-#                          house_temp: 21,
-#                          energy_class: ,
-#                          vegetable_season: ,
-#                          eating_habits: ,
-#                          bio_buyings: ,
-#                          vehicle_km: ,
-#                          fuel_type: ,
-#                          public_transp: ,
-#                          upcycling: ,
-#                          green_invest: ,
-#                          user: tiphaine)
+survey_2 = Survey.create(heat_type: 0,
+                          housing_type: 0,
+                         area: 0,
+                         isolated: true,
+                         children_inhabitants: 0,
+                         adults_inhabitants: 0,
+                         house_inhabitants: 0,
+                         house_temp: 0,
+                         energy_class: 0,
+                         vegetable_season: 0,
+                         eating_habits: 0,
+                         bio_buyings: 0,
+                         vehicule_km: 0,
+                         fuel_type: 0,
+                         public_transp: 0,
+                         upcycling: 0,
+                         green_invest: 0,
+                         user: fred)
 
 
 # survey_3 = Survey.create(heat_type: "gaz",

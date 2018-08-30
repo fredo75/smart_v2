@@ -9,9 +9,12 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    @user = current_user
-    @user.update!(user_params)
-    redirect_to profile_path(@user.id)
+    @user = User.find(params[:id])
+    authorize @user
+    if @user.update(user_params)
+      redirect_to profile_path(@user.id)
+    else
+    end
   end
 
 end

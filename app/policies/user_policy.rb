@@ -17,12 +17,18 @@ class UserPolicy < ApplicationPolicy
     return true
   end
 
+  def results?
+    return true
+  end
+
   def index?
     return true
   end
 
   def update?
-    record.user == user
+    # record.user == user
+    return true
+
   end
 
   def edit?

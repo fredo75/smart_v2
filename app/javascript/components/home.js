@@ -6,7 +6,10 @@ function iconAnimation () {
   const trash = document.querySelector ('.deg90');
   const house = document.querySelector ('.deg270');
   const header = document.querySelector('.header');
-  const text = document.getElementById('pick')
+
+  const text = document.getElementById('pick');
+
+  if (planet) {
   planet.addEventListener('touchend', () => {
     if (transport) {
       transport.classList.toggle('move');
@@ -29,6 +32,8 @@ function iconAnimation () {
     }
     planet.classList.toggle('move');
   })
+  }
+
 
 }
 
