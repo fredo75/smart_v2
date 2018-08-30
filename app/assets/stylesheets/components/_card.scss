@@ -13,13 +13,7 @@
   opacity:0.9;
   display:flex;
   align-items:center;
-}
-
-.buttons-eco {
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  height: 60px;
+  padding:30px;
 }
 
 .eco-photo {
@@ -88,4 +82,16 @@
   width: 500px;
   background-color: rgb(211,211,211);
   box-shadow: 2px 2px 2px 2px rgba(200,200,200,0.9);
+}
+
+.card-detailed {
+  margin-top: 30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.card-other {
+  text-align:left;
 }
