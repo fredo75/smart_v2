@@ -20,7 +20,9 @@
     <% end %>
 
     <p id='result_title'>My results</p>
-    <%= image_tag("stat.png",class:'stat') %>
+    <%= link_to results_user_path(params[:id]),class:'stat' do %>
+    <%= image_tag("stat.png") %>
+    <% end %>
 </div>
 
 

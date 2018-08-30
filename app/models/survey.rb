@@ -6,24 +6,24 @@ class Survey < ApplicationRecord
   def food_calculation_adult
     meal_per_person = 730
     coef_adult_meal = 2.27
-    adult = self.house_inhabitants
+    adult = self.adults_inhabitants
     @adult_food_calculation = (adult * meal_per_person * coef_adult_meal)/1000
   end
 
   def food_calculation_children
     meal_per_person = 730
     coef_child_meal = 0.44
-    child = self.house_inhabitants
+    child = self.children_inhabitants
     @child_food_calculation = (child * meal_per_person * coef_child_meal)/1000
   end
 
    def vegetable_calculation
     vegetable_season_buying = self.vegetable_season
-    @vegetable_calculation = (vegetable_season_buying * 1000)
+    @vegetable_calculation = vegetable_season_buying
   end
 
   def eating_habits_calculation
-    @eating_habits_calculation = self.eating_habits * 1000
+    @eating_habits_calculation = self.eating_habits
   end
 
 
@@ -32,13 +32,11 @@ class Survey < ApplicationRecord
   end
 
   def food_score
-    @food_score = @adult_food_calculation + @child_food_calculation + @vegetable_calculation + @eating_habits_calculation + @bio_buying_calculation
+    @food_score = food_calculation_adult + food_calculation_children + vegetable_calculation + eating_habits_calculation + bio_buying_calculation
   end
 
   def housing_type_area_calculation
-    new_housing = self.housing_type
-    new_area = self.area
-    @housing_type_area_calculation = new_housing * new_area
+    (self.housing_type * self.area).fdiv(1000)
   end
 
   def house_temp_calculation
@@ -49,51 +47,48 @@ class Survey < ApplicationRecord
   end
 
   def energy_score
-    @energy_score = @housing_type_area_calculation + @house_temp_calculation
+    @energy_score = house_temp_calculation + house_temp_calculation
   end
 
   def upcycling_calculation
     inhab_waste_av = 345
     total_adults_inhabitants = self.adults_inhabitants
     total_children_inhabitants = self.children_inhabitants
-    @upcycling_calculation = (inhab_waste_av * (total_adults_inhabitants + total_children_inhabitants) * self.upcycling)
+    @upcycling_calculation = (inhab_waste_av * (total_adults_inhabitants + total_children_inhabitants) * self.upcycling) / 1000
   end
 
   def transportation_calculation
     emission_factor = 0.216
-    total_vehicle_km = self.vehicle_km
-    @transportation_calculation = total_vehicle_km * emission_factor
+    total_vehicle_km = self.vehicule_km
+    @transportation_calculation = (total_vehicle_km * emission_factor) / 1000
   end
 
   def fuel_calculation
     new_fuel_type = self.fuel_type
-    @fuel_calculation = new_fuel_type * @transportation_calculation
+    @fuel_calculation = new_fuel_type * transportation_calculation
   end
 
   def public_transportation_calculation
     public_emission_factor = 0.155
     new_public_transportation = self.public_transp
-    @public_transportation_calculation = new_public_transportation * public_emission_factor
+    @public_transportation_calculation = (new_public_transportation * public_emission_factor) / 1000
   end
 
   def transportation_score
-    @transportation_score = @transportation_calculation + @fuel_calculation + @public_transportation_calculation
+    @transportation_score = transportation_calculation + fuel_calculation + public_transportation_calculation
   end
 
   def green_invest_calculation
     @new_green_invest = self.green_invest
   end
 
+
   def total_user_score
     society_factor = 1.2
-    @total_user_score = society_factor + @food_score + @energy_score + @transportation_score + @upcycling_calculation + @new_green_invest
+    @total_user_score = society_factor + food_score + energy_score + transportation_score + upcycling_calculation + green_invest_calculation
   end
 
 
-  def heat_type_calculation
-    average_inhab_cons = 1334
-    @heat_type_calculation = average_inhab_cons * (children_inhabitants + adults_inhabitants) * heat_type
-  end
 
   AREA = [["Less than 30m2", 30], ["Between 30 and 50m2", 50], ["between 50 and 70m2", 70], ["Between 70 and 100m2", 100], ["Between 100 and 130m2", 130], ["+130m2", 160]]
   HEAT_TYPE = [["Fioul", 0.329], ["Gas", 0.241], ["Electric standard", 0.325], ["Electric Green", 0.007], ["Wood", 0.015]]

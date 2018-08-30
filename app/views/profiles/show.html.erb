@@ -3,12 +3,14 @@
       <i class="far fa-times-circle"></i>
     <% end %>
 
+  <div class='circle-container' style="top:15em;">
+    <%= image_tag("earth.png", class:'planet small') %>
+  </div>
+
+
    <h1 id="username"> <%= @user.username %></h1>
    <p id="bio"> <%= @user.mybio %></p>
-
-  <div class='circle-container' style="top:12em;">
-    <%= image_tag("earth", class:'planet small') %>
-  </div>
+   <p id="myEcoActions">My Eco Actions</p>
 
 <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar avatar_position') %>
 <button class="button button_position" data-toggle="modal" data-target="#edit-user-profile">Edit my Profile</button>
