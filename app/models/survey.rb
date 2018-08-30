@@ -6,29 +6,29 @@ class Survey < ApplicationRecord
   def food_calculation_adult
     meal_per_person = 730
     coef_adult_meal = 2.27
-    adult = self.adults_inhabitants
+    adult = (self.adults_inhabitants || 0)
     @adult_food_calculation = (adult * meal_per_person * coef_adult_meal)/1000
   end
 
   def food_calculation_children
     meal_per_person = 730
     coef_child_meal = 0.44
-    child = self.children_inhabitants
+    child = (self.children_inhabitants || 0)
     @child_food_calculation = (child * meal_per_person * coef_child_meal)/1000
   end
 
    def vegetable_calculation
-    vegetable_season_buying = self.vegetable_season
+    vegetable_season_buying = (self.vegetable_season || 0)
     @vegetable_calculation = vegetable_season_buying
   end
 
   def eating_habits_calculation
-    @eating_habits_calculation = self.eating_habits
+    @eating_habits_calculation = (self.eating_habits || 0)
   end
 
 
   def bio_buying_calculation
-    @bio_buying_calculation = self.bio_buyings
+    @bio_buying_calculation = (self.bio_buyings || 0)
   end
 
   def food_score
@@ -41,8 +41,8 @@ class Survey < ApplicationRecord
 
   def house_temp_calculation
     av_inhab_cons = 1.334
-    new_children_inhabitants = self.children_inhabitants
-    new_adults_inhabitants = self.adults_inhabitants
+    new_children_inhabitants = (self.children_inhabitants || 0)
+    new_adults_inhabitants = (self.adults_inhabitants || 0)
     @house_temp_calculation = av_inhab_cons * (new_children_inhabitants + new_adults_inhabitants) + self.house_temp + self.heat_type
   end
 
@@ -52,14 +52,14 @@ class Survey < ApplicationRecord
 
   def upcycling_calculation
     inhab_waste_av = 345
-    total_adults_inhabitants = self.adults_inhabitants
-    total_children_inhabitants = self.children_inhabitants
-    @upcycling_calculation = (inhab_waste_av * (total_adults_inhabitants + total_children_inhabitants) * self.upcycling) / 1000
+    total_adults_inhabitants = (self.adults_inhabitants || 0)
+    total_children_inhabitants = (self.children_inhabitants || 0)
+    @upcycling_calculation = (inhab_waste_av * (total_adults_inhabitants + total_children_inhabitants) * (self.upcycling || 0)) / 1000
   end
 
   def transportation_calculation
     emission_factor = 0.216
-    total_vehicle_km = self.vehicule_km
+    total_vehicle_km = (self.vehicule_km || 0)
     @transportation_calculation = (total_vehicle_km * emission_factor) / 1000
   end
 
@@ -70,7 +70,7 @@ class Survey < ApplicationRecord
 
   def public_transportation_calculation
     public_emission_factor = 0.155
-    new_public_transportation = self.public_transp
+    new_public_transportation = (self.public_transp || 0)
     @public_transportation_calculation = (new_public_transportation * public_emission_factor) / 1000
   end
 
@@ -79,7 +79,7 @@ class Survey < ApplicationRecord
   end
 
   def green_invest_calculation
-    @new_green_invest = self.green_invest
+    @new_green_invest = (self.green_invest || 0)
   end
 
 
