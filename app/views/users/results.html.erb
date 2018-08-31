@@ -8,7 +8,18 @@
   <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
 
   </canvas>
-    <h1 style="position:absolute; top: 3em; right:1.5em;"> <%= @final_score %></h1>
+
+
+  <%# if @survey.food_score.nil? %>
+  <%# else %>
+  <%#= @users.surveys.last.food_score %>
+  <%# end %>
+  <%#= @survey.energy_score %>
+  <%#= @survey.transportation_score %>
+  <%#= @survey.upcycling_calculation %>
+  <%#= @survey.total_user_score %>
+
+    <h1 style="position:absolute; top: 2.75em; right:1.5em;"> <%= @final_score %></h1>
   <p style="margin: 2em;"> National Average </p>
   <canvas id="myChart2" align="center">
   </canvas>
