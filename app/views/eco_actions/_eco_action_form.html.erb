@@ -16,7 +16,7 @@
 
         <div class="sentence">What is the impact of your Eco Action (yearly basis)?</div>
         <div class="impact">
-          <%= f.input :eco_scoring, label: false, :input_html => {:style => 'width: 100px'} %>
+          <%= f.input :eco_impact, label: false, :input_html => {:style => 'width: 100px'} %>
 
           <%= f.input :eco_scoring_unit, include_blank: false, collection: EcoAction::UNITS, label: false %>
 
