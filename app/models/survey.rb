@@ -89,7 +89,7 @@ class Survey < ApplicationRecord
     society_factor = 1.2
 
     @total_user_score = society_factor + food_score + energy_score + transportation_score + upcycling_calculation + green_invest_calculation
-
+    @total_user_score.round(2)
   end
 
 
