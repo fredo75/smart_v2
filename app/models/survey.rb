@@ -32,14 +32,9 @@ class Survey < ApplicationRecord
   end
 
   def food_score
-    # @food_score = 0
 
-    # if @food_score.nil?
+    @food_score = (food_calculation_adult || 0) + (food_calculation_children || 0) + (vegetable_calculation || 0) + (eating_habits_calculation || 0) + (bio_buying_calculation || 0)
 
-    # else
-      @food_score = (food_calculation_adult || 0) + (food_calculation_children || 0) + (vegetable_calculation || 0) + (eating_habits_calculation || 0) + (bio_buying_calculation || 0)
-      # raise
-    # end
   end
 
   def housing_type_area_calculation
@@ -92,12 +87,8 @@ class Survey < ApplicationRecord
 
   def total_user_score
     society_factor = 1.2
-    # if @total_user_score.nil?
-       # @total_user_score = 0
-    # else
-       @total_user_score = society_factor + food_score + energy_score + transportation_score + upcycling_calculation + green_invest_calculation
-    # end
 
+    @total_user_score = society_factor + food_score + energy_score + transportation_score + upcycling_calculation + green_invest_calculation
 
   end
 
