@@ -27,12 +27,6 @@
   margin-top: 4em;
 }
 
-@-webkit-keyframes orbitFootprint {
-
-    from  {-webkit-transform: rotate(0deg) translateX(5px) rotate(0deg)  }
-    to  {-webkit-transform: rotate(360deg) translateX(5px) rotate(-360deg) }
-
-}
 
 @-webkit-keyframes orbitStat {
     0%   {-webkit-transform:  scale(1); opacity:1;}
@@ -42,7 +36,7 @@
     100% {-webkit-transform: scale(1); opacity:1;}
 }
 #Footprint img{
-animation: orbitFootprint 5s ease-in-out infinite;
+animation: orbitStat 5s ease-in-out infinite;
 }
 
 #Stat img{
