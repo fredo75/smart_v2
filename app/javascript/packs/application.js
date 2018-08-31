@@ -13,6 +13,7 @@ selectCategory()
 import {testChart} from '../components/chart';
 testChart();
 
-import {calculEcoAction} from '../components/eco_action';
-
-calculEcoAction();
+// import {calculEcoAction} from '../components/eco_action';
+// if () {
+// calculEcoAction();
+// }

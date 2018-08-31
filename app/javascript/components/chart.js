@@ -21,6 +21,7 @@ function testChart (){
         }
       },
       data: {
+        labels: ['Transport', 'Food', 'Waste', 'Energy'],
         datasets : [{
           label: "My Score",
           backgroundColor: ['rgb(240, 25, 94)','rgb(246, 242, 171)','rgb(253, 172, 98)','rgb(255, 91, 93)'],
