@@ -90,26 +90,26 @@ class Survey < ApplicationRecord
 
 
 
-  AREA = [["Less than 30m2", 30], ["Between 30 and 50m2", 50], ["between 50 and 70m2", 70], ["Between 70 and 100m2", 100], ["Between 100 and 130m2", 130], ["+130m2", 160]]
+  AREA = [["> 30m2", 30], [" 30 < area > 50m2", 50], [" 50 < area > 70m2", 70], [" 70 < area > 100m2", 100], [" 100 < area > 130m2", 130], ["+130m2", 160]]
   HEAT_TYPE = [["Fioul", 0.329], ["Gas", 0.241], ["Electric standard", 0.325], ["Electric Green", 0.007], ["Wood", 0.015]]
-  CHILDREN_INHABITANTS = [["zero", 0], ["one", 1], ["two", 2], ["three", 3], ["4", 4], ["+4", 5]]
+  CHILDREN_INHABITANTS = [["No children !", 0], ["Only one", 1], ["2", 2], ["3", 3], ["4", 4], ["+4", 5]]
   ADULTS_INHABITANTS = [["Only one: me!", 1], ["two", 2], ["three", 3], ["4", 4], ["+4", 5]]
-  TEMPERATURE = [["Less than 17: like in a freezer!", -0.06], ["19 max", -0.03], ["Around 21", 0], ["Around 23", 0.03]]
+  TEMPERATURE = [["- 17°C: like in a freezer!", -0.06], ["19°C at max", -0.03], ["Around 21°C", 0], ["Around 23°C...!", 0.03]]
   # ISOLATION = [["I don't care!", 8], ["I don't know, more than 10 years", 7], ["I don't know, more than 10 years", 5], ["minimum A", 6], ["minimum A+", 4], ["Minimum A++", 3]]
 
 
   VEG_SEASON = [["Less than 25%!", 0.59], ["Around 25%", 0.44], ["Around 50%", 0.3], ["Around 75%", 0.15], ["100%: I'm so seasonal!", 0.04]]
   EATING_HAB = [["2 times/day", 1.21], ["1 time/day", 0.63], ["1 to 3 times/week", 0.14], ["1/week", 0.06], ["I am Vegi!", 0.03]]
-  BIO = [["I purchase only organic food!", -0.18], ["75%", -0.13], ["50%", -0.08], ["25%", -0.03], ["Never, the cheaper the better!", 0.01]]
+  BIO = [["I purchase only organic food!", -0.18], ["75%", -0.13], ["50%", -0.08], ["25%", -0.03], ["Never, I purchase cheap food!", 0.01]]
 
-  VEHICULE_KM = [["More than 30,000 km", 30000], ["Between 7,500 and  12,500", 12500], ["Between 2000 and  7,500", 7500],["Less than 2000", 2000], ["No car!!!!", 0]]
+  VEHICULE_KM = [["+ 30,000 km", 30000], [" 7,500 < KM/year > 12,500", 12500], [" 2000 < KM/year > 7,500", 7500],[" - 2000 KM/year", 2000], ["No car !!", 0]]
   FUEL =[["Petrol", 0.88], ["Gazoil", 1]]
-  PUBLIC_TRANSP =[["none, I use my feet!", 0], ["Less than 5km", 5], ["Between 5 and 15km", 15], ["Between 15 and 40km", 40], ["More than 40km", 60]]
+  PUBLIC_TRANSP =[["None, I use my feet!", 0], ["- 5km / day", 5], ["Between 5 and 15km", 15], ["Between 15 and 40km", 40], ["+ 40km", 60]]
 
-  UPCYCLING =[["I have a compost", 0.7], ["I sort garbage most part of the time", 0.8], ["I sort garbage from time to time", 0.9], ["no effort at all!", 1]]
+  UPCYCLING =[["I have a compost", 0.7], ["Most of the time", 0.8], ["From time to time", 0.9], ["No effort at all...!", 1]]
 
-  INVEST = [["I don't know", 0], ["few investment", -0.02], ["Yes I invest regurlarly in green Eco", -0.05], ["All my money is invested into Green", -0.07]]
-  TYPE_HOUSE = [["house", 22], ["appartment", 16]]
+  INVEST = [["I don't know", 0], ["Few investment", -0.02], ["Regurlar investment", -0.05], ["Full investment", -0.07]]
+  TYPE_HOUSE = [["House", 22], ["Appartment", 16]]
 
 end
 

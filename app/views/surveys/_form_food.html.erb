@@ -1,15 +1,18 @@
 <div class="gradient">
   <div class="choices" id="step_1">
   <%= f.input :vegetable_season, as: :radio_buttons, collection: Survey::VEG_SEASON, wrapper: :vertical_collection_inline, label:"Your seasonal vegetables buyings?" %>
+  <%= image_tag "food.png", class:'small_icon' %>
   <p id="step_1_button">NEXT</p>
   </div>
 
   <div class="choices hidden" id="step_2">
-  <%= f.input :eating_habits, as: :radio_buttons, collection: Survey::EATING_HAB, wrapper: :vertical_collection_inline, label:"Your eating habits?" %>
+  <%= f.input :eating_habits, as: :radio_buttons, collection: Survey::EATING_HAB, wrapper: :vertical_collection_inline, label:"Meat eating habits?" %>
+  <%= image_tag "food.png", class:'small_icon' %>
   <p id="step_2_button">NEXT</p>
   </div>
 
   <div class="choices hidden" id="step_3" >
   <%= f.input :bio_buyings, as: :radio_buttons, collection: Survey::BIO, wrapper: :vertical_collection_inline, label:"Your proportion of organic buyings?" %>
+  <%= image_tag "food.png", class:'small_icon' %>
   </div>
 </div>
