@@ -36,10 +36,10 @@ class EcoActionsController < ApplicationController
     @eco_action = EcoAction.new(eco_action_params)
     @eco_action.user = current_user
 
-    if @eco_action.eco_scoring?
-    @eco_action.eco_scoring_total = @eco_action.eco_scoring * @eco_action.eco_scoring_unit.to_i
+    if @eco_action.eco_impact?
+    @eco_action.eco_scoring_total = @eco_action.eco_impact * @eco_action.eco_scoring_unit.to_i
     else
-    @eco_action.eco_scoring_total = "?"
+    @eco_action.eco_scoring_total = 0
     end
 
     if @eco_action.save
@@ -71,7 +71,7 @@ class EcoActionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eco_action_params
-      params.require(:eco_action).permit(:title, :description, :user, :photo, :eco_category, :eco_scoring, :eco_scoring_total, :eco_scoring_unit)
+      params.require(:eco_action).permit(:title, :description, :user, :photo, :eco_category, :eco_impact, :eco_scoring_total, :eco_scoring_unit)
     end
 end
 
