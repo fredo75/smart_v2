@@ -6,7 +6,6 @@ function iconAnimation () {
   const trash = document.querySelector ('.deg90');
   const house = document.querySelector ('.deg270');
   const header = document.querySelector('.header');
-
   const text = document.getElementById('pick');
   function explode (){
     if (transport) {
@@ -31,7 +30,7 @@ function iconAnimation () {
       planet.classList.toggle('move');
 
   }
-  if (planet) {
+  if (header) {
   window.setTimeout( explode, 200);
 
   }
