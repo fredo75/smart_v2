@@ -26,3 +26,48 @@
   right: 2em;
   margin-top: 4em;
 }
+
+@-webkit-keyframes orbitFootprint {
+
+    from  {-webkit-transform: rotate(0deg) translateX(5px) rotate(0deg)  }
+    to  {-webkit-transform: rotate(360deg) translateX(5px) rotate(-360deg) }
+
+}
+
+@-webkit-keyframes orbitStat {
+    0%   {-webkit-transform:  scale(1); opacity:1;}
+    25%  {-webkit-transform: scale(1.1); opacity: 0.9;}
+    50%  {-webkit-transform: scale(1); opacity:0.8;}
+    75%  {-webkit-transform: scale(0.9); opacity:0.9;}
+    100% {-webkit-transform: scale(1); opacity:1;}
+}
+#Footprint img{
+animation: orbitFootprint 5s ease-in-out infinite;
+}
+
+#Stat img{
+  animation: orbitStat 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes OrbitSolutions {
+    0%   {-webkit-transform:  scale(0.9); opacity:1;}
+    25%  {-webkit-transform: scale(1); opacity: 0.9;}
+    50%  {-webkit-transform: scale(1.1); opacity:0.8;}
+    75%  {-webkit-transform: scale(1); opacity:0.9;}
+    100% {-webkit-transform: scale(0.9); opacity:1;}
+}
+
+@-webkit-keyframes orbitProfile {
+    0%   {-webkit-transform:  scale(1.1); opacity:1;}
+    25%  {-webkit-transform: scale(1); opacity: 0.9;}
+    50%  {-webkit-transform: scale(0.9); opacity:0.8;}
+    75%  {-webkit-transform: scale(1); opacity:0.9;}
+    100% {-webkit-transform: scale(1.1); opacity:1;}
+}
+#Solutions img{
+animation: OrbitSolutions 5s  ease-in-out infinite;
+}
+
+#Profile img{
+  animation: orbitProfile 5s  ease-in-out infinite;
+}
