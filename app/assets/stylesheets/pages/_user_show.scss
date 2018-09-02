@@ -29,11 +29,11 @@
 
 
 @-webkit-keyframes orbitStat {
-    0%   {-webkit-transform:  scale(1); opacity:1;}
-    25%  {-webkit-transform: scale(1.1); opacity: 0.9;}
-    50%  {-webkit-transform: scale(1); opacity:0.8;}
-    75%  {-webkit-transform: scale(0.9); opacity:0.9;}
-    100% {-webkit-transform: scale(1); opacity:1;}
+    0%   {-webkit-transform:  scale(0.8); opacity:1;}
+    25%  {-webkit-transform: scale(0.9); opacity: 0.9;}
+    50%  {-webkit-transform: scale(0.8); opacity:0.8;}
+    75%  {-webkit-transform: scale(0.7); opacity:0.9;}
+    100% {-webkit-transform: scale(0.8); opacity:1;}
 }
 #Footprint img{
 animation: orbitStat 5s ease-in-out infinite;
@@ -44,19 +44,19 @@ animation: orbitStat 5s ease-in-out infinite;
 }
 
 @-webkit-keyframes OrbitSolutions {
-    0%   {-webkit-transform:  scale(0.9); opacity:1;}
-    25%  {-webkit-transform: scale(1); opacity: 0.9;}
-    50%  {-webkit-transform: scale(1.1); opacity:0.8;}
-    75%  {-webkit-transform: scale(1); opacity:0.9;}
-    100% {-webkit-transform: scale(0.9); opacity:1;}
+    0%   {-webkit-transform:  scale(0.7); opacity:1;}
+    25%  {-webkit-transform: scale(0.8); opacity: 0.9;}
+    50%  {-webkit-transform: scale(0.9); opacity:0.8;}
+    75%  {-webkit-transform: scale(0.8); opacity:0.9;}
+    100% {-webkit-transform: scale(0.7); opacity:1;}
 }
 
 @-webkit-keyframes orbitProfile {
-    0%   {-webkit-transform:  scale(1.1); opacity:1;}
-    25%  {-webkit-transform: scale(1); opacity: 0.9;}
-    50%  {-webkit-transform: scale(0.9); opacity:0.8;}
-    75%  {-webkit-transform: scale(1); opacity:0.9;}
-    100% {-webkit-transform: scale(1.1); opacity:1;}
+    0%   {-webkit-transform:  scale(0.9); opacity:1;}
+    25%  {-webkit-transform: scale(0.8); opacity: 0.9;}
+    50%  {-webkit-transform: scale(0.7); opacity:0.8;}
+    75%  {-webkit-transform: scale(0.8); opacity:0.9;}
+    100% {-webkit-transform: scale(0.9); opacity:1;}
 }
 #Solutions img{
 animation: OrbitSolutions 5s  ease-in-out infinite;
