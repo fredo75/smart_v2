@@ -1,6 +1,13 @@
-#welcome {
-  z-index:20;
-}
+// #welcome {
+//   z-index:20;
+// }
+
+@-webkit-keyframes disappearingTitle {
+    from { -webkit-transform: translateX(0px) scale(1); opacity:1; }
+    to   { -webkit-transform: translateX(150px) scale(0); opacity:0; }
+  }
+
+.welcome h1 { animation: disappearingTitle 5s ease-out 1s; }
 
 .small {
   transform:scale(1.6);
