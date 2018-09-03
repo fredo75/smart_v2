@@ -9,7 +9,7 @@ z-index:4;
   position:absolute;
   margin-left: 25vw;
   font-size:15px;
-  top: 14em;
+  top: 18em;
   width: 60vw;
 }
 
@@ -35,4 +35,8 @@ z-index:4;
   right: 7em;
    border-bottom: 1px solid #000000;
    padding-bottom: 3px;
+}
+
+.transparent {
+  opacity:0.2;
 }

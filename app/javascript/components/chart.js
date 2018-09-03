@@ -2,10 +2,10 @@ import Chart from 'chart.js'
 
 function testChart (){
   const c = document.getElementById('myChart');
+  if (c) {
   const points = JSON.parse(c.dataset.points)
   console.log(points);
 
-  if (c) {
     const ctx = c.getContext('2d');
     const chart2 = new Chart(ctx, {
       type: 'pie',
@@ -21,6 +21,7 @@ function testChart (){
         }
       },
       data: {
+        labels: ['Transport', 'Food', 'Waste', 'Energy'],
         datasets : [{
           label: "My Score",
           backgroundColor: ['rgb(240, 25, 94)','rgb(246, 242, 171)','rgb(253, 172, 98)','rgb(255, 91, 93)'],
