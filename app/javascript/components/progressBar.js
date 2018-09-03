@@ -13,8 +13,8 @@ const bar_one = new ProgressBar.Circle(container_food, {
 });
 bar_one.animate(answers_food);
 
-const answers_transport = 1/3;
 const container_transport = document.querySelector('#container_transport');
+const answers_transport = JSON.parse(container_transport.dataset.transport)/3;
 const bar_two = new ProgressBar.Circle(container_transport, {
   strokeWidth: 6,
   easing: 'easeInOut',
@@ -24,8 +24,8 @@ const bar_two = new ProgressBar.Circle(container_transport, {
 });
 bar_two.animate(answers_transport);
 
-const answers_trash = 1/1;
 const container_trash = document.querySelector('#container_trash');
+const answers_trash = JSON.parse(container_trash.dataset.trash)/2;
 const bar_three = new ProgressBar.Circle(container_trash, {
   strokeWidth: 6,
   easing: 'easeInOut',
@@ -35,8 +35,8 @@ const bar_three = new ProgressBar.Circle(container_trash, {
 });
 bar_three.animate(answers_trash);
 
-const answers_housing = 1/5;
 const container_housing = document.querySelector('#container_housing');
+const answers_housing = JSON.parse(container_housing.dataset.housing)/6;
 const bar_four = new ProgressBar.Circle(container_housing, {
   strokeWidth: 6,
   easing: 'easeInOut',

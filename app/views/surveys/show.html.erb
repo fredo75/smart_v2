@@ -9,30 +9,28 @@
     <div class='wrapper deg0' >
         <%=  link_to edit_survey_path(@survey, category: 'food') do%>
         <%= image_tag("food.png") %>
-      <div id="container_food" data-points="<%= @food.to_json %>"></div>
+      <div id="container_food" data-food="<%= @food.to_json %>"></div>
       <% end %>
     </div>
 
      <div class='wrapper deg90' >
       <%=  link_to edit_survey_path(@survey, category: 'transport') do%>
         <%= image_tag("transport.png") %>
-        <div id="container_transport" data-points="<%= @transport.to_json %>"></div>
+        <div id="container_transport" data-transport="<%= @transport.to_json %>"></div>
       <% end %>
       </div>
 
       <div class='wrapper deg180' >
       <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg180' do%>
         <%= image_tag("trash.png") %>
-         <div id="container_trash" data-points="<%= @trash.to_json %>"></div>
+         <div id="container_trash" data-trash="<%= @trash.to_json %>"></div>
       <% end %>
       </div>
 
       <div class='wrapper deg270' >
       <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
         <%= image_tag("house.png") %>
-        <div id="container_housing" data-points="<%= @housing.to_json %>"></div>
-        <% @housing %>
-        <% raise %>
+        <div id="container_housing" data-housing="<%= @housing.to_json %>"></div>
       <% end %>
     </div>
 

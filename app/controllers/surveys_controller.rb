@@ -14,6 +14,28 @@ class SurveysController < ApplicationController
 
     @user = current_user
     @survey = @user.surveys.last
+
+    @housing = 0
+    @housing += 1 if @survey.housing_type != nil
+    @housing += 1 if@survey.area != nil
+    @housing += 1 if@survey.heat_type != nil
+    @housing += 1 if @survey.adults_inhabitants != nil
+    @housing += 1 if @survey.children_inhabitants != nil
+    @housing +=1 if @survey.house_temp != nil
+
+    @trash = 0
+    @trash += 1 if@survey.upcycling != nil
+    @trash += 1 if@survey.green_invest != nil
+
+    @transport = 0
+    @transport += 1 if @survey.vehicule_km != nil
+    @transport += 1 if @survey.fuel_type != nil
+    @transport += 1 if @survey.public_transp != nil
+
+    @food =0
+    @food += 1 if @survey.vegetable_season != nil
+    @food += 1 if @survey.eating_habits != nil
+    @food += 1 if @survey.bio_buyings != nil
     # raise
 
     # redirect_to survey_path(@survey)
@@ -42,15 +64,6 @@ class SurveysController < ApplicationController
     @survey.update(survey_params)
     redirect_to survey_path(@survey)
     authorize @survey
-  end
-
-   def questionAnswered
-    @survey = Survey.find(params[:id])
-    authorize @survey
-    @housing = 10
-    #  @housing += 1 if @user.surveys.last.housing_type != nil
-    #  @housing += 1 if @user.surveys.last.adults_inhabitants != nil
-    #  @housing += 1
   end
 
   private
