@@ -28,6 +28,10 @@ class UsersController < ApplicationController
   def show
     # @user = User.find(params[:id])
     @user = current_user
+    @survey = current_user.surveys.last
+    if @survey.nil?
+      @survey = Survey.create(user: current_user)
+    end
     authorize @user
   end
 
