@@ -21,6 +21,10 @@ class UserPolicy < ApplicationPolicy
     return true
   end
 
+  def results_2?
+    return true
+  end
+
   def index?
     return true
   end

@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update] do
     get :results, on: :member
+    get :results_2, on: :member
   end
   # For details on the DSL available within this file, see http:key => "value", //guides.rubyonrails.org/routing.html
-
   get '/design', to:'pages#design'
 
 
