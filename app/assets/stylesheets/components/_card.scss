@@ -4,17 +4,18 @@
   background: white;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14);
   border-radius : 3px;
-  width: 100vw;
+  // width: 100vw;
   height: 150px;
   background-repeat: no-repeat;
-  position: relative;
+  // position: relative;
   margin: 10px;
   background-size: 250px;
   opacity:0.9;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   padding:10px;
   border-radius: 6px;
+  justify-content: space-between;
 }
 
 .title {
@@ -32,7 +33,6 @@ width: 100%;
 justify-content:space-around;
 }
 
-
 .created-at {
   font-size:12px;
   text-align:center;
@@ -41,13 +41,20 @@ justify-content:space-around;
 }
 
 .eco-photo {
+  height:150px;
+  width:150px;
+  box-flex: 0;
+  background-size:cover;
+  border-radius: 10px;
+}
+
+.eco-photo-index {
   height:100px;
   width:100px;
   box-flex: 0;
   background-size:cover;
   border-radius: 10px;
 }
-
 .selected {
  box-shadow: 3px 3px 2px #888888
 }
@@ -69,10 +76,14 @@ justify-content:space-around;
 }
 
 .card-description {
-  width: 220px;
+  // width: 220px;
+  flex: 1 0;
   text-align:left;
   padding:10px;
+  display: flex;
+  justify-content: space-between;
 }
+
 .card-description h2 {
   color: black;
   border-radius: 3px;
@@ -146,25 +157,59 @@ justify-content:space-around;
   width:100%;
 }
 
-.inline {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  display:flex;
+.vertical-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items:center;
-  justify-content:space-around;
+}
+
+.inline {
+  // position: absolute;
+  // right: 20px;
+  // top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  // align-self: flex-start;
 }
 
 .score {
   // position:absolute;
   // right: 60px;
   // top: 10px;
-  font-size: 10px;
+  font-size: 15px;
   border-style: solid;
   border-radius: 7px;
-  background-color: light grey;
+  background-color: #42DFBE;
+  border-color: #6DB3D0;
   border-width: 2px;
-  width: 50px;
+  min-width: 50px;
   text-align:center;
   margin-right:10px;
+}
+
+.score-large {
+  font-size: 30px;
+  border-style: solid;
+  border-radius: 7px;
+  background-color: #42DFBE;
+  border-color: #6DB3D0;
+  border-width: 2px;
+  text-align:center;
+  min-width: 50px;
+  margin-right:10px;
+}
+
+.toggle {
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.toggle-title {
+  font-size: 10px;
 }

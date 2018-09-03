@@ -19,3 +19,15 @@ function calculEcoAction() {
 
 }
 export {calculEcoAction}
+
+
+function toggleAddedSurvey() {
+  const allforms = document.querySelectorAll(".form-toggle");
+  allforms.forEach((formItem)=> {
+    const button = formItem.querySelector("input[type=checkbox]")
+    button.addEventListener("change", (event) => {
+      formItem.submit();
+    })
+  })
+}
+export {toggleAddedSurvey}
