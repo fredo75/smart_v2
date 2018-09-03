@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :surveys, only: [:show, :edit, :create, :update]
   resources :eco_actions
   resources :profiles, only: [:show, :edit, :update]
+  resources :members, only: [:show, :index]
   devise_for :users
   root to: 'users#show'
 
