@@ -20,17 +20,10 @@ import{formSlider} from '../components/form_slider';
   formSlider();
  }
 
-
-// import {testChart} from '../components/chart';
-// testChart();
-
-// import {calculEcoAction} from '../components/eco_action';
-// if () {
-// calculEcoAction();
-// }
-
 import {progressBar} from '../components/progressBar';
+if (document.getElementById('container_trash')) {
 progressBar();
+}
 
 
 import {calculEcoAction} from '../components/eco_action';

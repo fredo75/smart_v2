@@ -15,7 +15,7 @@
     position: absolute;
     width: 6em;
     height: 6em;
-    left:1.5em;
+    left:2em;
 }
 
 .wrapper > .progress {
@@ -88,6 +88,9 @@ z-index: 10;
       width: 5em;
       height: 5em;
       border-radius: 50px;
+      border-style:solid;
+      border-width:5px;
+      border-color:red;
     }
 }
 .deg0, .deg90, .deg180, .deg270 {
