@@ -21,8 +21,8 @@ import{formSlider} from '../components/form_slider';
  }
 
 
-// import {testChart} from '../components/chart';
-// testChart();
+import {testChart} from '../components/chart';
+testChart();
 
 // import {calculEcoAction} from '../components/eco_action';
 // if () {
