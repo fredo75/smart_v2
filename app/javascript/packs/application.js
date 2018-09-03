@@ -29,3 +29,5 @@ testChart();
 // calculEcoAction();
 // }
 
+import {progressBar} from '../components/progressBar';
+progressBar();

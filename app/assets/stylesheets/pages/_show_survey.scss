@@ -11,6 +11,32 @@
  }
  }
 
+ .wrapper {
+    position: absolute;
+    width: 6em;
+    height: 6em;
+    left:1.5em;
+}
+
+.wrapper > .progress {
+    /* Needs appropriate vendor prefixes */
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 6em;
+    width:7em;
+    box-sizing: border-box;
+}
+
+
+#container_food, #container_transport, #container_trash, #container_housing {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  height: 5em;
+
+}
 .margin {
   top: 2em;
 }
@@ -61,6 +87,7 @@ z-index: 10;
     img{
       width: 5em;
       height: 5em;
+      border-radius: 50px;
     }
 }
 .deg0, .deg90, .deg180, .deg270 {
