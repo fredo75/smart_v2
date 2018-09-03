@@ -29,3 +29,7 @@ testChart();
 // calculEcoAction();
 // }
 
+import {openNavigation} from '../components/navigation';
+  if (document.querySelector('.planet-navbar')){
+    openNavigation();
+  }
