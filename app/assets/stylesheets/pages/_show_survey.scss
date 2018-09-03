@@ -18,17 +18,6 @@
     left:2em;
 }
 
-.wrapper > .progress {
-    /* Needs appropriate vendor prefixes */
-    position:absolute;
-    top: 0;
-    left: 0;
-    height: 6em;
-    width:7em;
-    box-sizing: border-box;
-}
-
-
 #container_food, #container_transport, #container_trash, #container_housing {
   position:absolute;
   top: 0;

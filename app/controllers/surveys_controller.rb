@@ -44,6 +44,15 @@ class SurveysController < ApplicationController
     authorize @survey
   end
 
+   def questionAnswered
+    @survey = Survey.find(params[:id])
+    authorize @survey
+    @housing = 10
+    #  @housing += 1 if @user.surveys.last.housing_type != nil
+    #  @housing += 1 if @user.surveys.last.adults_inhabitants != nil
+    #  @housing += 1
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_survey

@@ -83,21 +83,6 @@ class Survey < ApplicationRecord
     @new_green_invest = (self.green_invest || 0)
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   def eco_action_cat_transport
     @eco_actions = self.user.eco_actions.all
     @eco_action_cat_transport = 0
