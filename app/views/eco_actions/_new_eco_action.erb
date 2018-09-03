@@ -1,9 +1,9 @@
-<div class="modal fade" id="eco_action_details_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="new_eco_action" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <h5 class="modal-title" id="exampleModalLabel">New Eco Action</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -11,7 +11,7 @@
 
       <div style="background-color: white;">
         <div class="modal-body">
-          <%= simple_form_for(user) do |l| %>
+          <%= simple_form_for(eco_action) do |l| %>
             <div class='col-sm-14 ' style="background-color: white;" align="center">
               <div class="form-inline" data-inline="true">
                 <%= l.input :title, as: :string  %>
