@@ -84,6 +84,22 @@ class Survey < ApplicationRecord
     @new_green_invest = (self.green_invest || 0)
   end
 
+  def Eco_action_score
+    @eco_action_score = 0
+    @user = @Survey.user
+    @eco_actions = @user.EcoAction.all
+    @eco_actions.each do |eco_action|
+      if eco_action.added_to_survey?
+        @eco_action_score += eco_action.eco_scoring_total
+      else
+      end
+    end
+
+  end
+
+
+
+
 
   def total_user_score
     society_factor = 1.2
