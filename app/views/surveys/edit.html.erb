@@ -1,17 +1,16 @@
+
 <% case params[:category] %>
 <% when "energy" %>
-  <h1>My energy footprint</h1>
+  <h1 class="header_form">POWER-print</h1>
 <% when "transport" %>
-  <h1>My transport footprint</h1>
+  <h1 class="header_form">TRAVEL-print</h1>
 <% when "investment" %>
-  <h1>My investment footprint</h1>
+  <h1 class="header_form">INVESTMENT-print</h1>
 <% when "food" %>
-  <h1>My food footprint</h1>
+  <h1 class="header_form">FOOD-print</h1>
 <% when "waste" %>
-  <h1>My waste footprint</h1>
+  <h1 class="header_form">TRASH-print</h1>
 <% end %>
 
 <%= render 'form', survey: @survey %>
 
-<%= link_to 'Show', @survey %>
-<%= link_to 'Back', survey_path %>

@@ -1,7 +1,12 @@
-<div class="gradient">
+
   <div class="choices" id="step_1">
     <%= f.input :upcycling, as: :radio_buttons, collection: Survey::UPCYCLING, wrapper: :vertical_collection_inline, label: "How much do you recycle?" %>
+    <p id="step_1_button" class="next_button_style">NEXT</p>
   </div>
-</div>
+  <div class="choices hidden" id="step_2">
+  <%= f.input :green_invest, as: :radio_buttons, collection: Survey::INVEST, wrapper: :vertical_collection_inline, label: "How much do you invest in the green economy?" %>
+  </div>
+  <div>
+  </div>
 
-<%= f.input :green_invest, as: :radio_buttons, collection: Survey::INVEST, wrapper: :vertical_collection_inline %>
+

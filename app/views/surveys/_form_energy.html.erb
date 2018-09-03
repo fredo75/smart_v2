@@ -1,28 +1,27 @@
-<div class="gradient">
+
   <div class="choices" id="step_1">
-    <%= f.input :housing_type, as: :radio_buttons, collection: Survey::TYPE_HOUSE, wrapper: :vertical_collection_inline, label: "What is your accomodation type?" %>
-    <p id="step_1_button">NEXT</p>
+    <%= f.input :housing_type, as: :radio_buttons, collection: Survey::TYPE_HOUSE, wrapper: :vertical_collection_inline, label: "Your accomodation type?" %>
+    <p id="step_1_button" class="next_button_style">NEXT</p>
   </div>
   <div class="choices hidden" id="step_2">
-   <%= f.input :area, as: :radio_buttons, collection: Survey::AREA, wrapper: :vertical_collection_inline, label: "What is the surface area of your accomodation?" %>
-   <p id="step_2_button">NEXT</p>
+   <%= f.input :area, as: :radio_buttons, collection: Survey::AREA, wrapper: :vertical_collection_inline, label: "Surface area of your accomodation?" %>
+   <p id="step_2_button" class="next_button_style">NEXT</p>
   </div>
   <div class="choices hidden" id="step_3">
-    <%= f.input :heat_type, as: :radio_buttons, collection: Survey::HEAT_TYPE, wrapper: :vertical_collection_inline, label: "What type of heating do you use?" %>
-    <p id="step_3_button">NEXT</p>
+    <%= f.input :heat_type, as: :radio_buttons, collection: Survey::HEAT_TYPE, wrapper: :vertical_collection_inline, label: "Type of heating used?" %>
+    <p id="step_3_button" class="next_button_style">NEXT</p>
   </div>
   <div class="choices hidden" id="step_4">
-    <%= f.input :adults_inhabitants, as: :radio_buttons, collection: Survey::ADULTS_INHABITANTS, wrapper: :vertical_collection_inline, label:"How many adults live in your house?" %>
-    <p id="step_4_button">NEXT</p>
+    <%= f.input :adults_inhabitants, as: :radio_buttons, collection: Survey::ADULTS_INHABITANTS, wrapper: :vertical_collection_inline, label:"Number of adults in your house?" %>
+    <p id="step_4_button" class="next_button_style">NEXT</p>
   </div>
   <div class="choices hidden" id="step_5" >
-    <%= f.input :children_inhabitants, as: :radio_buttons, collection: Survey::CHILDREN_INHABITANTS, wrapper: :vertical_collection_inline, label:"How many children live in your house?" %>
-    <p id="step_5_button">NEXT</p>
+    <%= f.input :children_inhabitants, as: :radio_buttons, collection: Survey::CHILDREN_INHABITANTS, wrapper: :vertical_collection_inline, label:"Number of children in your house?" %>
+    <p id="step_5_button" class="next_button_style">NEXT</p>
   </div>
   <div class="choices hidden" id="step_6" >
-    <%= f.input :house_temp, as: :radio_buttons, collection: Survey::TEMPERATURE, wrapper: :vertical_collection_inline, label:"What is your house temperature?" %>
+    <%= f.input :house_temp, as: :radio_buttons, collection: Survey::TEMPERATURE, wrapper: :vertical_collection_inline, label:"Your house temperature?" %>
   </div>
-</div>
 
 
 

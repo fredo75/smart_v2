@@ -6,36 +6,38 @@ function iconAnimation () {
   const trash = document.querySelector ('.deg90');
   const house = document.querySelector ('.deg270');
   const header = document.querySelector('.header');
-
   const text = document.getElementById('pick');
-
-  if (planet) {
-  planet.addEventListener('touchend', () => {
+  function explode (){
     if (transport) {
-      transport.classList.toggle('move');
-    }
-    if (food) {
-      food.classList.toggle('move');
-    }
-    if (trash) {
-      trash.classList.toggle('move');
-    }
-    if (house) {
-      house.classList.toggle('move');
-    }
-    if (header) {
-      header.classList.toggle('hide_title');
-    }
+        transport.classList.toggle('move');
+      }
+      if (food) {
+        food.classList.toggle('move');
+      }
+      if (trash) {
+        trash.classList.toggle('move');
+      }
+      if (house) {
+        house.classList.toggle('move');
+      }
+      if (header) {
+        header.classList.toggle('hide_title');
+      }
 
-    if (text) {
-      text.classList.toggle('show')
-    }
-    planet.classList.toggle('move');
-  })
+      if (text) {
+        text.classList.toggle('show')
+      }
+      planet.classList.toggle('move');
+
+  }
+  if (header) {
+  window.setTimeout( explode, 200);
+
   }
 
-
 }
+
+
 
 // function textAnimation () {
 //   const food = document.querySelector ('.deg0');
