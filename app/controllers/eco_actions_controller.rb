@@ -54,8 +54,21 @@ class EcoActionsController < ApplicationController
   # PATCH/PUT /eco_actions/1
   # PATCH/PUT /eco_actions/1.json
   def update
+
     @eco_action.update(eco_action_params)
-    redirect_to eco_action_path(@eco_action)
+
+    if @eco_action.eco_impact?
+    @eco_action.eco_scoring_total = @eco_action.eco_impact * @eco_action.eco_scoring_unit.to_i
+    else
+    @eco_action.eco_scoring_total = 0
+    end
+    @eco_action.save
+
+    if request.referer.include?('results_2')
+      redirect_to results_2_user_path(current_user)
+    else
+      redirect_to eco_actions_path
+    end
     authorize @eco_action
   end
 
@@ -71,7 +84,7 @@ class EcoActionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def eco_action_params
-      params.require(:eco_action).permit(:title, :description, :user, :photo, :eco_category, :eco_impact, :eco_scoring_total, :eco_scoring_unit)
+      params.require(:eco_action).permit(:title, :description, :user, :photo, :eco_category, :eco_impact, :added_to_survey, :eco_scoring_total, :eco_scoring_unit)
     end
 end
 

@@ -21,8 +21,8 @@ import{formSlider} from '../components/form_slider';
  }
 
 
-import {testChart} from '../components/chart';
-testChart();
+// import {testChart} from '../components/chart';
+// testChart();
 
 // import {calculEcoAction} from '../components/eco_action';
 // if () {
@@ -31,3 +31,16 @@ testChart();
 
 import {progressBar} from '../components/progressBar';
 progressBar();
+
+
+import {calculEcoAction} from '../components/eco_action';
+
+calculEcoAction();
+
+import {toggleAddedSurvey} from '../components/eco_action';
+
+if (document.querySelector(".container-card")) {
+  toggleAddedSurvey();
+}
+
+
