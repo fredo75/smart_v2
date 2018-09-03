@@ -11,6 +11,21 @@
  }
  }
 
+ .wrapper {
+    position: absolute;
+    width: 6em;
+    height: 6em;
+    left:2em;
+}
+
+#container_food, #container_transport, #container_trash, #container_housing {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  height: 5em;
+
+}
 .margin {
   top: 2em;
 }
@@ -61,6 +76,10 @@ z-index: 10;
     img{
       width: 5em;
       height: 5em;
+      border-radius: 50px;
+      border-style:solid;
+      border-width:5px;
+      border-color:red;
     }
 }
 .deg0, .deg90, .deg180, .deg270 {

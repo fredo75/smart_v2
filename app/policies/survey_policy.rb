@@ -34,5 +34,9 @@ class SurveyPolicy < ApplicationPolicy
     record.user == user
   end
 
+   def questionAnswered?
+    return true
+  end
+
 
 end
