@@ -54,8 +54,21 @@ class EcoActionsController < ApplicationController
   # PATCH/PUT /eco_actions/1
   # PATCH/PUT /eco_actions/1.json
   def update
+
     @eco_action.update(eco_action_params)
-    redirect_to eco_actions_path
+
+    if @eco_action.eco_impact?
+    @eco_action.eco_scoring_total = @eco_action.eco_impact * @eco_action.eco_scoring_unit.to_i
+    else
+    @eco_action.eco_scoring_total = 0
+    end
+    @eco_action.save
+
+    if request.referer.include?('results_2')
+      redirect_to results_2_user_path(current_user)
+    else
+      redirect_to eco_actions_path
+    end
     authorize @eco_action
   end
 

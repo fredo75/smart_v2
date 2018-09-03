@@ -1,28 +1,35 @@
 <div class="gradient">
 
-<%= link_to user_path(current_user), class:'back' do %>
-  <i class="far fa-times-circle"></i>
-<% end %>
+  <%= link_to user_path(current_user), class:'back' do %>
+    <i class="far fa-times-circle"></i>
+  <% end %>
 
-<p style="margin-left: 1em; margin-top: 1em;"> My score </p>
-  <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
+  <%= link_to results_2_user_path(@user), class:'back' do %>
+    <i class="fas fa-search-plus"></i>
+  <% end %>
 
-  </canvas>
+  <p style="margin-left: 1em; margin-top: 1em;"> My score </p>
+    <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
+
+    </canvas>
 
 
-  <%# if @survey.food_score.nil? %>
-  <%# else %>
-  <%#= @users.surveys.last.food_score %>
-  <%# end %>
-  <%#= @survey.energy_score %>
-  <%#= @survey.transportation_score %>
-  <%#= @survey.upcycling_calculation %>
-  <%#= @survey.total_user_score %>
+    <%# if @survey.food_score.nil? %>
+    <%# else %>
+    <%#= @users.surveys.last.food_score %>
+    <%# end %>
+    <%#= @survey.energy_score %>
+    <%#= @survey.transportation_score %>
+    <%#= @survey.upcycling_calculation %>
+    <%#= @survey.total_user_score %>
 
-    <h1 style="position:absolute; top: 3.25em; right:2.5em;"> <%= @final_score %></h1>
-  <p style="margin: 2em;"> National Average </p>
-  <canvas id="myChart2" align="center">
-  </canvas>
-    <h1 style="position:absolute; top: 9em; left:2em;"> <%= 22.16 %></h1>
+      <h1 style="position:absolute; top: 3.25em; right:2.5em;"> <%= @final_score %></h1>
+    <p style="margin: 2em;"> National Average </p>
+    <canvas id="myChart2" align="center">
+    </canvas>
+      <h1 style="position:absolute; top: 9em; left:2em;"> <%= 22.16 %></h1>
+
+
+
 
 </div>
