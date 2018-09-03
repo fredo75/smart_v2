@@ -11,6 +11,9 @@ class SurveysController < ApplicationController
   # GET /surveys/1
   # GET /surveys/1.json
   def show
+    # @survey = Survey.find(params[:id])
+    @user = current_user
+    @survey = @user.surveys.last
     authorize @survey
   end
 
