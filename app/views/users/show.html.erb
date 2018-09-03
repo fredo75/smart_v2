@@ -1,13 +1,14 @@
 <div class='gradient'>
   <div class="box" style="padding-top:1em;">
-    <div class="box_item"  style="position: absolute;left: 2em;margin-top: 2em;">
-        <%= link_to surveys_path, method: :post, class:'footprint' do   %>
+
+    <div class="box_item" id="Footprint"  style="position: absolute;left: 2em;margin-top: 2em;">
+        <%= link_to survey_path(@survey), class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
       <% end %>
       <p>Get started !</p>
     </div>
 
-    <div class="box_item box_right">
+    <div class="box_item box_right" id="Solutions">
     <p>Eco-actions</p>
       <%= link_to eco_actions_path, class:'solutions' do %>
       <%= image_tag("solutions.png") %>
@@ -21,15 +22,15 @@
     <h1 id="Welcome" align="center">Welcome</h1>
   </div>
 
-  <div class="box">
-    <div class="box_item" style="position: absolute;left: 2em;">
+  <div class="box" >
+    <div class="box_item" id="Profile" style="position: absolute;left: 2em;">
       <%= link_to profile_path(current_user), class:'user' do  %>
       <%= image_tag("profile.png") %>
     <% end %>
     <p>My profile</p>
     </div>
 
-    <div class="box_item box_right">
+    <div class="box_item box_right" id="Stat">
     <p>My results</p>
     <% if @user.surveys.present? %>
       <% @user.surveys.first.total_user_score %>

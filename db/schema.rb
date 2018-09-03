@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_31_091916) do
+ActiveRecord::Schema.define(version: 2018_09_02_125957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,30 @@ ActiveRecord::Schema.define(version: 2018_08_31_091916) do
     t.string "eco_scoring_unit"
     t.integer "eco_scoring_total"
     t.integer "eco_impact"
+    t.boolean "added_to_survey", default: false
     t.index ["user_id"], name: "index_eco_actions_on_user_id"
+  end
+
+  create_table "points", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "value"
+    t.string "category"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_points_on_user_id"
+  end
+
+  create_table "scorecards", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "daily"
+    t.integer "weekly"
+    t.integer "monthly"
+    t.integer "yearly"
+    t.integer "lifetime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_scorecards_on_user_id"
   end
 
   create_table "surveys", force: :cascade do |t|
