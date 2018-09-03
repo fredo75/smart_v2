@@ -1,15 +1,14 @@
 <div class='navbar-container'>
   <div class='earth-container'>
-  <%= image_tag("earth.png", class:'planet-navbar') %>
 
   <div class="button-navbar button-profile box_item">
     <% if current_user.nil? %>
       <%= link_to user_session_path do %>
-        <%= image_tag("footprint.png") %>
+        <%= image_tag("profile.png") %>
       <% end %>
     <% else %>
-      <%= link_to profile_path(current_user) do   %>
-        <%= image_tag("footprint.png") %>
+      <%= link_to profile_path(current_user) do%>
+        <%= image_tag("profile.png") %>
       <% end %>
     <% end %>
     <p>Profile</p>
@@ -19,7 +18,7 @@
       <%= link_to surveys_path, method: :post, class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
       <% end %>
-      <p>Get started !</p>
+      <p>Start!</p>
   </div>
 
   <div class="button-navbar button-results box_item">
@@ -40,6 +39,7 @@
 
   </div>
 
+  <%= image_tag("earth.png", class:'planet-navbar') %>
 
   </div>
 </div>

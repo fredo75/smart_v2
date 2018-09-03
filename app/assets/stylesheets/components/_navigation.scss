@@ -4,7 +4,6 @@
   z-index: 3;
   width: 100vw;
   height: 220px;
-  background-color: red;
   overflow: hidden;
 
   .earth-container{
@@ -14,23 +13,24 @@
     overflow: hidden;
     top: 5%;
   }
-  .planet-navbar {
+  .planet-navbar{
     display: block;
     position: absolute;
+    width: 5em;
+    bottom: 0.5em;
+    left: 0em;
+  }
+  .planet-navbar.open {
     width: 23em;
-    opacity: 1;
-    bottom: 0;
-    left: 0;
-    margin-bottom: -68%;
-    margin-left: -45%;
+    bottom: -16em;
+    left: -8em;
 
   }
   .button-navbar{
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 110px;
     text-align: center;
-    padding-top: 25px;
     font-size: 16px;
     left: 0;
     bottom: 0;
@@ -38,6 +38,14 @@
       height: 80px;
       width: 80px;
       animation: orbitStat 5s ease-in-out infinite;
+    }
+    p{
+      margin-top: -4px;
+      padding: 0;
+    }
+    a{
+      margin: 0;
+      padding: 0;
     }
   }
   .button-profile.open{
