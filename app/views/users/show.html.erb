@@ -1,7 +1,7 @@
 <div class='gradient'>
   <div class="box" style="padding-top:1em;">
     <div class="box_item" id="Footprint"  style="position: absolute;left: 2em;margin-top: 2em;">
-        <%= link_to surveys_path, method: :post, class:'footprint' do   %>
+        <%= link_to survey_path(@survey), class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
       <% end %>
       <p>Get started !</p>
