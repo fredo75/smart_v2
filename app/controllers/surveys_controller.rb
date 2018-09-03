@@ -11,10 +11,11 @@ class SurveysController < ApplicationController
   # GET /surveys/1
   # GET /surveys/1.json
   def show
+    # raise
     @user = current_user
     @survey = @user.surveys.last
     # raise
-    redirect_to survey_path(@survey)
+    # redirect_to survey_path(@survey)
     authorize @survey
   end
 
@@ -28,7 +29,6 @@ class SurveysController < ApplicationController
   # POST /surveys.json
   def create
     @survey = Survey.create(user: current_user)
-    # raise
     redirect_to survey_path(@survey)
     authorize @survey
   end
