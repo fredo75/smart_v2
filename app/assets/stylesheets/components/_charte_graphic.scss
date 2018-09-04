@@ -1,12 +1,15 @@
 .gradient {
 width: 100vw;
-height: calc(100vh - 142px);
+height: 100vh;
+padding-bottom: 142px;
+
 // background: -webkit-linear-gradient(#37ebba, #72aed3);
 // background: -o-linear-gradient(#37ebba, #72aed3);
 // background: linear-gradient(#37ebba, #72aed3);
 }
 
 body {
+  height: 100%;
   background: -webkit-linear-gradient(#37ebba, #72aed3);
   background: -o-linear-gradient(#37ebba, #72aed3);
   background: linear-gradient(#37ebba, #72aed3);
