@@ -22,9 +22,10 @@
   </div>
 
   <div class="button-navbar button-results box_item">
-    <% if @user.surveys.present? %>
-      <% @user.surveys.first.total_user_score %>
-      <%= link_to results_user_path(@user),class:'stat' do %>
+    <% if @eco_actions.nil? %>
+      <%= link_to eco_actions_path, class:'solutions' do %>
+      <%# @user.surveys.first.total_user_score %>
+      <%#= link_to results_user_path(@user),class:'stat' do %>
       <%= image_tag("stat.png") %>
       <% end %>
     <% end %>
