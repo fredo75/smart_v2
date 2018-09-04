@@ -15,10 +15,15 @@
   </div>
 
   <div class="button-navbar button-survey-categories box_item" >
+    <% if @survey.nil? %>
+      <%= link_to survey_path(current_user), class:'footprint' do   %>
+      <% end %>
+    <% else %>
       <%= link_to survey_path(@survey), class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
-      <% end %>
       <p>Start!</p>
+    <% end %>
+  <% end %>
   </div>
 
   <div class="button-navbar button-results box_item">
