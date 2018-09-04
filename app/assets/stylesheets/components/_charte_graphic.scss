@@ -1,6 +1,6 @@
 .gradient {
 width: 100vw;
-height: 100vh;
+height: calc(100vh - 142px);
 // background: -webkit-linear-gradient(#37ebba, #72aed3);
 // background: -o-linear-gradient(#37ebba, #72aed3);
 // background: linear-gradient(#37ebba, #72aed3);
@@ -8,8 +8,8 @@ height: 100vh;
 
 body {
   background: -webkit-linear-gradient(#37ebba, #72aed3);
- background: -o-linear-gradient(#37ebba, #72aed3);
- background: linear-gradient(#37ebba, #72aed3);
+  background: -o-linear-gradient(#37ebba, #72aed3);
+  background: linear-gradient(#37ebba, #72aed3);
 }
 .avatar {
   width: 90px;

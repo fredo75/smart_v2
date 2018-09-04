@@ -45,6 +45,7 @@ class UsersController < ApplicationController
       @survey = Survey.create(user: current_user)
     end
     authorize @user
+    render layout: "home_without_navbar"
   end
 
   private

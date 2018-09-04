@@ -1,0 +1,26 @@
+<div class= gradient>
+
+
+
+  <p class= text-center>My friends</p>
+
+  <% @users.each do | user |%>
+
+    <div class="message grad">
+      <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
+      <div class="message-name">
+        <h3><%= user.username %></h3>
+        <p><%= Date.today %></p>
+      </div>
+      <div class="message-body">
+        <p><strong>I am not sure yet!</strong></p>
+
+      </div>
+      <div class="message-status">
+        <p class="status pending">score</p>
+        <p class="score"><%= user.surveys.last&.total_user_score %></p>
+      </div>
+    </div>
+  <% end  %>
+</div>
+

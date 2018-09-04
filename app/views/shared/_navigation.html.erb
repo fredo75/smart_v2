@@ -1,0 +1,47 @@
+<div class='navbar-container'>
+  <div class='earth-container'>
+
+  <div class="button-navbar button-profile box_item">
+    <% if current_user.nil? %>
+      <%= link_to user_session_path do %>
+        <%= image_tag("profile.png") %>
+      <% end %>
+    <% else %>
+      <%= link_to profile_path(current_user) do%>
+        <%= image_tag("profile.png") %>
+      <% end %>
+    <% end %>
+    <p>Profile</p>
+  </div>
+
+  <div class="button-navbar button-survey-categories box_item" >
+      <%= link_to surveys_path, method: :post, class:'footprint' do   %>
+      <%= image_tag("footprint.png") %>
+      <% end %>
+      <p>Start!</p>
+  </div>
+
+  <div class="button-navbar button-results box_item">
+    <% if @eco_actions.nil? %>
+      <%= link_to eco_actions_path, class:'solutions' do %>
+      <%# @user.surveys.first.total_user_score %>
+      <%#= link_to results_user_path(@user),class:'stat' do %>
+      <%= image_tag("stat.png") %>
+      <% end %>
+    <% end %>
+    <p>Results</p>
+  </div>
+
+  <div class="button-navbar button-ecoactions box_item">
+
+    <%= link_to eco_actions_path, class:'solutions' do %>
+      <%= image_tag("solutions.png") %>
+    <% end %>
+    <p>Eco-actions</p>
+
+  </div>
+
+  <%= image_tag("earth.png", class:'planet-navbar') %>
+
+  </div>
+</div>
