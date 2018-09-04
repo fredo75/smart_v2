@@ -1,0 +1,52 @@
+<div class="modal fade" id="new_eco_action" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Eco Action</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div style="background-color: white;">
+        <div class="modal-body">
+          <%= simple_form_for eco_action do |f| %>
+          <div class="container-form">
+            <h4>Category:</h4>
+            <div class="button-icons">
+              <% EcoAction::CATEGORIES.each do |category| %>
+              <div>
+                <%= image_tag "#{category}.png", height: 50, data: {name: category} %>
+              </div>
+              <% end %>
+            </div>
+
+            <%= f.input :eco_category, as: :hidden, label: false %>
+            <h4>Title:</h4>
+            <%= f.input :title, label: false, placeholder: 'Title' %>
+            <h4>Description:</h4>
+            <%= f.input :description, label: false, placeholder: 'Description' %>
+
+            <div class="sentence"><p>What is the impact of your Eco Action (yearly basis)?</p></div>
+            <div class="impact">
+              <%= f.input :eco_impact, label: false, :input_html => {:style => 'width: 100px'} %>
+
+              <%= f.input :eco_scoring_unit, include_blank: false, collection: EcoAction::UNITS, label: false %>
+            </div>
+            <h4>Add a photo!</h4>
+            <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+            </div>
+            <%= f.input :photo, label: false %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.button :submit, label:"hello", class: "button"%>
+            <% end %>
+            <p></p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

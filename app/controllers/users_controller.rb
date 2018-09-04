@@ -24,10 +24,26 @@ class UsersController < ApplicationController
       @final_score = @user.surveys.last.total_user_score
   end
 
+    def results_2
+    @user = User.find(params[:id])
+    authorize @user
+    @points = [
+      @user.surveys.last.transportation_score_updated,
+      @user.surveys.last.food_score_updated,
+      @user.surveys.last.upcycling_calculation_updated,
+      @user.surveys.last.energy_score_updated,
+    ]
+      @final_score = @user.surveys.last.total_user_score_updated
+  end
+
 
   def show
     # @user = User.find(params[:id])
     @user = current_user
+    @survey = current_user.surveys.last
+    if @survey.nil?
+      @survey = Survey.create(user: current_user)
+    end
     authorize @user
   end
 

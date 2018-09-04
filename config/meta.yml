@@ -1,0 +1,5 @@
+meta_product_name: "Green-Impact"
+meta_title: "Green-Impact - A funny tool to assess your environmental footprint !"
+meta_description: "A funny tool to assess your environmental footprint"
+meta_image: "earth.png"                       # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

@@ -1,50 +1,79 @@
 
-<div class="buttons-eco btn">
+<div class=" buttons-eco btn">
   <%= link_to user_path(current_user), class:'button' do %>
-    <i class="fas fa-arrow-left"></i>
+  <i class="fas fa-arrow-left"></i>
   <% end %>
 
-  <%= link_to new_eco_action_path, class:'button' do %>
-    <i class="fas fa-plus"></i>
-  <% end %>
+  <div class="button">
+     <i class="fas fa-plus" data-toggle="modal" data-target="#new_eco_action"></i>
+  </div>
+
 </div>
 
 <% if @eco_actions.empty? %>
-  <h5>no eco actions yet!!</h5>
+<h5>no eco actions yet!!</h5>
 <% else %>
-  <div class="container-card">
-      <div class="row">
-        <% @eco_actions.each do |eco_action| %>
-        <div class="col-xs-12">
-            <div class="card" >
-              <% if eco_action.photo.present? %>
-                <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path eco_action.photo, height: 100, width: 100 %>')">
-                </div>
-              <% else  %>
-                <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
-                  </div>
-              <% end %>
-              <div class="card-description">
-                <div class="title">
-                  <h5><%= eco_action.title %></h5>
-                </div>
-                <div class="inline">
-                  <div class="score">
-                    <%= eco_action.eco_scoring_total %>
-                  </div>
-                  <div class="category">
-                    <% if eco_action.eco_category.present? %>
-                    <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
-                    <% else  %>
-                    <%= image_tag "interogation.jpg", height: 20 %>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-              <%= link_to '', eco_action_path(eco_action.id), class: "card-link" %>
-            </div>
+<div class="container-card">
+  <div class="row">
+    <% @eco_actions.each do |eco_action| %>
+    <div class="col-xs-12">
+      <div class="card" >
+        <% if eco_action.photo.present? %>
+        <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path eco_action.photo, height: 100, width: 100 %>')">
+        </div>
+        <% else  %>
+        <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
         </div>
         <% end %>
+        <div class="card-description">
+          <div class="title">
+            <h5><%= eco_action.title %></h5>
+          </div>
+
+          <%= link_to '', eco_action_path(eco_action.id), class: "card-link" %>
+
+        </div>
+
+        <div class="vertical-flexbox">
+
+          <div class="inline">
+            <div class="score">
+              <%= eco_action.eco_scoring_total %>
+            </div>
+            <div class="category">
+              <% if eco_action.eco_category.present? %>
+              <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
+              <% else  %>
+              <%= image_tag "interogation.jpg", height: 20 %>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="toggle" >
+            <div class="toggle-title">Join it!</div>
+            <%= simple_form_for eco_action, html: {class: "form-toggle"} do |f| %>
+            <div class="spe-toggle">
+              <label class="switch">
+                <%= f.input_field :added_to_survey, {
+                  data: { toggle: 'toggle', size: 'small' }
+                }
+                %>
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <%#= f.submit %>
+            <% end %>
+          </div>
+
+        </div>
       </div>
+    </div>
+    <% end %>
   </div>
+</div>
+
 <% end %>
+
+
+
+  <%= render 'new_eco_action', eco_action: EcoAction.new %>

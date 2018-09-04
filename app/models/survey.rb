@@ -34,7 +34,6 @@ class Survey < ApplicationRecord
   def food_score
 
     @food_score = (food_calculation_adult || 0) + (food_calculation_children || 0) + (vegetable_calculation || 0) + (eating_habits_calculation || 0) + (bio_buying_calculation || 0)
-
   end
 
   def housing_type_area_calculation
@@ -83,6 +82,118 @@ class Survey < ApplicationRecord
   def green_invest_calculation
     @new_green_invest = (self.green_invest || 0)
   end
+
+  def eco_action_cat_transport
+    @eco_actions = self.user.eco_actions.all
+    @eco_action_cat_transport = 0
+    @eco_actions.each do |eco_action|
+      if eco_action.eco_category == "transport" && eco_action.added_to_survey
+        @eco_action_cat_transport += eco_action.eco_scoring_total
+      end
+    end
+    return @eco_action_cat_transport
+  end
+
+  def eco_action_cat_food
+    @eco_actions = self.user.eco_actions.all
+    @eco_action_cat_food = 0
+    @eco_actions.each do |eco_action|
+      if eco_action.eco_category == "food" && eco_action.added_to_survey
+        @eco_action_cat_food += eco_action.eco_scoring_total
+      end
+    end
+    return @eco_action_cat_food
+  end
+
+  def eco_action_cat_energy
+    @eco_actions = self.user.eco_actions.all
+    @eco_action_cat_energy = 0
+    @eco_actions.each do |eco_action|
+      if eco_action.eco_category == "house" && eco_action.added_to_survey
+        @eco_action_cat_energy += eco_action.eco_scoring_total
+      end
+    end
+    return @eco_action_cat_energy
+  end
+
+  def eco_action_cat_waste
+    @eco_actions = self.user.eco_actions.all
+    @eco_action_cat_waste = 0
+    @eco_actions.each do |eco_action|
+      if eco_action.eco_category == "trash" && eco_action.added_to_survey
+        @eco_action_cat_waste += eco_action.eco_scoring_total
+      end
+    end
+    return @eco_action_cat_waste
+  end
+
+
+
+
+
+
+
+
+
+  def energy_score_updated
+    if eco_action_cat_energy.nil?
+      @energy_score_updated = energy_score
+    else
+      @energy_score_updated = energy_score + eco_action_cat_energy
+    end
+    return @energy_score_updated
+  end
+
+  def transportation_score_updated
+    if eco_action_cat_transport.nil?
+      @transportation_score_updated = transportation_score
+    else
+    @transportation_score_updated = transportation_score + eco_action_cat_transport
+    end
+     return @transportation_score_updated
+  end
+
+  def upcycling_calculation_updated
+    if eco_action_cat_waste.nil?
+      @upcycling_calculation_updated = upcycling_calculation
+    else
+    @upcycling_calculation_updated = upcycling_calculation + eco_action_cat_waste
+    end
+    return @upcycling_calculation_updated
+  end
+
+  def food_score_updated
+    if eco_action_cat_food.nil?
+      @food_score_updated = food_score
+    else
+    @food_score_updated = food_score + eco_action_cat_food
+    end
+    return @food_score_updated
+  end
+
+  def total_user_score_updated
+    society_factor = 1.2
+    @total_user_score_updated = society_factor + food_score_updated + energy_score_updated + transportation_score_updated + upcycling_calculation_updated
+    @total_user_score_updated.round(2)
+  end
+
+
+
+  # def Eco_action_score
+  #   @eco_action_score = 0
+  #   @user = @Survey.user
+  #   @eco_actions = @user.EcoAction.all
+  #   @eco_actions.each do |eco_action|
+  #     if eco_action.added_to_survey?
+  #       @eco_action_score += eco_action.eco_scoring_total
+  #     else
+  #     end
+  # #   end
+
+  # end
+
+
+
 
 
   def total_user_score
