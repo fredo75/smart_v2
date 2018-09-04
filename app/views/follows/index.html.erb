@@ -4,7 +4,7 @@
 
   <p class= text-center>My friends</p>
 
-  <% @users.each do | user |%>
+  <% @friends.each do | user |%>
 
     <div class="message grad">
       <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
@@ -19,6 +19,11 @@
       <div class="message-status">
         <p class="status pending">score</p>
         <p class="score"><%= user.surveys.last&.total_user_score %></p>
+         <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
+        <!-- <div class=""> -->
+        <i class="far fa-share-square color-link1"></i>
+        <p>Partager</p>
+      </div>
       </div>
     </div>
   <% end  %>

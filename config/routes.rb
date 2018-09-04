@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :eco_actions
   resources :profiles, only: [:show, :edit, :update]
   resources :members, only: [:show, :index]
-  resources :follows, only: [:create]
+  resources :follows, only: [:create, :index]
   devise_for :users
   root to: 'users#show'
 

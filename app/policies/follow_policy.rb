@@ -1,7 +1,7 @@
 class FollowPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      user.liked_users.uniq
     end
   end
 
