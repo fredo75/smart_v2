@@ -29,18 +29,16 @@
   </div>
 
   <div class="button-navbar button-results box_item">
-    <% if @eco_actions.nil? %>
-        <%= link_to eco_actions_path, class:'solutions' do %>
-        <% end %>
-        <%= image_tag("stat.png") %>
-        <% else %>
-        <%= link_to eco_actions_path, class:'solutions' do %>
+   <% if @user.present? %>
+        <%= link_to members_path(@user),class:'stat' do %>
         <%= image_tag("stat.png") %>
         <% end %>
-      <%# @user.surveys.first.total_user_score %>
-      <%#= link_to results_user_path(@user),class:'stat' do %>
+      <% else %>
+        <%= link_to members_path(@user),class:'stat' do %>
+        <%= image_tag("stat.png") %>
+      <% end %>
     <% end %>
-    <p>Results</p>
+    <p>Community</p>
   </div>
 
   <div class="button-navbar button-ecoactions box_item">
