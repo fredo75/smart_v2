@@ -29,6 +29,12 @@ testChart();
 // calculEcoAction();
 // }
 
+import {progressBar} from '../components/progressBar';
+if (document.getElementById('container_trash')) {
+progressBar();
+}
+
+
 
 import {calculEcoAction} from '../components/eco_action';
 
@@ -39,4 +45,5 @@ import {toggleAddedSurvey} from '../components/eco_action';
 if (document.querySelector(".container-card")) {
   toggleAddedSurvey();
 }
+
 

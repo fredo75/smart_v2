@@ -8,18 +8,18 @@
        # id: "flat_address",
         placeholder: "find your friend"%>
 
-      <%= button_tag class: "button" do %>
-        <%= icon('fa', 'search') %>
-      <% end %>
+      <%#= button_tag class: "button" do %>
+        <%#= icon('fa', 'search') %>
+      <%# end %>
     <% end %>
   </div>
 
 
-  <p>Page Member</p>
+  <p class= text-center>Community</p>
 
   <% @users.each do | user |%>
 
-    <div class="message">
+    <div class="message grad">
       <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
       <div class="message-name">
         <h3><%= user.username %></h3>

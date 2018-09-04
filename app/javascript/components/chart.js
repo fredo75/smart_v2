@@ -3,7 +3,7 @@ import Chart from 'chart.js'
 function testChart (){
   const c = document.getElementById('myChart');
   if (c) {
-  const points = JSON.parse(c.dataset.points)
+  const points = JSON.parse(c.dataset.points);
   console.log(points);
 
     const ctx = c.getContext('2d');
