@@ -17,6 +17,8 @@
   <div class="button-navbar button-survey-categories box_item" >
     <% if @survey.nil? %>
       <%= link_to survey_path(current_user), class:'footprint' do   %>
+      <%= image_tag("footprint.png") %>
+      <p>Start!</p>
       <% end %>
     <% else %>
       <%= link_to survey_path(@survey), class:'footprint' do   %>
@@ -28,11 +30,15 @@
 
   <div class="button-navbar button-results box_item">
     <% if @eco_actions.nil? %>
-      <%= link_to eco_actions_path, class:'solutions' do %>
+        <%= link_to eco_actions_path, class:'solutions' do %>
+        <% end %>
+        <%= image_tag("stat.png") %>
+        <% else %>
+        <%= link_to eco_actions_path, class:'solutions' do %>
+        <%= image_tag("stat.png") %>
+        <% end %>
       <%# @user.surveys.first.total_user_score %>
       <%#= link_to results_user_path(@user),class:'stat' do %>
-      <%= image_tag("stat.png") %>
-      <% end %>
     <% end %>
     <p>Results</p>
   </div>
