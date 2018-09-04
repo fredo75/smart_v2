@@ -1,0 +1,72 @@
+.navbar-container{
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 142px;
+  background-color: red;
+  overflow: hidden;
+  padding:0;
+
+  .earth-container{
+    position: relative;
+    width: 100vw;
+    height: 142px;
+    overflow: hidden;
+  }
+  .planet-navbar{
+    display: block;
+    position: absolute;
+    width: 5em;
+    bottom: 0.5em;
+    left: 0em;
+  }
+  .planet-navbar.open {
+    width: 35em;
+    bottom: -30em;
+    left: -13em;
+
+  }
+  .button-navbar{
+    position: absolute;
+    height: 80px;
+    width: 110px;
+    text-align: center;
+    font-size: 16px;
+    left: 0;
+    bottom: -5px;
+    img{
+      height: 80px;
+      width: 80px;
+      animation: orbitStat 5s ease-in-out infinite;
+    }
+    p{
+      margin-top: -4px;
+      padding: 0;
+    }
+    a{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .button-profile.open{
+    left: 0em;
+    bottom: 4em;
+    }
+  .button-survey-categories.open{
+    left: 5.8em;
+    bottom: 3.8em;
+  }
+  .button-results.open{
+    left: 11.5em;
+    bottom: 3em;
+  }
+  .button-ecoactions.open{
+    left: 17em;
+    bottom: 1em;
+  }
+
+.open{
+   transition: all 0.5s ease-in-out;
+}
+}
