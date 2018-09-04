@@ -15,7 +15,7 @@
   </div>
 
   <div class="button-navbar button-survey-categories box_item" >
-      <%= link_to surveys_path, method: :post, class:'footprint' do   %>
+      <%= link_to survey_path(@survey), class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
       <% end %>
       <p>Start!</p>
