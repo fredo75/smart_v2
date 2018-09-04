@@ -6,13 +6,13 @@
   height: 142px;
   background-color: red;
   overflow: hidden;
+  padding:0;
 
   .earth-container{
     position: relative;
     width: 100vw;
     height: 142px;
     overflow: hidden;
-    top: 5%;
   }
   .planet-navbar{
     display: block;

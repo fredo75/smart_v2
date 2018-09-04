@@ -1,17 +1,17 @@
 
   <div class="choices" id="step_1">
   <%= f.input :vegetable_season, as: :radio_buttons, collection: Survey::VEG_SEASON, wrapper: :vertical_collection_inline, label:"Your seasonal vegetables buyings?" %>
-  <p id="step_1_button" class="next_button_style">NEXT</p>
+  <p id="step_1_button" class="next_button_style">Next</p>
   </div>
 
   <div class="choices hidden" id="step_2">
   <%= f.input :eating_habits, as: :radio_buttons, collection: Survey::EATING_HAB, wrapper: :vertical_collection_inline, label:"Meat eating habits?" %>
-  <p id="step_2_button" class="next_button_style">NEXT</p>
+  <p id="step_2_button" class="next_button_style">Next</p>
   </div>
 
   <div class="choices hidden" id="step_3" >
   <%= f.input :bio_buyings, as: :radio_buttons, collection: Survey::BIO, wrapper: :vertical_collection_inline, label:"Your proportion of organic buyings?" %>
    <div class="form-actions" style="width: 30vw; margin-bottom: 10vh;">
-    <%= f.button :submit, 'Save', class:'next_button_style button_save' %>
+    <%= f.button :submit, 'Save', class:'button_save' %>
   </div>
 

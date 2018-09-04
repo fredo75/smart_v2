@@ -8,9 +8,10 @@
   legend{
     font-size:20px;
     text-align: center;
-    padding: 15px;
     font-family: $headers-font;
     color: #544c4c;
+    border-bottom: 0 !important;
+    margin-bottom: 10px !important;
   }
   // width: 70%;
   // margin: auto;
@@ -26,10 +27,11 @@
   label{
   text-align: center;
   width: 100%;
-  height: 40px;
-  border-radius: 25px;
-  padding: 12px;
-  font-size: 14px;
+  height: 38px;
+  border-radius: 19px;
+  padding: 8px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -51,15 +53,20 @@
   padding-top: 20px;
   margin: auto;
   margin-top: 40px;
+  display: block;
 }
 .button_save{
-  opacity: 0.9;
-  height: 55px;
-  width: 55px;
-  margin-left: 40px;
-  padding-top: 7px;
-  padding-left: 5px;
-  font-size: 16px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-top: 8px;
+  padding-left: 8px;
+  margin: auto;
+  margin-top: 40px;
+
 
 }
 

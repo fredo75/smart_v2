@@ -205,11 +205,11 @@ class Survey < ApplicationRecord
 
 
 
-  AREA = [["> 30m2", 30], [" 30 < area > 50m2", 50], [" 50 < area > 70m2", 70], [" 70 < area > 100m2", 100], [" 100 < area > 130m2", 130], ["+130m2", 160]]
+  AREA = [["< 30m2", 30], [" 30 < area > 50m2", 50], [" 50 < area > 70m2", 70], [" 70 < area > 100m2", 100], [" 100 < area > 130m2", 130], ["+130m2", 160]]
   HEAT_TYPE = [["Fioul", 0.329], ["Gas", 0.241], ["Electric standard", 0.325], ["Electric Green", 0.007], ["Wood", 0.015]]
-  CHILDREN_INHABITANTS = [["No children !", 0], ["Only one", 1], ["2", 2], ["3", 3], ["4", 4], ["+4", 5]]
-  ADULTS_INHABITANTS = [["Only one: me!", 1], ["two", 2], ["three", 3], ["4", 4], ["+4", 5]]
-  TEMPERATURE = [["- 17°C: like in a freezer!", -0.06], ["19°C at max", -0.03], ["Around 21°C", 0], ["Around 23°C...!", 0.03]]
+  CHILDREN_INHABITANTS = [["0", 0], ["1", 1], ["2", 2], ["3", 3], ["4", 4], ["> 4", 5]]
+  ADULTS_INHABITANTS = [["1", 1], ["2", 2], ["3", 3], ["4", 4], ["> 4", 5]]
+  TEMPERATURE = [["< 17°C", -0.06], [" max 19°C", -0.03], [">= 21°C", 0], [">= 23°C", 0.03]]
   # ISOLATION = [["I don't care!", 8], ["I don't know, more than 10 years", 7], ["I don't know, more than 10 years", 5], ["minimum A", 6], ["minimum A+", 4], ["Minimum A++", 3]]
 
 
