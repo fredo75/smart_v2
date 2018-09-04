@@ -17,15 +17,15 @@ class SurveysController < ApplicationController
 
     @housing = 0
     @housing += 1 if @survey.housing_type != nil
-    @housing += 1 if@survey.area != nil
-    @housing += 1 if@survey.heat_type != nil
+    @housing += 1 if @survey.area != nil
+    @housing += 1 if @survey.heat_type != nil
     @housing += 1 if @survey.adults_inhabitants != nil
     @housing += 1 if @survey.children_inhabitants != nil
     @housing +=1 if @survey.house_temp != nil
 
     @trash = 0
-    @trash += 1 if@survey.upcycling != nil
-    @trash += 1 if@survey.green_invest != nil
+    @trash += 1 if @survey.upcycling != nil
+    @trash += 1 if @survey.green_invest != nil
 
     @transport = 0
     @transport += 1 if @survey.vehicule_km != nil
