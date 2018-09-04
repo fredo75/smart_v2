@@ -5,7 +5,9 @@
     "@rails/webpacker": "3.5",
     "bootstrap": "3",
     "chart.js": "^2.7.2",
-    "jquery": "^3.3.1"
+    "easy-pie-chart": "^2.1.7",
+    "jquery": "^3.3.1",
+    "progressbar.js": "^1.0.1"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
