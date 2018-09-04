@@ -11,9 +11,6 @@
   </div>
   <div class="choices hidden" id="step_3">
     <%= f.input :public_transp, as: :radio_buttons, collection: Survey::PUBLIC_TRANSP, wrapper: :vertical_collection_inline, label: "Usage of public transport?" %>
-    <div class="form-actions" style="width: 30vw; margin-bottom: 10vh;">
-    <%= f.button :submit, 'Save', class:'button_save' %>
-
-  </div>
+    <%= f.button :submit, 'Save', class:'next_button_style button_save' %>
   </div>
 
