@@ -17,7 +17,6 @@ import{formSlider} from '../components/form_slider';
  }
 
 
-
 import {testChart} from '../components/chart';
 testChart();
 
@@ -38,4 +37,6 @@ if (document.querySelector(".container-card")) {
   toggleAddedSurvey();
 }
 
+import {previewImage} from '../components/preview_image';
 
+previewImage();

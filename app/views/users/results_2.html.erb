@@ -1,10 +1,9 @@
 <div class="gradient">
-
   <%= link_to user_path(current_user), class:'back' do %>
     <i class="far fa-times-circle"></i>
   <% end %>
 
-  <%= @points %>
+  <h3>Result including Eco Actions!</h3>
 
   <p style="margin-left: 1em; margin-top: 1em;"> My score </p>
     <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">

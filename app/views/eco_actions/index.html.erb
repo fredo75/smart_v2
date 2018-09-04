@@ -21,7 +21,7 @@
         <% if eco_action.photo.present? %>
         <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path eco_action.photo, height: 100, width: 100 %>')">
         </div>
-        <% else  %>
+        <% else %>
         <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
         </div>
         <% end %>
@@ -37,14 +37,20 @@
         <div class="vertical-flexbox">
 
           <div class="inline">
+
             <div class="score">
-              <%= eco_action.eco_scoring_total %>
+              <div class="font-Xsmall">
+                score:
+              </div>
+                <%= eco_action.eco_scoring_total %>
             </div>
             <div class="category">
               <% if eco_action.eco_category.present? %>
               <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
               <% else  %>
-              <%= image_tag "interogation.jpg", height: 20 %>
+              <div class="interrogation">
+                <%= image_tag "interrogation3.png", height: 20 %>
+              </div>
               <% end %>
             </div>
           </div>
@@ -73,7 +79,6 @@
 </div>
 
 <% end %>
-
 
 
   <%= render 'new_eco_action', eco_action: EcoAction.new %>
