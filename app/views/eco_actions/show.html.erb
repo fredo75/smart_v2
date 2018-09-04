@@ -1,58 +1,71 @@
 
-<div class="container">
+<div class="gradient">
+  <div class="container">
 
-    <%= link_to eco_actions_path, class:'button' do %>
-    <i class="fas fa-arrow-left"></i>
-    <% end %>
-    <div class="row">
-      <div class="card-detailed col-xs-12">
+      <%= link_to eco_actions_path, class:'button' do %>
+      <i class="fas fa-arrow-left"></i>
+      <% end %>
+      <div class="row">
+        <div class="card-detailed col-xs-12">
 
-              <% if @eco_action.photo.present? %>
-                <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @eco_action.photo, height: 150, width: 150 %>')">
-                </div>
-              <% else  %>
-                <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
-                </div>
-              <% end %>
-              <br>
-              <div class="card-other">
-                <div class="title">
-                  <%= @eco_action.title %>
-                </div>
-                <div id="sub-title-eco">
-                  <div class="score-large">
-                    <%= @eco_action.eco_scoring_total %>
+                <% if @eco_action.photo.present? %>
+                  <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @eco_action.photo, height: 150, width: 150 %>')">
                   </div>
-                  <% if @eco_action.eco_category.present? %>
-                  <%= image_tag "#{@eco_action.eco_category}.png", height: 70 %>
-                  <% else  %>
-                  <%= image_tag "interogation.jpg", height: 40 %>
-                  <% end %>
+                <% else  %>
+                  <div class="eco-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
+                  </div>
+                <% end %>
+                <br>
+                <div class="card-other">
+                  <div class="title">
+                    <%= @eco_action.title %>
+                  </div>
+                  <div id="sub-title-eco">
+                    <div class="other">
+                      <div class="other">
+                        <div class="font-small">Score:</div>
+                        <div class="score-large">
+                          <%= @eco_action.eco_scoring_total %>
+                        </div>
+                      </div>
+                      <% if @eco_action.eco_category.present? %>
+                      <div class="other">
+                        <div class="font-small">category:</div>
+                        <%= image_tag "#{@eco_action.eco_category}.png", height: 70 %>
+                      </div>
+                      <% else  %>
+                        <div class="font-small">category:</div>
+                        <%= image_tag "interrogation3.png", height: 20 %>
+                      <% end %>
+                    </div>
 
+                  </div>
+
+                  <div class="created-at"> <%= @eco_action.created_at.strftime("%Y-%m-%d") %>
+                  </div>
+
+                  <h5><strong>Description:  </strong>
+                    <br>
+                    <%= @eco_action.description %>
+                  </h5>
+
+
+
+                  <div class="link">
+                    <%= link_to eco_action_path(@eco_action.id), method: :delete, :class => 'lilink' do %>
+                      <i class='fas fa-trash-alt'></i>
+                    <% end %>
+                    <%= link_to edit_eco_action_path(@eco_action.id), :class => 'lilink' do %>
+                      <i class="fas fa-pencil-alt"></i>
+                    <% end %>
+                  </div>
                 </div>
 
-                <div class="created-at"> <%= @eco_action.created_at.strftime("%Y-%m-%d") %>
-                </div>
-
-                <h5><strong>Description:  </strong>
-                  <br>
-                  <%= @eco_action.description %>
-                </h5>
-
-
-
-                <div class="link">
-                  <%= link_to eco_action_path(@eco_action.id), method: :delete, :class => 'lilink' do %>
-                    <i class='fas fa-trash-alt'></i>
-                  <% end %>
-                  <%= link_to edit_eco_action_path(@eco_action.id), :class => 'lilink' do %>
-                    <i class="fas fa-pencil-alt"></i>
-                  <% end %>
-                </div>
-              </div>
-
+        </div>
       </div>
-    </div>
+
+  </div>
+
 
 </div>
 
