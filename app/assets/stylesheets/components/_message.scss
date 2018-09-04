@@ -60,3 +60,13 @@
 .status.pending {
   color: lightgrey;
 }
+.grad {
+  background: -webkit-linear-gradient(#37ebba, #72aed3);
+ background: -o-linear-gradient(#37ebba, #72aed3);
+ background: linear-gradient(#37ebba, #72aed3);
+}
+.text-center {
+
+text-align: center;
+
+}
