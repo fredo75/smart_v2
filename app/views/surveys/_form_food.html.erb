@@ -11,5 +11,7 @@
 
   <div class="choices hidden" id="step_3" >
   <%= f.input :bio_buyings, as: :radio_buttons, collection: Survey::BIO, wrapper: :vertical_collection_inline, label:"Your proportion of organic buyings?" %>
+   <div class="form-actions" style="width: 30vw; margin-bottom: 10vh;">
+    <%= f.button :submit, 'Save', class:'next_button_style button_save' %>
   </div>
 

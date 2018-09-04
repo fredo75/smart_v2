@@ -3,13 +3,14 @@
   bottom: 0;
   z-index: 3;
   width: 100vw;
-  height: 220px;
+  height: 142px;
+  background-color: red;
   overflow: hidden;
 
   .earth-container{
     position: relative;
     width: 100vw;
-    height: 220px;
+    height: 142px;
     overflow: hidden;
     top: 5%;
   }
@@ -21,9 +22,9 @@
     left: 0em;
   }
   .planet-navbar.open {
-    width: 23em;
-    bottom: -16em;
-    left: -8em;
+    width: 35em;
+    bottom: -30em;
+    left: -13em;
 
   }
   .button-navbar{
@@ -50,18 +51,18 @@
   }
   .button-profile.open{
     left: 0em;
-    bottom: 8em;
+    bottom: 4em;
     }
   .button-survey-categories.open{
-    left: 6.2em;
-    bottom: 7em;
+    left: 5.8em;
+    bottom: 3.8em;
   }
   .button-results.open{
-    left: 12em;
-    bottom: 5em;
+    left: 11.5em;
+    bottom: 3em;
   }
   .button-ecoactions.open{
-    left: 16em;
+    left: 17em;
     bottom: 1em;
   }
 
