@@ -4,7 +4,7 @@
   z-index: 3;
   width: 100vw;
   height: 142px;
-  background-color: red;
+  // background-color: red;
   overflow: hidden;
   padding:0;
 
@@ -18,12 +18,12 @@
     display: block;
     position: absolute;
     width: 5em;
-    bottom: 0.5em;
+    bottom: 0em;
     left: 0em;
   }
   .planet-navbar.open {
     width: 35em;
-    bottom: -30em;
+    bottom: -30.5em;
     left: -13em;
 
   }
@@ -33,12 +33,12 @@
     width: 110px;
     text-align: center;
     font-size: 16px;
-    left: 0;
-    bottom: -5px;
+    left: -12px;
+    bottom: -16px;
     img{
       height: 80px;
       width: 80px;
-      animation: orbitStat 5s ease-in-out infinite;
+      // animation: orbitStat 5s ease-in-out infinite;
     }
     p{
       margin-top: -4px;
@@ -51,19 +51,19 @@
   }
   .button-profile.open{
     left: 0em;
-    bottom: 4em;
+    bottom: 3em;
     }
   .button-survey-categories.open{
     left: 5.8em;
-    bottom: 3.8em;
+    bottom: 2.8em;
   }
   .button-results.open{
     left: 11.5em;
-    bottom: 3em;
+    bottom: 1em;
   }
   .button-ecoactions.open{
     left: 17em;
-    bottom: 1em;
+    bottom: 0em;
   }
 
 .open{
