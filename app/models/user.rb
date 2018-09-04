@@ -11,4 +11,10 @@ class User < ApplicationRecord
   has_many :eco_actions
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :given_likes, inverse_of: :follower, class_name: "Follow", foreign_key: "follower_id"
+  has_many :received_likes, inverse_of: :followee, class_name: "Follow", foreign_key: "followee_id"
+
+  has_many :liked_users, through: :given_likes, source: :followee
+  has_many :liked_by_users, through: :received_likes, source: :follower
 end
