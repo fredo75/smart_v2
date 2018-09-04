@@ -35,10 +35,11 @@
     </div>
 
     <div class="box_item box_right" id="Stat">
-    <p>My results</p>
+    <p>Community</p>
     <% if @user.surveys.present? %>
       <% @user.surveys.first.total_user_score %>
-      <%= link_to results_user_path(@user),class:'stat' do %>
+      <%= link_to members_path(@user),class:'stat' do %>
+      <%#= link_to results_user_path(@user),class:'stat' do %>
       <%= image_tag("stat.png") %>
       <% end %>
     <% else %>
