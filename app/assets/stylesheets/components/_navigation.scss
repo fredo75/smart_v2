@@ -18,13 +18,14 @@
     display: block;
     position: absolute;
     width: 7em;
-    bottom: 0em;
+    bottom: -1em;
     left: 0em;
   }
   .planet-navbar.open {
     width: 35em;
     bottom: -30.5em;
     left: -13em;
+    z-index: -5;
 
   }
   .button-navbar{
@@ -35,6 +36,7 @@
     font-size: 16px;
     left: -12px;
     bottom: -16px;
+
     img{
       height: 55px;
       width: 55px;
@@ -52,19 +54,19 @@
   }
   .button-profile.open{
     left: 0em;
-    bottom: 3em;
+    bottom: 4em;
     }
   .button-survey-categories.open{
     left: 5.8em;
-    bottom: 2.8em;
+    bottom: 3.3em;
   }
   .button-results.open{
     left: 11.5em;
-    bottom: 1em;
+    bottom: 2em;
   }
   .button-ecoactions.open{
     left: 17em;
-    bottom: 0em;
+    bottom: 0.5em;
   }
 
 .open{
