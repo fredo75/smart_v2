@@ -17,7 +17,7 @@
   .planet-navbar{
     display: block;
     position: absolute;
-    width: 5em;
+    width: 7em;
     bottom: 0em;
     left: 0em;
   }
@@ -29,20 +29,21 @@
   }
   .button-navbar{
     position: absolute;
-    height: 80px;
+    height: 55px;
     width: 110px;
     text-align: center;
     font-size: 16px;
     left: -12px;
     bottom: -16px;
     img{
-      height: 80px;
-      width: 80px;
+      height: 55px;
+      width: 55px;
       // animation: orbitStat 5s ease-in-out infinite;
     }
     p{
       margin-top: -4px;
       padding: 0;
+      font-size: 15px;
     }
     a{
       margin: 0;
