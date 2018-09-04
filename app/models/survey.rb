@@ -217,7 +217,7 @@ class Survey < ApplicationRecord
   EATING_HAB = [["2 times/day", 1.21], ["1 time/day", 0.63], ["1 to 3 times/week", 0.14], ["1/week", 0.06], ["Vegetarian", 0.03]]
   BIO = [["100%", -0.18], ["75%", -0.13], ["50%", -0.08], ["25%", -0.03], ["0%", 0.01]]
 
-  VEHICULE_KM = [["+ 30,000 km", 30000], [" 7,500 < KM/year > 12,500", 12500], [" 2000 < KM/year > 7,500", 7500],[" - 2000 KM/year", 2000], ["No car !!", 0]]
+  VEHICULE_KM = [["+ 30,000 km", 30000], [" 7,500 < KM/year > 12,500", 12500], [" 2000 < KM/year > 7,500", 7500],[" - 2000 KM/year", 2000], ["No car", 0]]
   FUEL =[["Petrol", 0.88], ["Gazoil", 1]]
   PUBLIC_TRANSP =[["None, I use my feet!", 0], ["- 5km / day", 5], ["Between 5 and 15km", 15], ["Between 15 and 40km", 40], ["+ 40km", 60]]
 
