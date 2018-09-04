@@ -6,12 +6,18 @@ class MembersController < ApplicationController
     if params["type"].present?
       @users = User.global_search(params["type"])
     end
+    # raise
+    @follow = Follow.new
 
   end
 
   def show
-    @user = User.find(params[:id])
-    authorize @user
+    @follow = Follow.find(params[:id])
+    @users = User.all
+    if params["type"].present?
+      @users = User.global_search(params["type"])
+    end
+    authorize @follow
   end
 
 
