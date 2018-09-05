@@ -1,31 +1,18 @@
-<div class= gradient>
-
-
-
-  <p class= text-center>My friends</p>
-
-  <% @friends.each do | user |%>
-
-    <div class="message grad">
-      <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
+<div class="gradient">
+  <h2 class="text-center">My friends</h2>
+  <% @friends.each do | friend |%>
+    <div class="message">
+      <img class="message-avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
       <div class="message-name">
-        <h3><%= user.username %></h3>
-        <p><%= Date.today %></p>
+        <h3><%= friend.username %></h3>
+        <p>Score <span class="score-cards next_button_style"><%= friend.surveys.last&.total_user_score %></span></p>
       </div>
-      <div class="message-body">
-        <p><strong>I am not sure yet!</strong></p>
-
-      </div>
-      <div class="message-status">
-        <p class="status pending">score</p>
-        <p class="score"><%= user.surveys.last&.total_user_score %></p>
-         <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
-        <!-- <div class=""> -->
-        <i class="far fa-share-square color-link1"></i>
-        <p>Partager</p>
-      </div>
+      <div class="icons">
+        <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
+          <i class="fab fa-facebook"></i>
+        </a>
       </div>
     </div>
-  <% end  %>
+  <% end %>
 </div>
 
