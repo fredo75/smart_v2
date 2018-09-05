@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
 
   def show
+    @survey = current_user.surveys.last
     @user = User.find(params[:id])
     authorize @user
   end
