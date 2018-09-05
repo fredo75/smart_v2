@@ -66,24 +66,25 @@ survey_2 = Survey.create(heat_type: 0,
                          user: fred)
 
 
-# survey_3 = Survey.create(heat_type: "gaz",
-#                          housing_type: ,
-#                          area: 200,
-#                          isolated: true,
-#                          children_inhabitants: ,
-#                          adults_inhabitants: ,
-#                          house_inhabitants: 4,
-#                          house_temp: 21,
-#                          energy_class: ,
-#                          vegetable_season: ,
-#                          eating_habits: ,
-#                          bio_buyings: ,
-#                          vehicle_km: ,
-#                          fuel_type: ,
-#                          public_transp: ,
-#                          upcycling: ,
-#                          green_invest: ,
-#                          user: camille)
+eco_actions1 = EcoAction.create(title: "Economiser de l'eau", description: "J’installe des réducteurs de débit sur les robinets pour réguler le débit d’eau : ils diminuent le débit d'eau qui coule en dispersant le flux. 
+Par exemple, pour une famille de 4 personnes, les aérateurs placés sur les robinets et les éco-douchettes génèrent une économie annuelle de 30% d'eau.
+12 litres par minute : c’est le débit courant d’un robinet. Si je laisse couler l’eau en me brossant les dents, je gaspille environ 10 000 litres d’eau par an. J’opte pour l’utilisation du gobelet !
+Je place une bouteille lestée dans le réservoir des toilettes pour diminuer la consommation d’eau.
+Si je fais la vaisselle à la main, j’utilise un bac : c’est plus économique que de laisser l’eau couler.
+")
 
+eco_actions2 = EcoAction.create(title: "Je bois l'eau du robinet", description: "Elle revient jusqu’à 200 fois moins chère que l’eau en bouteille.
+Bonne pour la santé, elle est le produit alimentaire le plus contrôlé de France.")
 
+eco_actions3 = EcoAction.create(title: "Fruits et des légumes de saison ", description: "Pour limiter la consommation d’énergie liée à leur transport et au chauffage des serres. Un fruit importé hors saison par avion consomme pour son transport 10 à 20 fois plus de pétrole que le même produit localement.
+")
 
+eco_actions4 = EcoAction.create(title: "Je favorise les éco-recharges", description: "Mini-doses pour faire des économies d’argent et réduire mes déchets !
+")
+
+eco_actions5 = EcoAction.create(title: "Chauffage", description: "Je réduis mon thermostat d’1°C pour économiser de 5 à 10 % (en fonction de l’isolation de mon logement) sur ma facture de chauffage.  19°C est la température idéale dans les pièces à vivre (salon, salle à manger, cuisine).
+")
+
+eco_actions6 = EcoAction.create(title: "Eco-mobilité", description: "Je fais les petits trajets à pied ou à vélo. J’opte pour le co-voiturage.
+Je privilégie les transports en commun : bus, tram, train. J’adopte l’éco-conduite.
+")
