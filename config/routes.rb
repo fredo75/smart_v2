@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :members, only: [:show, :index]
   resources :follows, only: [:create, :index]
   devise_for :users
-  root to: 'users#show'
+  root to: 'user#show'
 
   resources :users, only: [:show, :edit, :update] do
     get :results, on: :member
