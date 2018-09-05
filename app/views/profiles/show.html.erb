@@ -16,9 +16,6 @@
               </button>
             </div>
           </div>
-          <div style="text-align: center; margin-top:0px; font-size:16px">
-           <%= image_tag "trait-separation.png", height: 20, width: 100 %>
-          </div>
 
           <div class="part-two">
             <div>
@@ -38,45 +35,39 @@
 
       <div style="display:flex; flex-direction:column; justify-content: center;"">
         <div id="index" style="margin-left: 10px;">
-          <div style="display:flex; width:100px; text-align:center">
-            <div class="color-box" style="background-color: #F0004C">
-            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #f79256"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
             <p style="font-size:16px;">food</p>
+            </div>
           </div>
-          <div style="display:flex; width:100px; text-align:center">
-            <div class="color-box" style="background-color: #FFF87A">
-            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #fbd1a2"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
             <p style="font-size:16px;">transport</p>
+            </div>
           </div>
-          <div style="display:flex; width:100px; text-align:center">
-            <div class="color-box" style="background-color: #FF9B3D">
-            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #7dcfb6"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
             <p style="font-size:16px;">waste</p>
+            </div>
           </div>
-          <div style="display:flex; width:100px; text-align:center">
-            <div class="color-box" style="background-color: #FF5B5D">
-            </div style="display:flex; width:100px; text-align:center; padding:5px;">
-            <p style="font-size:16px;">energy</p>
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #00b2ca"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">energy</p></div>
           </div>
         </div>
       </div>
-    </div>
-      <div style=" display:flex; align-items:center; justify-content: center;">
-        <div style="font-size: 18px;margin-bottom:5px;">Your score:</div>
-        <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %></div>
-      </div>
-      <div style="text-align: center; font-size: 16px; margin-top:20px;">
-        <p>Add EcoActions to reduce your impact!</p>
-        <%= link_to eco_actions_path, class:'button' do %>
-          <i class="fas fa-plus"> </i>
-        <% end %>
-      </div>
-  </div>
 
+      </div>
+        <div style=" display:flex; align-items:center; justify-content: center;">
+          <div style="font-size: 18px;margin-bottom:5px;">Your score:</div>
+          <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %></div>
+        </div>
 
-    <div style="text-align: center; margin-top:20px; ">
-     <%= image_tag "trait-separation.png", height: 20, width: 100 %>
-    </div>
+      </div>
 
    <%# if @survey.food_score.nil? %>
    <%# else %>
@@ -90,20 +81,23 @@
 
 
 
-  <div class="average">
-    <div id="camembert2">
-      <canvas id="myChart2" align="center">
-      </canvas>
-    </div >
-    <div style="display: flex; flex-direction: column; align-items: center">
-      <p style=" margin-top: 1em; text-align: center; font-size:18px; opacity: 0.8"> National average</p>
-      <div style="font-size: 20px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
+    <div class="average">
+      <div id="camembert2">
+        <canvas id="myChart2" align="center">
+        </canvas>
+      </div >
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average</p>
+        <div style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
 
+      </div>
     </div>
-  </div>
 
-    <div style="text-align: center; margin-top:10px; ">
-     <%= image_tag "trait-separation.png", height: 20, width: 100 %>
+    <div style="text-align: center; font-size: 15px; margin-top:20px;">
+      <p>Add EcoActions to reduce your impact!</p>
+      <%= link_to eco_actions_path, class:'button' do %>
+        Add EcoActions </i>
+      <% end %>
     </div>
 
   </div>
