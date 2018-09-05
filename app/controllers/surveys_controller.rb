@@ -15,10 +15,6 @@ class SurveysController < ApplicationController
     @user = current_user
     @survey = @user.surveys.last
 
-
-    @user = current_user
-    @survey = @user.surveys.last
-
     @housing = 0
     @housing += 1 if @survey.housing_type != nil
     @housing += 1 if @survey.area != nil
@@ -66,6 +62,8 @@ class SurveysController < ApplicationController
     # @user = current_user
     # @survey = @user.survey.last
     @survey.update(survey_params)
+    current_user.score = @survey.total_user_score_updated
+    current_user.save
     redirect_to survey_path(@survey)
     authorize @survey
   end

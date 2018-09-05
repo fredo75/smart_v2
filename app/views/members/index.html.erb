@@ -32,8 +32,15 @@
         <% end %>
         <!-- <i class="far fa-heart"></i> -->
 
-      <!-- <p class="score-cards next_button_style"><%= user.surveys.last&.total_user_score %></p> -->
 
+      </div>
+      <div class="message-status">
+        <p class="status pending">score</p>
+        <p class="score"><%= user.surveys.last&.total_user_score %></p>
+          <%= simple_form_for @follow do |f| %>
+            <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
+            <%= f.button :submit,'Add', class:'next_button_style button_save' %>
+          <% end %>
     </div>
       </div>
     </div>

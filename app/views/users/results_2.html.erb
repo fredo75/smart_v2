@@ -1,39 +1,76 @@
 <div class="gradient">
   <%= link_to user_path(current_user), class:'back' do %>
-    <i class="far fa-times-circle"></i>
+  <i class="far fa-times-circle"></i>
   <% end %>
 
-  <h3>Result including Eco Actions!</h3>
+  <div class="general">
+    <div style="text-align:left; display:flex; align-items:center;flex-direction:column">
+      <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar') %>
+      <button class="button" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i></button>
+    </div>
 
-  <p style="margin-left: 1em; margin-top: 1em;"> My score </p>
+    <div style="display:flex; flex-direction: column; text-align: left; padding-left: 20px">
+      <div>
+        <h3 > <%= @user.username %></h3>
+      </div>
+      <div>
+        <p> <%= @user.mybio %></p>
+      </div>
+    </div>
+  <!--    <p id="myEcoActions">My Eco Actions</p> -->
+  </div>
+
+
+
+  <!--  <p style="margin-left: 1em; margin-top: 1em; text-align: center;"> My score </p> -->
+
+  <div id="camembert1">
     <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
-
     </canvas>
+  </div>
+  <div style=" display:flex; align-items:center; justify-content:center">
+    <div>Your score:</div>
+    <div style="font-size: 30px; margin-left: 15px"><%= @final_score %></div>
+  </div>
+
+  <div style="text-align: center; ">
+   <%= image_tag "trait-separation.png", height: 20, width: 100 %>
+  </div>
+
+ <%# if @survey.food_score.nil? %>
+ <%# else %>
+ <%#= @users.surveys.last.food_score %>
+ <%# end %>
+ <%#= @survey.energy_score %>
+ <%#= @survey.transportation_score %>
+ <%#= @survey.upcycling_calculation %>
+ <%#= @survey.total_user_score %>
 
 
-    <%# if @survey.food_score.nil? %>
-    <%# else %>
-    <%#= @users.surveys.last.food_score %>
-    <%# end %>
-    <%#= @survey.energy_score %>
-    <%#= @survey.transportation_score %>
-    <%#= @survey.upcycling_calculation %>
-    <%#= @survey.total_user_score %>
 
-      <h1 style="position:absolute; top: 3.25em; right:2.5em;"> <%= @final_score %></h1>
-    <p style="margin: 2em;"> National Average </p>
+
+<div class="average">
+  <div style="display: flex; flex-direction: column; align-items: center">
+    <p style="margin-left: 1em; margin-top: 1em; text-align: center; font-size:15px"> National average</p>
+    <div style="font-size: 20px"><%= 22.16 %></div>
+  </div>
+  <div id="camembert2">
     <canvas id="myChart2" align="center">
     </canvas>
-      <h1 style="position:absolute; top: 9em; left:2em;"> <%= 22.16 %></h1>
-
-<div class="result-2-title">
-  <h3>My eco Actions linked !</h3>
+  </div>
 </div>
 
+  <div style="text-align: center; ">
+   <%= image_tag "trait-separation.png", height: 20, width: 100 %>
+  </div>
+
+  <div style="margin-top: 0; text-align: center">
+    <h4>My eco Actions!</h4>
+  </div>
 
   <div class=" buttons-eco btn">
     <%= link_to eco_actions_path(current_user), class:'button' do %>
-    Add an Eco Action <i class="fas fa-plus"></i>
+    Add! <i class="fas fa-plus"></i>
     <% end %>
   </div>
 
@@ -41,61 +78,64 @@
     <div class="container-card">
       <div class="row">
         <% @user.eco_actions.all.each do |eco_action| %>
-              <% if eco_action.added_to_survey %>
+<<<<<<< HEAD
+        <% if eco_action.added_to_survey %>
 
-                <div class="col-xs-12">
-                  <div class="card" >
-                    <% if eco_action.photo.present? %>
-                    <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path eco_action.photo, height: 100, width: 100 %>')">
-                    </div>
-                    <% else  %>
-                    <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
-                    </div>
-                    <% end %>
-                    <div class="card-description">
-                      <div class="title">
-                        <h5><%= eco_action.title %></h5>
-                      </div>
-                      <%= link_to '', eco_action_path(eco_action.id), class: "card-link" %>
-                    </div>
+        <div class="col-xs-12">
+          <div class="card" >
+            <% if eco_action.photo.present? %>
+            <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path eco_action.photo, height: 100, width: 100 %>')">
+            </div>
+            <% else  %>
+            <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+            </div>
+            <% end %>
+            <div class="card-description">
+              <div class="title">
+                <h5><%= eco_action.title %></h5>
+              </div>
+              <%= link_to '', eco_action_path(eco_action.id), class: "card-link" %>
+            </div>
 
-                    <div class="vertical-flexbox">
+            <div class="vertical-flexbox">
 
-                      <div class="inline">
-                        <div class="score">
-                          <%= eco_action.eco_scoring_total %>
-                        </div>
-                        <div class="category">
-                          <% if eco_action.eco_category.present? %>
-                          <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
-                          <% else  %>
-                          <%= image_tag "interogation.jpeg", height: 20 %>
-                          <% end %>
-                        </div>
-                      </div>
+              <div class="inline">
+                <div class="score">
+                  <%= eco_action.eco_scoring_total %>
+                </div>
+                <div class="category">
+                  <% if eco_action.eco_category.present? %>
+                  <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
+                  <% else  %>
+                  <%= image_tag "interogation.jpeg", height: 20 %>
+                  <% end %>
+                </div>
+              </div>
 
-                      <div class="toggle" >
-                      <div class="toggle-title">Join it!</div>
-                      <%= simple_form_for eco_action, html: {class: "form-toggle"} do |f| %>
-                      <div class="spe-toggle">
-                      <label class="switch">
-                      <%= f.input_field :added_to_survey, {
+              <div class="toggle" >
+                <div class="toggle-title">Join it!</div>
+                <%= simple_form_for eco_action, html: {class: "form-toggle"} do |f| %>
+                <div class="spe-toggle">
+                  <label class="switch">
+                    <%= f.input_field :added_to_survey, {
                       data: { toggle: 'toggle', size: 'small' }
-                      }
-                      %>
-                      <span class="slider round"></span>
-                      </label>
-                      </div>
+                    }
+                    %>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
                 <%#= f.submit %>
                 <% end %>
               </div>
-                    </div>
-                  </div>
-                </div>
-              <% else %>
-              <% end %>
+            </div>
+          </div>
+        </div>
+        <% else %>
+        <% end %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+ <%= render 'form', user: @user %>
