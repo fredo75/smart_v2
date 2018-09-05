@@ -39,28 +39,6 @@ ActiveRecord::Schema.define(version: 2018_09_05_091547) do
     t.index ["follower_id"], name: "index_follows_on_follower_id"
   end
 
-  create_table "points", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "value"
-    t.string "category"
-    t.text "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_points_on_user_id"
-  end
-
-  create_table "scorecards", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "daily"
-    t.integer "weekly"
-    t.integer "monthly"
-    t.integer "yearly"
-    t.integer "lifetime"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_scorecards_on_user_id"
-  end
-
   create_table "surveys", force: :cascade do |t|
     t.integer "housing_type"
     t.integer "adults_inhabitants"
