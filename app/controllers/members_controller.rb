@@ -2,6 +2,7 @@ class MembersController < ApplicationController
   skip_after_action :verify_policy_scoped, only: :index
 
   def index
+    @survey = current_user.surveys.last
     @users = User.all
     if params["type"].present?
       @users = User.global_search(params["type"])
