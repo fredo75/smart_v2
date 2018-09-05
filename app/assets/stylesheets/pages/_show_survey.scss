@@ -9,9 +9,15 @@
  //  margin-top: 0px;
  //  text-align: center;
  // }
+ .arrow{
+  margin-top: -5px;
+  height: 10px;
+  width: 10px;
+ }
  .pimp{
   font-size: 40px;
   font-weight: bolder;
+  color: white;
  }
  }
  .form-container{
@@ -23,6 +29,9 @@
     display: block;
     min-height: calc(100vh - 230px);
  }
+.space{
+  margin-bottom: 100px;
+}
 
 #container_food, #container_transport, #container_trash, #container_housing {
   position:absolute;
@@ -38,10 +47,15 @@
     height: 120px;
     width: 120px;
   }
- height: 70px;
- width: 70px;
- background-color:red;
-}
+   height: 70px;
+   width: 70px;
+   background-color:red;
+  }
+  p{
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+  }
 // .margin {
 //   top: 2em;
 // }
