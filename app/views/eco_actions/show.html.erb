@@ -22,12 +22,16 @@
                   </div>
                   <div id="sub-title-eco">
                     <div class="other">
-                      <div class="other">
-                        <div class="font-small">Score:</div>
-                        <div class="score-large">
+
+                      <div class="score">
+                        <div style="margin-right:10px;">
+                          score:
+                        </div>
+                        <div style="font-size:20px;">
                           <%= @eco_action.eco_scoring_total %>
                         </div>
                       </div>
+
                       <% if @eco_action.eco_category.present? %>
                       <div class="other">
                         <div class="font-small">category:</div>
