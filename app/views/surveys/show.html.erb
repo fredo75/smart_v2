@@ -15,7 +15,7 @@
           <%= link_to edit_survey_path(@survey, category: 'food') do%>
           <%= image_tag("food.png") %>
           <div id="container_food" data-food="<%= @food.to_json %>"></div>
-          <p>Food</p>
+          <p class="pimp-2">Food</p>
           <% end %>
           </div>
         </div>
@@ -25,7 +25,7 @@
             <%=  link_to edit_survey_path(@survey, category: 'transport') do%>
             <%= image_tag("transport.png") %>
           <div id="container_transport" data-transport="<%= @transport.to_json %>"></div>
-          <p>Transport</p>
+          <p class="pimp-2">Transport</p>
           <% end %>
         </div>
         </div>
@@ -39,7 +39,7 @@
           <%=  link_to edit_survey_path(@survey, category: 'waste') do%>
           <%= image_tag("trash.png") %>
        <div id="container_trash" data-trash="<%= @trash.to_json %>"></div>
-       <p>Waste</p>
+       <p class="pimp-2">Waste</p>
       <% end %>
       </div>
         </div>
@@ -49,7 +49,7 @@
         <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
         <%= image_tag("house.png") %>
         <div id="container_housing" data-housing="<%= @housing.to_json %>"></div>
-        <p>Energy</p>
+        <p class="pimp-2">Energy</p>
         <% end %>
         </div>
         </div>
@@ -57,7 +57,7 @@
 
 
 
-    <p> <%#= @survey.energy_score %></p>
+    <p> Pick a category !</p>
   </div>
 </div>
 
