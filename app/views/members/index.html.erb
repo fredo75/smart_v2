@@ -9,10 +9,24 @@
 <h2 class="text-center">Community</h2>
   <% @users.each do | user |%>
     <div class="message">
-      <img class="message-avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
+
+      <% if user.photo.present? %>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path user.photo, height: 100, width: 100 %>')">
+        </div>
+        <% else %>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+        </div>
+        <% end %>
+
         <div class="message-name">
           <h3><%= user.username %></h3>
-          <p>Score <span class="score-cards next_button_style"><%= user.surveys.last&.total_user_score %></span></p>
+          <p>Score <span class="score-cards next_button_style">
+            <% if user.surveys.empty? || user.surveys.last.total_user_score.nil? %>
+              0
+            <% else %>
+              <%= user.surveys.last.total_user_score %>
+            <% end %>
+          </span></p>
         </div>
         <div class="icons">
           <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">

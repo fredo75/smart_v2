@@ -1,10 +1,11 @@
 function openNavigation() {
-  const earth = document.querySelector(".planet-navbar");
+  let earth = document.querySelector(".planet-navbar");
   earth.addEventListener('click', (event) => {
-    earth.classList.add("open");
-    const buttons = document.querySelectorAll(".button-navbar");
+    console.log('coucou')
+    earth.classList.toggle("open");
+    let buttons = document.querySelectorAll(".button-navbar");
     buttons.forEach((button) =>{
-      button.classList.add("open");
+      button.classList.toggle("open");
     });
   });
 }
@@ -13,6 +14,8 @@ export {openNavigation};
 
 
 // function hideSave() {
-//   const save_1 = querySelectorAll(".button_save")
+//   let save_1 = querySelectorAll(".button_save")
 //   save_1.classList.add("hidden")
 // }
+
+

@@ -17,8 +17,13 @@ body {
 .avatar {
   width: 90px;
   border-radius: 50%;
+  background-size:cover;
 }
 
+.avatar-small {
+  width: 60px;
+  border-radius: 50%;
+}
 
 .typo {
   margin-left:20px;

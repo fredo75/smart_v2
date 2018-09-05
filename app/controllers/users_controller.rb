@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     redirect_to profile_path(@user.id)
     @user.username = params[:username]
     @user.mybio = params[:mybio]
+    @user.photo = params[:photo]
     authorize @user
 
   end
