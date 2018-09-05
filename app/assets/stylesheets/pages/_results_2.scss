@@ -14,9 +14,9 @@
 }
 
 #camembert2 {
-  height:15vh;
-  width: auto;
-  opacity:0.8;
+  height:10vh;
+  width: 40vw;
+  opacity:0.7;
   position:relative;
 }
 
@@ -25,13 +25,14 @@
   text-align:center;
   align-items:center;
   justify-content:center;
+  width: 80vw;
 }
 
 .general {
   display:flex;
   flex-direction:column;
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 7px;
+  padding: 5px;
   border-radius: 3px;
   // text-align:center;
   // align-items:center;
@@ -64,6 +65,7 @@
   overflow: scroll;
   height: 80px;
   font-size: 16px;
+  margin-top:20px;
 }
 
 .container-tight {
