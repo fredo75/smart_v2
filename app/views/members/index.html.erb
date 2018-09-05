@@ -1,48 +1,41 @@
 <div class= gradient>
-    <div>
+  <div>
     <!-- <div class="form-inline " > -->
-      <%= form_tag members_path, method: :get, :class => "form-inline" do %>
-      <%= text_field_tag :type,
-         params[:type],
-         class:"form-control input",
-         # id: "flat_address",
-          placeholder: "find your friend"%>
+    <%= form_tag members_path, method: :get, :class => "form-inline" do %>
+    <%= text_field_tag :type, params[:type], class:"form-control input", placeholder: "find your friend"%>
+    <% end %>
+  </div>
 
-        <%#= button_tag class: "button" do %>
-          <%#= icon('fa', 'search') %>
-        <%# end %>
-      <% end %>
+<h2 class= text-center>Community</h2>
+<% @users.each do | user |%>
+  <div class="message">
+    <img class="message-avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
+    <div class="message-name">
+      <h3><%= user.username %></h3>
+      <p>Score: <span class="score-cards next_button_style"><%= user.surveys.last&.total_user_score %></span></p>
     </div>
-
-
-   <p class= text-center>Community</p>
-
-  <% @users.each do | user |%>
-
-    <div class="message">
-      <img class="message-avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
-      <div class="message-name">
-        <h3><%= user.username %></h3>
-        <p><%= Date.today %></p>
-      </div>
-      <div class="message-body">
-        <p><strong>I am not sure yet!</strong></p>
-
-      </div>
-      <div class="message-status">
-        <p class="status pending">score</p>
-        <p class="score"><%= user.surveys.last&.total_user_score %></p>
-          <%= simple_form_for @follow do |f| %>
-            <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
-            <%= f.button :submit,'Add', class:'next_button_style button_save' %>
+    <div class="icons">
+      <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
+        <i class="fab fa-facebook"></i>
+      </a>
+        <%= simple_form_for @follow do |f| %>
+        <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
+        <%= button_tag type: 'submit', class: "" do %>
+              <i class="far fa-heart"></i>
           <% end %>
-         <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
 
-        <!-- <div class=""> -->
-        <i class="far fa-share-square color-link1"></i>
-        <p>Partager</p>
-      </div>
+        <%#= f.button :submit, '', {class:'next_button_style button_add'} do %>
+          <!-- <i class="far fa-heart"></i> -->
+        <%# end %>
+
+        <!-- <input type="submit" name="commit" value="Add" class="btn next_button_style button_add" data-disable-with="Add"> -->
+        <% end %>
+        <!-- <i class="far fa-heart"></i> -->
+
+      <!-- <p class="score-cards next_button_style"><%= user.surveys.last&.total_user_score %></p> -->
+
+    </div>
       </div>
     </div>
-  <% end  %>
+  <% end%>
 </div>
