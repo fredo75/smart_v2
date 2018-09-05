@@ -1,42 +1,59 @@
 <div class='gradient'>
-    <h1 class='header margin'> Evaluate <br> your <br> eco-impact</h1>
-     <p id='pick'>Start with a category!</p>
+    <p class="header_form pimp ">Start Surveys </p>
+  <div class="form-container">
+     <!-- <p>Start with a category!</p> -->
     <%= link_to user_path(current_user), class:'button' do %>
       <i class="fas fa-arrow-left"></i>
     <% end %>
     <div class='circle-container'>
-      <%= image_tag("earth.png", class:'planet') %>
-    <div class='wrapper deg0' >
-        <%=  link_to edit_survey_path(@survey, category: 'food') do%>
-        <%= image_tag("food.png") %>
-      <div id="container_food" data-food="<%= @food.to_json %>"></div>
-      <% end %>
-    </div>
+      <%#= image_tag("earth.png", class:'planet') %>
 
-     <div class='wrapper deg90' >
-      <%=  link_to edit_survey_path(@survey, category: 'transport') do%>
-        <%= image_tag("transport.png") %>
-        <div id="container_transport" data-transport="<%= @transport.to_json %>"></div>
-      <% end %>
+      <div class="row">
+        <div class="col-xs-6 ">
+          <div class="fixed-image">
+          <%= link_to edit_survey_path(@survey, category: 'food') do%>
+          <%= image_tag("food.png") %>
+          <div id="container_food" data-food="<%= @food.to_json %>"></div>
+          <% end %>
+          </div>
+        </div>
+
+        <div class="col-xs-6">
+          <div class="fixed-image">
+            <%=  link_to edit_survey_path(@survey, category: 'transport') do%>
+            <%= image_tag("transport.png") %>
+          <div id="container_transport" data-transport="<%= @transport.to_json %>"></div>
+          <% end %>
+        </div>
+        </div>
       </div>
 
-      <div class='wrapper deg180' >
-      <%=  link_to edit_survey_path(@survey, category: 'waste'), class:'deg180' do%>
-        <%= image_tag("trash.png") %>
-         <div id="container_trash" data-trash="<%= @trash.to_json %>"></div>
+
+
+      <div class="row">
+        <div class="col-xs-6 ">
+          <div class="fixed-image">
+          <%=  link_to edit_survey_path(@survey, category: 'waste') do%>
+          <%= image_tag("trash.png") %>
+       <div id="container_trash" data-trash="<%= @trash.to_json %>"></div>
       <% end %>
       </div>
+        </div>
 
-      <div class='wrapper deg270' >
-      <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
+        <div class="col-xs-6">
+          <div class= "fixed-image">
+        <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
         <%= image_tag("house.png") %>
         <div id="container_housing" data-housing="<%= @housing.to_json %>"></div>
-      <% end %>
-    </div>
+        <% end %>
+        </div>
+        </div>
+      </div>
 
-  </div>
+
+
     <p> <%#= @survey.energy_score %></p>
-</div>
+  </div>
 </div>
 
 
