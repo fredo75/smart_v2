@@ -16,12 +16,12 @@
 
   <div class="button-navbar button-survey-categories box_item" >
     <% if @survey.nil? %>
-      <%= link_to user_session_path, class:'footprint' do   %>
+      <%= link_to surveys_path, class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
       <p>Start!</p>
       <% end %>
     <% else %>
-      <%= link_to survey_path(@survey), class:'footprint' do   %>
+      <%= link_to user_session_path(@survey), class:'footprint' do   %>
       <%= image_tag("footprint.png") %>
       <p>Start!</p>
     <% end %>
