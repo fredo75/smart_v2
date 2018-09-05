@@ -15,9 +15,9 @@ User.destroy_all
 puts "Create User"
 
 fred = User.create(email: 'f@gmail.com', password: '123456')
-tiphaine = User.create(email: 't@gmail.com', password: '654321')
-camille = User.create(email: 'c@gmail.com', password: 'azerty')
-adrien = User.create(email: 'a@gmail.com', password: 'qwerty')
+tiphaine = User.create(email: 't@gmail.com', password: '123456')
+camille = User.create(email: 'c@gmail.com', password: '123456')
+adrien = User.create(email: 'a@gmail.com', password: '123456')
 
 
 

@@ -1,5 +1,7 @@
 class SurveysController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_survey, only: [:show, :edit, :update]
+
 
   # GET /surveys
   # GET /surveys.json
@@ -12,10 +14,6 @@ class SurveysController < ApplicationController
   # GET /surveys/1.json
   def show
     # @survey = Survey.find(params[:id])
-    @user = current_user
-    @survey = @user.surveys.last
-
-
     @user = current_user
     @survey = @user.surveys.last
 
@@ -40,7 +38,6 @@ class SurveysController < ApplicationController
     @food += 1 if @survey.vegetable_season != nil
     @food += 1 if @survey.eating_habits != nil
     @food += 1 if @survey.bio_buyings != nil
-    # raise
 
     # redirect_to survey_path(@survey)
     authorize @survey
@@ -66,6 +63,8 @@ class SurveysController < ApplicationController
     # @user = current_user
     # @survey = @user.survey.last
     @survey.update(survey_params)
+    current_user.score = @survey.total_user_score_updated
+    current_user.save
     redirect_to survey_path(@survey)
     authorize @survey
   end
