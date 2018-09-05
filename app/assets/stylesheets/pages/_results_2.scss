@@ -1,8 +1,49 @@
 .result-2-title {
 
   text-align: center;
-  border-top: solid;
   width: vh;
-  border-color: grey;
-  margin-top: 40px;
+  // border-color: grey;
+  // margin-top: 10px;
+}
+
+#camembert1 {
+  height:30vh;
+  width: 60vw;
+  opacity:1;
+  position:relative;
+}
+
+#camembert2 {
+  height:auto;
+  width: 40vw;
+  opacity:0.6;
+  position:relative;
+}
+
+.average {
+  display:flex;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+}
+
+.general {
+  display:flex;
+  background-color: rgba(220, 220, 220, 0.7);
+  padding: 10px;
+  margin-bottom: 20px;
+  // text-align:center;
+  // align-items:center;
+  // justify-content:center;
+
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-style:solid;
+  border-width: 2px;
+  border-color: white;
+  margin:5px;
+  border-radius:2px;
 }
