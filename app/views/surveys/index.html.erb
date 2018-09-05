@@ -1,1 +1,17 @@
+<div class= gradient>
+   <div class='box welcome' style="align-items: center; padding-top: 20px;">
+
+    <%= image_tag "earth2.svg", class:'planet small' %>
+
+    <h1 id="Welcome" align="center">Green-Impact</h1>
+  </div>
+  <% if current_user.nil? %>
+    <p><%= link_to "start", user_session_path, class: "next_button_style"  %></p>
+  <% else %>
+    <p><%= link_to "start", user_path(current_user), class: "next_button_style"  %></p>
+
+  <% end %>
+</div>
+
+=======
 <h1>Landing page</h1>

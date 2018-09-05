@@ -12,8 +12,12 @@
       <img class="message-avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
         <div class="message-name">
           <h3><%= user.username %></h3>
-          <p>Score <span class="score-cards next_button_style"><%# @final_score %><%#= user.surveys.last&total_user_score %>
-
+          <p>Score <span class="score-cards next_button_style">
+            <% if user.surveys.empty? || user.surveys.last.total_user_score.nil? %>
+              0
+            <% else %>
+              <%= user.surveys.last.total_user_score %>
+            <% end %>
           </span></p>
         </div>
         <div class="icons">
