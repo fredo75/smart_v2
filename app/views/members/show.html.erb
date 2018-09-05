@@ -7,7 +7,15 @@
   <% @users.each do | user |%>
 
     <div class="message grad">
-      <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
+        <% if user.photo.present? %>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path user.photo, height: 100, width: 100 %>')">
+        </div>
+        <% else %>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+        </div>
+        <% end %>
+
+
       <div class="message-name">
         <h3><%= user.username %></h3>
         <p><%= Date.today %></p>

@@ -1,4 +1,5 @@
 .navbar-container{
+  position: sticky;
   position: absolute;
   bottom: 0;
   z-index: 3;
@@ -9,12 +10,15 @@
   padding:0;
 
   .earth-container{
+    position: sticky;
     position: relative;
     width: 100vw;
     height: 142px;
     overflow: hidden;
   }
   .planet-navbar{
+
+    transition: all 0.5s ease-in-out;
     display: block;
     position: absolute;
     width: 7em;
@@ -30,10 +34,11 @@
     width: 35em;
     bottom: -30.5em;
     left: -13em;
-    z-index: -5;
+    // z-index: -5;
 
   }
   .button-navbar{
+    transition: all 0.5s ease-in-out;
     position: absolute;
     height: 55px;
     width: 110px;
