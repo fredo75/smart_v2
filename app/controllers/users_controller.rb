@@ -35,6 +35,7 @@ class UsersController < ApplicationController
     ]
       @final_score = @user.surveys.last.total_user_score_updated
       @user.score = @final_score
+      @user.save
   end
 
 

@@ -15,10 +15,6 @@ class SurveysController < ApplicationController
     @user = current_user
     @survey = @user.surveys.last
 
-
-    @user = current_user
-    @survey = @user.surveys.last
-
     @housing = 0
     @housing += 1 if @survey.housing_type != nil
     @housing += 1 if @survey.area != nil
