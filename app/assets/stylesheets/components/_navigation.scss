@@ -20,11 +20,15 @@
     width: 5em;
     bottom: 0em;
     left: 0em;
+    &:hover {
+      cursor: pointer;
+    }
   }
+
   .planet-navbar.open {
-    width: 35em;
-    bottom: -30.5em;
-    left: -13em;
+    // width: 35em;
+    // bottom: -30.5em;
+    // left: -13em;
 
   }
   .button-navbar{
