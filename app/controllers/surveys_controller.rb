@@ -62,6 +62,8 @@ class SurveysController < ApplicationController
     # @user = current_user
     # @survey = @user.survey.last
     @survey.update(survey_params)
+    current_user.score = @survey.total_user_score_updated
+    current_user.save
     redirect_to survey_path(@survey)
     authorize @survey
   end
