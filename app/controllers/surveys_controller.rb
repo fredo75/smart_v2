@@ -1,5 +1,7 @@
 class SurveysController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_survey, only: [:show, :edit, :update]
+
 
   # GET /surveys
   # GET /surveys.json
@@ -36,7 +38,6 @@ class SurveysController < ApplicationController
     @food += 1 if @survey.vegetable_season != nil
     @food += 1 if @survey.eating_habits != nil
     @food += 1 if @survey.bio_buyings != nil
-    # raise
 
     # redirect_to survey_path(@survey)
     authorize @survey

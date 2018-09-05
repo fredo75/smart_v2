@@ -9,7 +9,7 @@ class MembersController < ApplicationController
     end
     # raise
     @follow = Follow.new
-    @final_score = @user.surveys.last.total_user_score_updated
+    # @final_score = @user.surveys.last.total_user_score_updated
 
   end
 
