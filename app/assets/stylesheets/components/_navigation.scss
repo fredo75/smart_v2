@@ -1,6 +1,6 @@
 .navbar-container{
-  position: sticky;
-  position: absolute;
+  position: fixed;
+  // position: absolute;
   bottom: 0;
   z-index: 3;
   width: 100vw;
@@ -10,7 +10,7 @@
   padding:0;
 
   .earth-container{
-    position: sticky;
+    position: fixed;
     position: relative;
     width: 100vw;
     height: 142px;
