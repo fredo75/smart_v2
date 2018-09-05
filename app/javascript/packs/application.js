@@ -45,4 +45,11 @@ if (document.querySelector(".container-card")) {
 
 import {previewImage} from '../components/preview_image';
 
+
+import {openNavigation} from '../components/navigation';
+  if (document.querySelector('.planet-navbar')){
+    openNavigation();
+  }
+
 previewImage();
+

@@ -1,8 +1,8 @@
 <div class='gradient'>
     <h1 class='header margin'> Evaluate <br> your <br> eco-impact</h1>
      <p id='pick'>Start with a category!</p>
-    <%= link_to user_path(current_user), class:'back' do %>
-      <i class="far fa-times-circle"></i>
+    <%= link_to user_path(current_user), class:'button' do %>
+      <i class="fas fa-arrow-left"></i>
     <% end %>
     <div class='circle-container'>
       <%= image_tag("earth.png", class:'planet') %>
@@ -37,7 +37,6 @@
   </div>
     <p> <%#= @survey.energy_score %></p>
 </div>
-
 </div>
 
 

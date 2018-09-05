@@ -11,7 +11,9 @@ class FollowsController < ApplicationController
   end
 
   def index
+    @survey = current_user.surveys.last
     @friends = policy_scope(Follow)
+
 
     # @friends = current_user.liked_users.uniq
   end
