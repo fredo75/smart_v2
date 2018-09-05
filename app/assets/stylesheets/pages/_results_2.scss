@@ -8,15 +8,15 @@
 
 #camembert1 {
   height:30vh;
-  width: 60vw;
+  width: 45vw;
   opacity:1;
   position:relative;
 }
 
 #camembert2 {
-  height:auto;
-  width: 40vw;
-  opacity:0.6;
+  height:15vh;
+  width: auto;
+  opacity:0.8;
   position:relative;
 }
 
@@ -29,9 +29,10 @@
 
 .general {
   display:flex;
-  background-color: rgba(220, 220, 220, 0.7);
-  padding: 10px;
-  margin-bottom: 20px;
+  flex-direction:column;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 7px;
+  border-radius: 3px;
   // text-align:center;
   // align-items:center;
   // justify-content:center;
@@ -45,5 +46,26 @@
   border-width: 2px;
   border-color: white;
   margin:5px;
-  border-radius:2px;
+  border-radius:1px;
+}
+
+.part-one {
+  display:flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.part-two {
+  display:flex;
+  text-align: center;
+  flex-direction:column;
+  overflow: scroll;
+  height: 80px;
+  font-size: 16px;
+}
+
+.container-tight {
+  padding:20px;
 }

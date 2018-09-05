@@ -1,163 +1,112 @@
 <div class='gradient'>
-  <%= link_to user_path(current_user), class:'back' do %>
-      <i class="far fa-times-circle"></i>
-    <% end %>
-
-  <div class="general">
-    <div style="text-align:left; display:flex; align-items:center;flex-direction:column">
-      <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar') %>
-      <button class="button" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i></button>
-    </div>
-
-    <div style="display:flex; flex-direction: column; text-align: left; padding-left: 20px">
-      <div>
-        <h3 > <%= @user.username %></h3>
-      </div>
-      <div>
-        <p> <%= @user.mybio %></p>
-      </div>
-    </div>
-  <!--    <p id="myEcoActions">My Eco Actions</p> -->
-  </div>
-  <%= render 'form', user: @user %>
-
-  <div style="display:flex; text-align:center; align-items: center;">
-
-      <div id="index" style="margin-left: 15px;">
-        <div style="display:flex; width:120px; text-align:center">
-          <div class="color-box" style="background-color: #F0004C">
-          </div style="display:flex; width:80px; text-align:center; padding:5px;">
-          <p>food</p>
-        </div>
-        <div style="display:flex; width:120px; text-align:center">
-          <div class="color-box" style="background-color: #FFF87A">
-          </div style="display:flex; width:80px; text-align:center; padding:5px;">
-          <p>transport</p>
-        </div>
-        <div style="display:flex; width:120px; text-align:center">
-          <div class="color-box" style="background-color: #FF9B3D">
-          </div style="display:flex; width:80px; text-align:center; padding:5px;">
-          <p>waste</p>
-        </div>
-        <div style="display:flex; width:120px; text-align:center">
-          <div class="color-box" style="background-color: #FF5B5D">
-          </div style="display:flex; width:80px; text-align:center; padding:5px;">
-          <p>energy</p>
-        </div>
-      </div>
-
-      <div>
-        <div style=" display:flex; align-items:center; justify-content:center">
-          <div>Your score:</div>
-          <div style="font-size: 30px; margin-left: 15px"><%= @final_score %></div>
-        </div>
-        <div id="camembert1">
-          <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
-          </canvas>
-        </div>
-      </div>
-  </div>
+  <div class="container-tight">
 
 
-  <div style="text-align: center; margin-top:20px; ">
-   <%= image_tag "trait-separation.png", height: 20, width: 100 %>
-  </div>
+    <div class="general">
 
- <%# if @survey.food_score.nil? %>
- <%# else %>
- <%#= @users.surveys.last.food_score %>
- <%# end %>
- <%#= @survey.energy_score %>
- <%#= @survey.transportation_score %>
- <%#= @survey.upcycling_calculation %>
- <%#= @survey.total_user_score %>
-
-
-
-
-<div class="average">
-  <div style="display: flex; flex-direction: column; align-items: center">
-    <p style="margin-left: 1em; margin-top: 1em; text-align: center; font-size:15px; opacity: 0.8"> National average</p>
-    <div style="font-size: 18px; opacity: 0.8;"><%= 22.16 %></div>
-  </div>
-  <div id="camembert2">
-    <canvas id="myChart2" align="center">
-    </canvas>
-  </div>
-</div>
-
-  <div style="text-align: center; ">
-   <%= image_tag "trait-separation.png", height: 20, width: 100 %>
-  </div>
-
-  <div style="margin-top: 0; text-align: center">
-    <h4>My eco Actions!</h4>
-  </div>
-
-  <div class="eco_actions">
-    <div class="container-card">
-      <div class="row">
-        <% @user.eco_actions.all.each do |eco_action| %>
-        <% if eco_action.added_to_survey %>
-
-        <div class="col-xs-12">
-          <div class="card" >
-            <% if eco_action.photo.present? %>
-            <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path eco_action.photo, height: 100, width: 100 %>')">
+          <div class="part-one">
+            <div stye="margin-top:10px;">
+              <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar-small') %>
             </div>
-            <% else  %>
-            <div class="eco-photo-index" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+            <div>
+              <h3 font-size:30px;"> <%= @user.username %></h3>
             </div>
-            <% end %>
-            <div class="card-description">
-              <div class="title">
-                <h5><%= eco_action.title %></h5>
-              </div>
-              <%= link_to '', eco_action_path(eco_action.id), class: "card-link" %>
-            </div>
-
-            <div class="vertical-flexbox">
-
-              <div class="inline">
-                <div class="score">
-                  <%= eco_action.eco_scoring_total %>
-                </div>
-                <div class="category">
-                  <% if eco_action.eco_category.present? %>
-                  <%= image_tag "#{eco_action.eco_category}.png", height: 30 %>
-                  <% else  %>
-                  <%= image_tag "interogation.jpg", height: 20 %>
-                  <% end %>
-                </div>
-              </div>
-
-              <div class="toggle" >
-                <div class="toggle-title">Join it!</div>
-                <%= simple_form_for eco_action, html: {class: "form-toggle"} do |f| %>
-                <div class="spe-toggle">
-                  <label class="switch">
-                    <%= f.input_field :added_to_survey, {
-                      data: { toggle: 'toggle', size: 'small' }
-                    }
-                    %>
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-                <%#= f.submit %>
-                <% end %>
-              </div>
+            <div>
+              <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
+              </button>
             </div>
           </div>
+          <div style="text-align: center; margin-top:0px; font-size:16px">
+           <%= image_tag "trait-separation.png", height: 20, width: 100 %>
+          </div>
+
+          <div class="part-two">
+            <div>
+              <p> <%= @user.mybio %></p>
+            </div>
+          </div>
+    <!--    <p id="myEcoActions">My Eco Actions</p> -->
+    </div>
+    <%= render 'form', user: @user %>
+
+  <div>
+    <div style="display:flex; text-align:center; align-items: center; justify-content: center;">
+      <div id="camembert1">
+        <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
+        </canvas>
+      </div>
+
+      <div style="display:flex; flex-direction:column; justify-content: center;"">
+        <div id="index" style="margin-left: 10px;">
+          <div style="display:flex; width:100px; text-align:center">
+            <div class="color-box" style="background-color: #F0004C">
+            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">food</p>
+          </div>
+          <div style="display:flex; width:100px; text-align:center">
+            <div class="color-box" style="background-color: #FFF87A">
+            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">transport</p>
+          </div>
+          <div style="display:flex; width:100px; text-align:center">
+            <div class="color-box" style="background-color: #FF9B3D">
+            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">waste</p>
+          </div>
+          <div style="display:flex; width:100px; text-align:center">
+            <div class="color-box" style="background-color: #FF5B5D">
+            </div style="display:flex; width:100px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">energy</p>
+          </div>
         </div>
-        <% else %>
-        <% end %>
-        <% end %>
       </div>
     </div>
+      <div style=" display:flex; align-items:center; justify-content: center;">
+        <div style="font-size: 18px;margin-bottom:5px;">Your score:</div>
+        <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %></div>
+      </div>
+      <div style="text-align: center; font-size: 16px; margin-top:20px;">
+        <p>Add EcoActions to reduce your impact!</p>
+        <%= link_to eco_actions_path, class:'button' do %>
+          <i class="fas fa-plus"> </i>
+        <% end %>
+      </div>
   </div>
 
 
+    <div style="text-align: center; margin-top:20px; ">
+     <%= image_tag "trait-separation.png", height: 20, width: 100 %>
+    </div>
 
+   <%# if @survey.food_score.nil? %>
+   <%# else %>
+   <%#= @users.surveys.last.food_score %>
+   <%# end %>
+   <%#= @survey.energy_score %>
+   <%#= @survey.transportation_score %>
+   <%#= @survey.upcycling_calculation %>
+   <%#= @survey.total_user_score %>
+
+
+
+
+  <div class="average">
+    <div id="camembert2">
+      <canvas id="myChart2" align="center">
+      </canvas>
+    </div >
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <p style=" margin-top: 1em; text-align: center; font-size:18px; opacity: 0.8"> National average</p>
+      <div style="font-size: 20px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
+
+    </div>
+  </div>
+
+    <div style="text-align: center; margin-top:10px; ">
+     <%= image_tag "trait-separation.png", height: 20, width: 100 %>
+    </div>
+
+  </div>
 
 
 </div>

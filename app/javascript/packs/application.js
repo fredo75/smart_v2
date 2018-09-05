@@ -52,4 +52,3 @@ import {openNavigation} from '../components/navigation';
   }
 
 previewImage();
-
