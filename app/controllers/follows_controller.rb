@@ -11,12 +11,11 @@ class FollowsController < ApplicationController
   end
 
   def index
-
-    @friends = policy_scope(Follow).order(:score)
-    raise
-
+    @user = current_user
     @survey = current_user.surveys.last
-    @friends = policy_scope(Follow)
+    @friends = policy_scope(Follow).order(:score)
+
+
 
     # @friends = current_user.liked_users.uniq
   end

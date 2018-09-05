@@ -22,9 +22,11 @@ class UsersController < ApplicationController
       @user.surveys.last.energy_score,
     ]
       @final_score = @user.surveys.last.total_user_score
+      @user.score = @final_score
+      @user.save
   end
 
-    def results_2
+  def results_2
     @user = User.find(params[:id])
     authorize @user
     @points = [
