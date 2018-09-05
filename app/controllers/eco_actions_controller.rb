@@ -11,6 +11,7 @@ class EcoActionsController < ApplicationController
   # GET /eco_actions/1
   # GET /eco_actions/1.json
   def show
+    @survey = current_user.surveys.last
     authorize @eco_action
   end
 
