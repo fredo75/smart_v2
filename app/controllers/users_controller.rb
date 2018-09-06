@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     redirect_to profile_path(@user.id)
     @user.username = params[:username]
     @user.mybio = params[:mybio]
+    @user.photo = params[:photo]
     authorize @user
 
   end
@@ -22,9 +23,11 @@ class UsersController < ApplicationController
       @user.surveys.last.energy_score,
     ]
       @final_score = @user.surveys.last.total_user_score
+      @user.score = @final_score
+      @user.save
   end
 
-    def results_2
+  def results_2
     @user = User.find(params[:id])
     authorize @user
     @points = [
@@ -34,6 +37,8 @@ class UsersController < ApplicationController
       @user.surveys.last.energy_score_updated,
     ]
       @final_score = @user.surveys.last.total_user_score_updated
+      @user.score = @final_score
+      @user.save
   end
 
 

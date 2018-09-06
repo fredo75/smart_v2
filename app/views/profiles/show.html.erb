@@ -1,19 +1,111 @@
 <div class='gradient'>
-  <%= link_to user_path(current_user), class:'back' do %>
-      <i class="far fa-times-circle"></i>
-    <% end %>
+  <div class="container-tight">
 
-  <div class='circle-container' style="top:15em;">
-    <%= image_tag("earth.png", class:'planet small transparent') %>
+
+    <div class="general">
+
+          <div class="part-one">
+            <div stye="margin-top:10px;">
+              <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar-small') %>
+            </div>
+            <div>
+              <h3 font-size:30px;"> <%= @user.username %></h3>
+            </div>
+            <div>
+              <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="part-two">
+            <div>
+              <p> <%= @user.mybio %></p>
+            </div>
+          </div>
+    <!--    <p id="myEcoActions">My Eco Actions</p> -->
+    </div>
+    <%= render 'form', user: @user %>
+
+  <div>
+    <div style="display:flex; text-align:center; align-items: center; justify-content: center;">
+      <div id="camembert1">
+        <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
+        </canvas>
+      </div>
+
+      <div style="display:flex; flex-direction:column; justify-content: center;"">
+        <div id="index" style="margin-left: 10px;">
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #f79256"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">food</p>
+            </div>
+          </div>
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #fbd1a2"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">transport</p>
+            </div>
+          </div>
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #7dcfb6"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">waste</p>
+            </div>
+          </div>
+          <div style="display:flex; width:110px; text-align:center">
+            <div class="color-box" style="background-color: #00b2ca"></div>
+            <div style="display:flex; width:80px; text-align:center; padding:5px;">
+            <p style="font-size:16px;">energy</p></div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+        <div style=" display:flex; align-items:center; justify-content: center;">
+          <div style="font-size: 18px;margin-bottom:5px;">Your score:</div>
+          <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %></div>
+        </div>
+
+      </div>
+
+   <%# if @survey.food_score.nil? %>
+   <%# else %>
+   <%#= @users.surveys.last.food_score %>
+   <%# end %>
+   <%#= @survey.energy_score %>
+   <%#= @survey.transportation_score %>
+   <%#= @survey.upcycling_calculation %>
+   <%#= @survey.total_user_score %>
+
+
+
+
+    <div class="average">
+      <div id="camembert2">
+        <canvas id="myChart2" align="center">
+        </canvas>
+      </div >
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average</p>
+        <div style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
+
+      </div>
+    </div>
+
+    <div style="text-align: center; font-size: 15px; margin-top:20px;">
+      <p>Add EcoActions to reduce your impact!</p>
+      <%= link_to eco_actions_path, class:'button' do %>
+        Add EcoActions </i>
+      <% end %>
+    </div>
+
   </div>
 
 
-   <h1 id="username"> <%= @user.username %></h1>
-   <p id="bio"> <%= @user.mybio %></p>
-<!--    <p id="myEcoActions">My Eco Actions</p> -->
-
-<%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar avatar_position') %>
-<button class="button button_position" data-toggle="modal" data-target="#edit-user-profile">Edit my Profile</button>
-
 </div>
-<%= render 'form', user: @user %>
+
+
+
+
+

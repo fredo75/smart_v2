@@ -2,6 +2,7 @@ class EcoActionsController < ApplicationController
   before_action :set_eco_action, only: [:show, :edit, :update, :destroy]
 
   def index
+    @survey = current_user.surveys.last
     @eco_actions = EcoAction.all
     @eco_actions = policy_scope(@eco_actions).order(created_at: :desc)
     authorize @eco_actions
@@ -10,6 +11,7 @@ class EcoActionsController < ApplicationController
   # GET /eco_actions/1
   # GET /eco_actions/1.json
   def show
+    @survey = current_user.surveys.last
     authorize @eco_action
   end
 

@@ -51,9 +51,10 @@ justify-content:space-around;
 .eco-photo-index {
   height:100px;
   width:100px;
-  box-flex: 0;
-  background-size:cover;
-  border-radius: 10px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+
+
 }
 
 .eco-photo-index-small {
@@ -214,6 +215,7 @@ justify-content:space-around;
   background-position:center;
   min-width: 40px;
   opacity: 1;
+  background-color: #88e2cd;
 }
 
 .score-large {

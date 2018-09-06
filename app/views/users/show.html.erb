@@ -8,9 +8,9 @@
       <p>Get started !</p>
     </div>
 
-    <%= link_to members_path, class:'back' do %>
-      <i class="fas fa-comment-dots"></i>
-    <% end %>
+    <%#= link_to members_path, class:'back' do %>
+      <!-- <i class="fas fa-comment-dots"></i> -->
+    <%# end %>
 
     <div class="box_item box_right" id="Solutions">
     <p>Eco-actions</p>
@@ -23,7 +23,7 @@
   <div class='box welcome' style="align-items: center; padding-top: 20px;">
 
     <%= image_tag "earth.png", class:'planet small' %>
-    <h1 id="Welcome" align="center">Welcome</h1>
+    <h1 id="Welcome" align="center">Green-Impact</h1>
   </div>
 
   <div class="box" >
@@ -31,17 +31,17 @@
       <%= link_to profile_path(current_user), class:'user' do  %>
       <%= image_tag("profile.png") %>
     <% end %>
-    <p>My profile</p>
+    <p>Eco-profile</p>
     </div>
 
     <div class="box_item box_right" id="Stat">
-    <p>My results</p>
+    <p>Community</p>
     <% if @user.surveys.present? %>
       <% @user.surveys.first.total_user_score %>
-      <%= link_to results_user_path(@user),class:'stat' do %>
+      <%= link_to members_path,class:'stat' do %>
+      <%#= link_to results_user_path(@user),class:'stat' do %>
       <%= image_tag("stat.png") %>
       <% end %>
-    <% else %>
 
     <% end %>
     </div>

@@ -1,48 +1,45 @@
-<div class= gradient>
-    <div>
+<div class="gradient">
+  <div>
     <!-- <div class="form-inline " > -->
-      <%= form_tag members_path, method: :get, :class => "form-inline" do %>
-      <%= text_field_tag :type,
-         params[:type],
-         class:"form-control input",
-         # id: "flat_address",
-          placeholder: "find your friend"%>
+    <%= form_tag members_path, method: :get, :class => "form-inline" do %>
+    <%= text_field_tag :type, params[:type], class:"form-control input", placeholder: "find your friend"%>
+    <% end %>
+  </div>
 
-        <%#= button_tag class: "button" do %>
-          <%#= icon('fa', 'search') %>
-        <%# end %>
-      <% end %>
-    </div>
-
-
-   <p class= text-center>Community</p>
-
+<h2 class="text-center">Community</h2>
   <% @users.each do | user |%>
+    <div class="message">
 
-    <div class="message grad">
-      <img class="avatar" src="https://kitt.lewagon.com/placeholder/users/camilleFr">
-      <div class="message-name">
-        <h3><%= user.username %></h3>
-        <p><%= Date.today %></p>
-      </div>
-      <div class="message-body">
-        <p><strong>I am not sure yet!</strong></p>
+      <% if user.photo.present? %>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path user.photo, height: 100, width: 100 %>')">
+        </div>
+        <% else %>
+        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+        </div>
+        <% end %>
 
-      </div>
-      <div class="message-status">
-        <p class="status pending">score</p>
-        <p class="score"><%= user.surveys.last&.total_user_score %></p>
-          <%= simple_form_for @follow do |f| %>
+        <div class="message-name">
+          <h3><%= user.username %></h3>
+          <p>Score <span class="score-cards next_button_style">
+            <% if user.surveys.empty? || user.surveys.last.total_user_score.nil? %>
+              0
+            <% else %>
+              <%= user.surveys.last.total_user_score %>
+            <% end %>
+          </span></p>
+        </div>
+        <div class="icons">
+          <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
+            <i class="fab fa-facebook"></i>
+          </a>
+            <%= simple_form_for @follow do |f| %>
             <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
-            <%= f.button :submit,'Add', class:'next_button_style button_save' %>
+            <%= button_tag type: 'submit', class: "" do %>
+              <i class="far fa-heart"></i>
+              <% end %>
           <% end %>
-         <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
-
-        <!-- <div class=""> -->
-        <i class="far fa-share-square color-link1"></i>
-        <p>Partager</p>
-      </div>
-      </div>
-    </div>
-  <% end  %>
+        </div>
 </div>
+  <% end%>
+</div>
+
