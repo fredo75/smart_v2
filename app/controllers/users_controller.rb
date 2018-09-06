@@ -36,6 +36,7 @@ class UsersController < ApplicationController
       @user.surveys.last.upcycling_calculation_updated,
       @user.surveys.last.energy_score_updated,
     ]
+
       @final_score = @user.surveys.last.total_user_score_updated
       @user.score = @final_score
       @user.save
