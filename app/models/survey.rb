@@ -84,7 +84,7 @@ class Survey < ApplicationRecord
   end
 
   def eco_action_cat_transport
-    @eco_actions = self.user.eco_actions.all
+    @eco_actions = EcoAction.all
     @eco_action_cat_transport = 0
     @eco_actions.each do |eco_action|
       if eco_action.eco_category == "transport" && eco_action.added_to_survey
@@ -95,7 +95,7 @@ class Survey < ApplicationRecord
   end
 
   def eco_action_cat_food
-    @eco_actions = self.user.eco_actions.all
+    @eco_actions = EcoAction.all
     @eco_action_cat_food = 0
     @eco_actions.each do |eco_action|
       if eco_action.eco_category == "food" && eco_action.added_to_survey
@@ -106,7 +106,7 @@ class Survey < ApplicationRecord
   end
 
   def eco_action_cat_energy
-    @eco_actions = self.user.eco_actions.all
+    @eco_actions = EcoAction.all
     @eco_action_cat_energy = 0
     @eco_actions.each do |eco_action|
       if eco_action.eco_category == "house" && eco_action.added_to_survey
@@ -117,7 +117,7 @@ class Survey < ApplicationRecord
   end
 
   def eco_action_cat_waste
-    @eco_actions = self.user.eco_actions.all
+    @eco_actions = EcoAction.all
     @eco_action_cat_waste = 0
     @eco_actions.each do |eco_action|
       if eco_action.eco_category == "trash" && eco_action.added_to_survey
