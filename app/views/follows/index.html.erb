@@ -24,7 +24,7 @@
               <% if friend.surveys.empty? || friend.surveys.last.total_user_score.nil? %>
                 0
               <% else %>
-                <%= friend.surveys.last.total_user_score %>
+                <%= friend.surveys.last.total_user_score_updated %>
               <% end %>
             </div>
 

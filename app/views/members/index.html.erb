@@ -30,7 +30,7 @@
               <% if user.surveys.empty? || user.surveys.last.total_user_score.nil? %>
                 0
               <% else %>
-                <%= user.surveys.last.total_user_score %>
+                <%= user.surveys.last.total_user_score_updated %>
               <% end %>
             </div>
 
