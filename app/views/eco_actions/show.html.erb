@@ -54,6 +54,11 @@
                   </h5>
 
 
+            <div>
+              <button class="button-small" data-toggle="modal" data-target="#new_eco_action"><i class="fas fa-pencil-alt"></i>
+              </button>
+            </div>
+
 
                   <div class="link">
                     <%= link_to eco_action_path(@eco_action.id), method: :delete, :class => 'lilink' do %>
@@ -73,3 +78,4 @@
 
 </div>
 
+<%= render 'new_eco_action', eco_action: @eco_action %>
