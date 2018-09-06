@@ -17,6 +17,8 @@ class EcoActionsController < ApplicationController
 
   # GET /eco_actions/1/edit
   def edit
+
+    @survey = current_user.surveys.last
     authorize @eco_action
   end
 
