@@ -1,6 +1,6 @@
 .navbar-container{
-  position: sticky;
-  position: absolute;
+  position: fixed;
+  // position: absolute;
   bottom: 0;
   z-index: 3;
   width: 100vw;
@@ -10,18 +10,20 @@
   padding:0;
 
   .earth-container{
-    position: sticky;
+    position: fixed;
     position: relative;
     width: 100vw;
     height: 142px;
     overflow: hidden;
+
   }
   .planet-navbar{
     transition: all 0.5s ease-in-out;
     position: absolute;
-    width: 7em;
-    bottom: -1em;
-    left: 0em;
+    width: 5em;
+    bottom: -4em;
+    left: -1em;
+    top: 4em;
     &:hover {
       cursor: pointer;
     }
@@ -42,8 +44,8 @@
     width: 110px;
     text-align: center;
     font-size: 16px;
-    left: -12px;
-    bottom: -16px;
+    left: -27px;
+    bottom: -33px;
 
     img{
       height: 55px;

@@ -1,11 +1,8 @@
 .gradient {
 width: 100vw;
-height: 100vh;
+min-height: 100vh;
 padding-bottom: 142px;
 
-// background: -webkit-linear-gradient(#37ebba, #72aed3);
-// background: -o-linear-gradient(#37ebba, #72aed3);
-// background: linear-gradient(#37ebba, #72aed3);
 }
 
 body {
@@ -16,6 +13,7 @@ body {
 }
 .avatar {
   width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-size:cover;
 }
