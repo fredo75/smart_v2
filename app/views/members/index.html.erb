@@ -40,7 +40,7 @@
 
         <div class="right" style="width: 80px; align-items:right; display:flex; flex-direction:column;">
           <div class="icons">
-            <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
+            <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= profile_url(user) %>','newwindow');return false;">
               <i class="fab fa-facebook"></i>
             </a>
               <%= simple_form_for @follow do |f| %>
@@ -52,6 +52,7 @@
           </div>
 
         </div>
+        <%= link_to '', profile_path(user), class: "card-link" %>
     </div>
   <% end%>
 </div>

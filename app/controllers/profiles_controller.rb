@@ -3,13 +3,15 @@ class ProfilesController < ApplicationController
   def show
     @survey = current_user.surveys.last
     @user = User.find(params[:id])
-    @points = [
-      @user.surveys.last.transportation_score_updated,
-      @user.surveys.last.food_score_updated,
-      @user.surveys.last.upcycling_calculation_updated,
-      @user.surveys.last.energy_score_updated,
-    ]
-    @final_score = @user.surveys.last.total_user_score_updated
+    unless @user.surveys.empty?
+      @points = [
+        @user.surveys.last.transportation_score_updated,
+        @user.surveys.last.food_score_updated,
+        @user.surveys.last.upcycling_calculation_updated,
+        @user.surveys.last.energy_score_updated,
+      ]
+      @final_score = @user.surveys.last.total_user_score_updated
+    end
     authorize @user
   end
 
