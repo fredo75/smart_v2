@@ -4,21 +4,15 @@
   <% end %>
   <p class="header_form pimp">My footprint </p>
 
-      <%#= image_tag("earth.png", class:'planet') %>
-  <p> Pick a category !</p>
-      <div class="row space">
-        <div class="col-xs-6 ">
-          <div class="fixed-image">
-
   <div class="form-container">
    <!-- <p>Start with a category!</p> -->
    <div class='circle-container' style="height: 150px;">
     <%#= image_tag("earth.png", class:'planet') %>
+    <p style="text-align: center"> Pick a category !</p>
 
     <div class="row space">
       <div class="col-xs-6 ">
         <div class="fixed-image">
-
           <%= link_to edit_survey_path(@survey, category: 'food') do%>
           <%= image_tag("food.png") %>
           <div id="container_food" data-food="<%= @food.to_json %>"></div>
@@ -61,6 +55,16 @@
         </div>
       </div>
     </div>
+
+
+
+  </div>
 </div>
+
+
+
+
+
+
 
 
