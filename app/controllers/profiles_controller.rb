@@ -22,6 +22,6 @@ class ProfilesController < ApplicationController
       if @user.update(user_params)
         redirect_to profile_path(@user.id)
       else
-    end
+      end
   end
 end

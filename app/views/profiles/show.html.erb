@@ -26,8 +26,26 @@
     </div>
     <%= render 'form', user: @user %>
 
-  <div>
+<div>
+
+  <!-- Nav tabs -->
+
+  <ul class="nav nav-tabs" role="tablist">
+
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">My Results</a></li>
+
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">National Average</a></li>
+
+  </ul>
+
+
+  <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane active" id="home">
+
     <div style="display:flex; text-align:center; align-items: center; justify-content: center;">
+
+
       <div id="camembert1">
         <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
         </canvas>
@@ -69,6 +87,43 @@
 
       </div>
 
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="profile">
+      <div class="average">
+        <div id="camembert2">
+          <canvas id="myChart2" align="center">
+          </canvas>
+        </div >
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average</p>
+        <div style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+
+
    <%# if @survey.food_score.nil? %>
    <%# else %>
    <%#= @users.surveys.last.food_score %>
@@ -81,22 +136,12 @@
 
 
 
-    <div class="average">
-      <div id="camembert2">
-        <canvas id="myChart2" align="center">
-        </canvas>
-      </div >
-      <div style="display: flex; flex-direction: column; align-items: center">
-        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average</p>
-        <div style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
 
-      </div>
-    </div>
 
     <div style="text-align: center; font-size: 15px; margin-top:20px;">
       <p>Add EcoActions to reduce your impact!</p>
       <%= link_to eco_actions_path, class:'button' do %>
-        Add EcoActions </i>
+        Add !
       <% end %>
     </div>
 
