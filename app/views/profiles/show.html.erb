@@ -1,16 +1,11 @@
 <div class='gradient'>
   <div class="container-tight">
-
-
     <div class="general">
 
           <div class="part-one">
-            <div stye="margin-top:10px;">
+
               <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar-small') %>
-            </div>
-            <div>
-              <h3 font-size:30px;"> <%= @user.username %></h3>
-            </div>
+              <h3> <%= @user.username %></h3>
             <div>
               <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
               </button>
@@ -19,7 +14,7 @@
 
           <div class="part-two">
             <div>
-              <p> <%= @user.mybio %></p>
+              <p> <%#= @user.mybio %></p>
             </div>
           </div>
     <!--    <p id="myEcoActions">My Eco Actions</p> -->
@@ -87,8 +82,7 @@
         </canvas>
       </div >
       <div style="display: flex; flex-direction: column; align-items: center">
-        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average</p>
-        <div style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></div>
+        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average: <span style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></span></p>
 
       </div>
     </div>
@@ -96,7 +90,7 @@
     <div style="text-align: center; font-size: 15px; margin-top:20px;">
       <p>Add EcoActions to reduce your impact!</p>
       <%= link_to eco_actions_path, class:'button' do %>
-        Add !
+        Take action!
       <% end %>
     </div>
 
