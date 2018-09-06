@@ -1,7 +1,5 @@
 class Survey < ApplicationRecord
   belongs_to :user
-  # mount_uploader :photo, PhotoUploader
-
 
   def food_calculation_adult
     meal_per_person = 730
