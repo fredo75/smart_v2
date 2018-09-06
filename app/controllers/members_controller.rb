@@ -3,7 +3,7 @@ class MembersController < ApplicationController
 
   def index
     @survey = current_user.surveys.last
-    @users = User.all
+    @users = User.all.order(score: :desc)
     if params["type"].present?
       @users = User.global_search(params["type"])
     end
