@@ -1,6 +1,6 @@
 <div class= gradient>
 
-  <h1 class="header_form welcome">Green-Impact</h1>
+  <h1 class="header_form">Green-Impact</h1>
 
   <% if current_user.nil? %>
     <p><%= link_to "start", user_session_path, class: "next_button_style"  %></p>
@@ -10,6 +10,6 @@
    <%= link_to "start", user_path(current_user), class: "next_button_style homepage"  %>
   </div>
   <% end %>
-  <p style="margin:3px; text-align:center;">A fun tool to assess your carbon footprint, understand and reduce it ! </p>
+  <h3 class="carbon-text" style="margin:3px; text-align:center;">A fun tool to assess your carbon footprint, understand and reduce it ! </h3>
 
 </div>
