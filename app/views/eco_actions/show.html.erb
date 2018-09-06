@@ -60,11 +60,11 @@
             </div>
 
 
-                  <div class="link">
-                    <%= link_to eco_action_path(@eco_action.id), method: :delete, :class => 'lilink' do %>
+                  <div class="link" style="display:flex; justify-content: center;">
+                    <%= link_to eco_action_path(@eco_action.id), method: :delete, :class => 'button' do %>
                       <i class='fas fa-trash-alt'></i>
                     <% end %>
-                    <%= link_to edit_eco_action_path(@eco_action.id), :class => 'lilink' do %>
+                    <%= link_to edit_eco_action_path(@eco_action.id), :class => 'button' do %>
                       <i class="fas fa-pencil-alt"></i>
                     <% end %>
                   </div>
