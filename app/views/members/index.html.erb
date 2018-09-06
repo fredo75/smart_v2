@@ -8,38 +8,49 @@
 
 <h2 class="text-center">Community</h2>
   <% @users.each do | user |%>
-    <div class="message">
+    <div class="message" style="display:flex; justify-content: space-between; align-items: center">
 
       <% if user.photo.present? %>
-        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path user.photo, height: 100, width: 100 %>')">
+        <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path user.photo, height: 100, width: 100 %>')">
         </div>
         <% else %>
-        <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
+        <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 100, width: 100 %>')">
         </div>
         <% end %>
 
-        <div class="message-name">
-          <h3><%= user.username %></h3>
-          <p>Score <span class="score-cards next_button_style">
-            <% if user.surveys.empty? || user.surveys.last.total_user_score.nil? %>
-              0
-            <% else %>
-              <%= user.surveys.last.total_user_score %>
-            <% end %>
-          </span></p>
-        </div>
-        <div class="icons">
-          <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
-            <i class="fab fa-facebook"></i>
-          </a>
-            <%= simple_form_for @follow do |f| %>
-            <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
-            <%= button_tag type: 'submit', class: "" do %>
-              <i class="far fa-heart"></i>
+      <div class="center" style="text-align:center; display:flex; flex-direction:column;">
+          <div class="message-name" style="text-align: left">
+            <h3><%= user.username %></h3>
+          </div>
+          <div id="score-X" style="display:flex; align-items:center; text-align:center;">
+            <div style="font-size:15px">Score</div>
+            <div style="border-style:solid; border-color: white; border-radius:20px; padding:5px; margin-left:10px; font-size:14px">
+              <% if user.surveys.empty? || user.surveys.last.total_user_score.nil? %>
+                0
+              <% else %>
+                <%= user.surveys.last.total_user_score %>
               <% end %>
-          <% end %>
+            </div>
+
+          </div>
+      </div>
+
+
+        <div class="right" style="width: 80px; align-items:right; display:flex; flex-direction:column;">
+          <div class="icons">
+            <a onclick="window.open('http://www.facebook.com/sharer.php?u=<%= request.original_url %>','newwindow');return false;">
+              <i class="fab fa-facebook"></i>
+            </a>
+              <%= simple_form_for @follow do |f| %>
+              <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
+              <%= button_tag type: 'submit', class: "" do %>
+                <i class="far fa-heart"></i>
+                <% end %>
+            <% end %>
+          </div>
+
         </div>
-</div>
+    </div>
   <% end%>
 </div>
 
