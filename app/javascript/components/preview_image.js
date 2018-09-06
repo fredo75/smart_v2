@@ -1,5 +1,6 @@
 function previewImage() {
-  const photo = document.getElementById('eco_action_photo');
+  const photo = document.querySelector('.photo-to-preview');
+
   if (photo) {
     photo.addEventListener('change', (event) => {
       const preview = document.getElementById('img_prev');
