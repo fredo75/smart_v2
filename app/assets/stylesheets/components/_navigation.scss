@@ -60,6 +60,9 @@
       padding: 0;
     }
   }
+  .button-navbar.open {
+    z-index: 10;
+  }
   .button-profile.open{
     left: 0em;
     bottom: 4em;
@@ -85,7 +88,7 @@
     width: 35em;
     bottom: -30.5em;
     left: -13em;
-    z-index: -5;
+    z-index: 1;
 }
 .click-container{
   // background-color: red;
