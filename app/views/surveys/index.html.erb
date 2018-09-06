@@ -1,21 +1,15 @@
 <div class= gradient>
-   <div class='box welcome' style="align-items: center; padding-top: 20px;">
 
+  <h1 class="header_form">Green-Impact</h1>
 
-    <h1 id="Welcome" align="center">Green-Impact</h1>
-
-  </div>
   <% if current_user.nil? %>
-    <p><%= link_to "start", user_session_path, class: "next_button_style"  %></p>
+    <p><%= link_to "start", user_session_path, class: "next_button_style "  %></p>
   <% else %>
   <div style="position:relative;">
     <%= image_tag "earth1.svg", class:'planet small' %>
    <%= link_to "start", user_path(current_user), class: "next_button_style homepage"  %>
   </div>
   <% end %>
-  <p style="margin:3px; text-align:center;">A fun tool to assess your carbon footprint, understand and reduce it ! </p>
+  <h3 class="carbon-text" style="margin:3px; text-align:center;">A fun tool to assess your carbon footprint, understand and reduce it ! </h3>
 
 </div>
-
-=======
-<h1>Landing page</h1>

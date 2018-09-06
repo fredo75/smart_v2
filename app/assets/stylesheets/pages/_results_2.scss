@@ -59,20 +59,10 @@
   width: 100%
 }
 
-.part-two {
-  display:flex;
-  text-align: center;
-  flex-direction:column;
-  overflow: scroll;
-  height: 50px;
-  font-size: 16px;
-  margin-top:20px;
-}
 
 .container-tight {
   padding:20px;
 }
-
 
 
 .tabpanel {
@@ -91,5 +81,19 @@
   padding: 8px;
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.print{
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+.national_average{
+  margin-top: 1em;
+  text-align:center;
+  font-size: 17px;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+.print-number{
 
 }
