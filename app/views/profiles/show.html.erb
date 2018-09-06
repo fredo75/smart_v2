@@ -1,34 +1,21 @@
 <div class='gradient'>
   <div class="container-tight">
     <div class="general">
-
-          <div class="part-one">
-
-
-                <% if @user.photo.present? %>
-                  <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.photo, height: 150, width: 150 %>')">
-                  </div>
-                <% else  %>
-                  <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
-                  </div>
-                <% end %>
-
-              <h3> <%= @user.username %></h3>
-
-
-
-            <div>
-              <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
-              </button>
-            </div>
+      <div class="part-one">
+        <% if @user.photo.present? %>
+          <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.photo, height: 150, width: 150 %>')">
           </div>
-
-          <div class="part-two">
-            <div>
-              <p> <%#= @user.mybio %></p>
-            </div>
+        <% else  %>
+          <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
           </div>
-    <!--    <p id="myEcoActions">My Eco Actions</p> -->
+          <% end %>
+        <h3> <%= @user.username %></h3>
+        <div>
+          <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
+          </button>
+        </div>
+        </div>
+
     </div>
     <%= render 'form', user: @user %>
 
@@ -69,8 +56,8 @@
 
       </div>
         <div style=" display:flex; align-items:center; justify-content: center;">
-          <div style="font-size: 18px;margin-bottom:5px;">Your score:</div>
-          <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %></div>
+          <div class="print">Your print</div>
+          <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %> Tco2</div>
         </div>
 
       </div>
@@ -92,8 +79,8 @@
         <canvas id="myChart2" align="center">
         </canvas>
       </div >
-      <div style="display: flex; flex-direction: column; align-items: center">
-        <p style=" margin-top: 1em; text-align: center; font-size:14px; opacity: 0.8"> National average: <span style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %></span></p>
+    <div>
+        <p class="national_average"> National average <span class=style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %>  Tco2</span></p>
 
       </div>
     </div>
