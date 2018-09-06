@@ -13,7 +13,7 @@ class FollowsController < ApplicationController
   def index
     @user = current_user
     @survey = current_user.surveys.last
-    @friends = policy_scope(Follow) #.sort{ |f1, f2| f2.score <=> f1.score }
+    @friends = policy_scope(Follow).sort{ |f1, f2| f1.score <=> f2.score }
 
 
 
