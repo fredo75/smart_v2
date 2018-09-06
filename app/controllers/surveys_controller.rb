@@ -7,7 +7,7 @@ class SurveysController < ApplicationController
   # GET /surveys.json
   def index
     @surveys = Survey.all
-    @surveys = policy_scope(Survey).order(created_at: :desc)
+    @surveys = policy_scope(Survey).order(created_at: :asc)
   end
 
   # GET /surveys/1
