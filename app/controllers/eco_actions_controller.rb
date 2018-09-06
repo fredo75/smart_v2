@@ -17,7 +17,6 @@ class EcoActionsController < ApplicationController
 
   # GET /eco_actions/1/edit
   def edit
-
     authorize @eco_action
   end
 

@@ -24,17 +24,13 @@
     bottom: -4em;
     left: -1em;
     top: 4em;
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .planet-navbar.open {
-
     width: 35em;
     bottom: -30.5em;
     left: -13em;
-    // z-index: -5;
+    z-index: -5;
 
   }
   .button-navbar{
@@ -56,6 +52,8 @@
       margin-top: -4px;
       padding: 0;
       font-size: 15px;
+      color: white;
+      font-family: $headers-font;
     }
     a{
       margin: 0;
@@ -81,5 +79,28 @@
 
 .open{
    transition: all 0.5s ease-in-out;
+}
+
+.click-container.open{
+    width: 35em;
+    bottom: -30.5em;
+    left: -13em;
+    z-index: -5;
+}
+.click-container{
+  // background-color: red;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 5em;
+  width: 5em;
+  bottom: -4em;
+  left: -1em;
+  top: 4em;
+  border-radius: 50%;
+  z-index: 5;
+    &:hover {
+      cursor: pointer;
+}
 }
 }
