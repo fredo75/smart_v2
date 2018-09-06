@@ -17,6 +17,7 @@ class EcoActionsController < ApplicationController
 
   # GET /eco_actions/1/edit
   def edit
+
     authorize @eco_action
   end
 
@@ -56,7 +57,6 @@ class EcoActionsController < ApplicationController
   # PATCH/PUT /eco_actions/1
   # PATCH/PUT /eco_actions/1.json
   def update
-
     @eco_action.update(eco_action_params)
 
     if @eco_action.eco_impact?

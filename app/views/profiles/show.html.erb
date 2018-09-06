@@ -6,7 +6,13 @@
 
           <div class="part-one">
             <div stye="margin-top:10px;">
-              <%= image_tag("https://kitt.lewagon.com/placeholder/users/camilleFr", class:'avatar-small') %>
+                <% if @user.photo.present? %>
+                  <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.photo, height: 150, width: 150 %>')">
+                  </div>
+                <% else  %>
+                  <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
+                  </div>
+                <% end %>
             </div>
             <div>
               <h3 font-size:30px;"> <%= @user.username %></h3>

@@ -1,12 +1,13 @@
 <div class="gradient">
+
   <div>
-    <!-- <div class="form-inline " > -->
     <%= form_tag members_path, method: :get, :class => "form-inline" do %>
     <%= text_field_tag :type, params[:type], class:"form-control input", placeholder: "find your friend"%>
     <% end %>
   </div>
 
 <h2 class="text-center">My Green Community!</h2>
+
   <% @users.each do | user |%>
     <div class="message" style="display:flex; justify-content: space-between; align-items: center">
 
