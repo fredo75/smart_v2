@@ -1,13 +1,14 @@
 
+
+ <p class="header_form pimp" style="font-size:45px;">My footprint </p>
+
 <div class=" buttons-eco">
   <%= link_to user_path(current_user), class:'button' do %>
   <i class="fas fa-arrow-left"></i>
   <% end %>
-
   <div class="button">
      <i class="fas fa-plus" data-toggle="modal" data-target="#new_eco_action"></i>
   </div>
-
 </div>
 
 <% if @eco_actions.empty? %>
