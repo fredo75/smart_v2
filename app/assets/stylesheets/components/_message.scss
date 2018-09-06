@@ -2,15 +2,18 @@
   position: relative;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px 33px;
-  margin-top: 18px;
+  // padding: 15px 15px;
+  margin-top: 15px;
   width: 335px;
   display: flex;
-  padding: 20px;
-  margin: 30px 20px;
-  height: 170px;
+  padding: 10px;
+  margin: 20px 20px;
+  height: 90px;
 }
 
+.message h3 {
+  margin:0px;
+}
 
 
 .message-avatar{
@@ -21,15 +24,15 @@
 }
 
 .message-name {
-  margin-left: 32px;
-  p span {
-    margin: 0;
-    display: inline-block;
-    margin-left: 20px;
+  // margin-left: 32px;
+  // p span {
+  //   margin: 0;
+  //   display: inline-block;
+  //   // margin-left: 20px;
     font-size: 25px;
-    width: 80px;
-    height: 80px;
-  }
+    // width: 0px;
+    // height: 80px;
+  // }
 }
   h3{
     font-size: 25px;
@@ -53,9 +56,9 @@
   font-size: 15px;
   font-weight: bold;
 }
-  .next_button_style{
-    margin: 0px;
-  }
+  // .next_button_style{
+  //   margin: 0px;
+  // }
 
 .button_add{
   height: 80px;
@@ -72,10 +75,13 @@
   z-index: 2;
 }
 .icons{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin: 15px;
+  // position: absolute;
+  // top: 0px;
+  // right: 0px;
+  // margin: 15px;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
   form {
     display: inline;
   }
