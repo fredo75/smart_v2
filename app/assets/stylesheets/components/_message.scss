@@ -77,6 +77,13 @@
   position: relative;
   z-index: 2;
 }
+
+.heart-button-mobile {
+
+margin-left:15px;
+
+}
+
 .icons{
   // position: absolute;
   // top: 0px;
@@ -89,9 +96,6 @@
   justify-content: space-around;
   form {
     display: inline;
-    button {
-      margin-left:20px;
-    }
   }
 }
 
