@@ -39,9 +39,9 @@ class EcoActionsController < ApplicationController
     @eco_action.user = current_user
 
     if @eco_action.eco_impact?
-    @eco_action.eco_scoring_total = @eco_action.eco_impact * @eco_action.eco_scoring_unit.to_i
+      @eco_action.eco_scoring_total = @eco_action.eco_impact * @eco_action.eco_scoring_unit.to_i
     else
-    @eco_action.eco_scoring_total = 0
+      @eco_action.eco_scoring_total = 0
     end
 
     if @eco_action.save

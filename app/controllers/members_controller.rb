@@ -3,9 +3,9 @@ class MembersController < ApplicationController
 
   def index
     @survey = current_user.surveys.last
-    @users = User.all.order(score: :asc)
+    @users = User.all.sort {|x,y| x.surveys.last&.total_user_score_updated <=> y.surveys.last&.total_user_score_updated }
     if params["type"].present?
-      @users = User.global_search(params["type"])
+      @users = User.global_search(params["type"]).sort {|x,y| x.surveys.last&.total_user_score_updated <=> y.surveys.last&.total_user_score_updated }
     end
     # raise
     @follow = Follow.new
