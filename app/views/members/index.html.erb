@@ -45,7 +45,7 @@
             </a>
               <%= simple_form_for @follow do |f| %>
               <%= f.input :follow, :as => :hidden, input_html: { :value => user.id } %>
-              <%= button_tag type: 'submit', class: "" do %>
+              <%= button_tag type: 'submit', class: "heart-button-mobile" do %>
                 <i class="far fa-heart"></i>
                 <% end %>
             <% end %>
