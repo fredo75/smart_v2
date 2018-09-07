@@ -17,7 +17,7 @@
           <%= link_to edit_survey_path(@survey, category: 'food') do%>
           <%= image_tag("food.png") %>
           <div id="container_food" data-food="<%= @food.to_json %>"></div>
-          <p class="pimp-2">Food</p>
+          <p class="pimp-1">Food</p>
           <% end %>
         </div>
       </div>
@@ -41,7 +41,7 @@
           <%=  link_to edit_survey_path(@survey, category: 'waste') do%>
           <%= image_tag("trash.png") %>
           <div id="container_trash" data-trash="<%= @trash.to_json %>"></div>
-          <p class="pimp-2">Waste</p>
+          <p class="pimp-3">Waste</p>
           <% end %>
         </div>
       </div>
@@ -51,7 +51,7 @@
           <%=  link_to edit_survey_path(@survey, category: 'energy'), class:'deg270' do%>
           <%= image_tag("house.png") %>
           <div id="container_housing" data-housing="<%= @housing.to_json %>"></div>
-          <p class="pimp-2">Energy</p>
+          <p class="pimp-4">Energy</p>
           <% end %>
         </div>
       </div>

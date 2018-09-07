@@ -20,11 +20,30 @@
   color: white;
   font-family: $headers-font;
  }
+
+ .pimp-1{
+  margin-left: 38px;
+  text-decoration: none;
+  color: #5a5555;
+
+ }
  .pimp-2{
+  margin-left: 18px;
+  text-decoration: none;
+  color: #5a5555;
+ }
+
+ .pimp-3{
   margin-left: 31px;
   text-decoration: none;
   color: #5a5555;
  }
+.pimp-4{
+  margin-left: 33px;
+  text-decoration: none;
+  color: #5a5555;
+}
+
  }
  .form-container{
     margin: auto;
@@ -38,6 +57,11 @@
  }
 .space{
   margin-bottom: 100px;
+}
+
+.row{
+  margin-left: -28px;
+  margin-right: - 22px;
 }
 
 #container_food, #container_transport, #container_trash, #container_housing {
@@ -58,69 +82,4 @@
    width: 70px;
   }
 
-// .margin {
-//   top: 2em;
-// }
-// #pick {
-//   position:absolute;
-//   text-align:center;
-//   top: 5em;
-//   right:3em;
-//   opacity:0;
-//   font-size: 25px;
-// }
 
-// .back{
-//  font-size: 30px;
-//   padding: 0.5em;
-//   opacity: 0.3;
-//   position:  absolute;
-// }
-
-// .show {
-//   opacity:1 !important;
-//   transition: opacity .5s;
-// }
-
-
-// .circle-container {
-//     position: relative;
-//     top: 15em;
-//     width: 10em;
-//     height: 10em;
-//     border-radius: 50%;
-//     margin-left: 14vw;
-// }
-// .circle-container a, .planet{
-//     display: block;
-//     position: absolute;
-//     left: 50%;
-//     width: 5em;
-//     height: 5em;
-//     img{
-//       width: 5em;
-//       height: 5em;
-//       border-radius: 50px;
-//       border-style:solid;
-//       border-width:5px;
-//       border-color:red;
-//     }
-// }
-// .deg0, .deg90, .deg180, .deg270 {
-//     transform: translate(0, 0);
-//  // :hover{
-//  //    position: relative;
-//  //    transform:scale(1.2);
-//  //    filter: contrast(130%);
-//  //  }
-//  }
-
-// .move {
-//   transition: all 0.5s ease-in-out;
-// }
-
-// .planet.move{ transform:scale(1); opacity:0.5;}
-// .deg0.move { transform: translate(0, 7em); } /* 12em = half the width of the wrapper */
-// .deg90.move{ transform:  translate(0, -7em); }
-// .deg180.move{ transform: translate(-7em, 0); }
-// .deg270.move { transform: translate(7em, 0); }
