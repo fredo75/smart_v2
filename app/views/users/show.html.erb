@@ -1,54 +1,55 @@
-<div class='gradient'>
-  <div class="box" style="padding-top:1em;">
+<div class= "container">
+  <div class='gradient'>
+    <div class="box" style="padding-top:1em;">
 
-    <div class="box_item" id="Footprint"  style="position: absolute;left: 2em;margin-top: 2em;">
-        <%= link_to survey_path(@survey), class:'footprint' do   %>
-      <%= image_tag("footprint.png") %>
+      <div class="box_item" id="Footprint"  style="position: absolute;left: 2em;margin-top: 2em;">
+          <%= link_to survey_path(@survey), class:'footprint' do   %>
+        <%= image_tag("footprint.png") %>
+        <% end %>
+        <p>Get started !</p>
+      </div>
+
+      <%#= link_to members_path, class:'back' do %>
+        <!-- <i class="fas fa-comment-dots"></i> -->
+      <%# end %>
+
+      <div class="box_item box_right" id="Solutions">
+      <p>Knowledge</p>
+        <%= link_to eco_actions_path, class:'solutions' do %>
+        <%= image_tag("solutions.png") %>
       <% end %>
-      <p>Get started !</p>
+      </div>
     </div>
 
-    <%#= link_to members_path, class:'back' do %>
-      <!-- <i class="fas fa-comment-dots"></i> -->
-    <%# end %>
+    <div class='box welcome' style="align-items: center; padding-top: 20px;">
 
-    <div class="box_item box_right" id="Solutions">
-    <p>Eco-actions</p>
-      <%= link_to eco_actions_path, class:'solutions' do %>
-      <%= image_tag("solutions.png") %>
-    <% end %>
-    </div>
-  </div>
-
-  <div class='box welcome' style="align-items: center; padding-top: 20px;">
-
-     <%#= image_tag "earth1.svg", class:'planet small' %>
-    <h1 id="Welcome" align="center" style="margin:6vw;">SMART</h1>
-  </div>
-
-  <div class="box" >
-    <div class="box_item" id="Profile" style="position: absolute;left: 2em;">
-      <%= link_to profile_path(current_user), class:'user' do  %>
-      <%= image_tag("profile.png") %>
-    <% end %>
-    <p>Eco-profile</p>
+       <%#= image_tag "earth1.svg", class:'planet small' %>
+      <h1 id="Welcome" align="center" style="margin:6vw;">SMART</h1>
     </div>
 
-    <div class="box_item box_right" id="Stat">
-    <p>Community</p>
-    <% if @user.surveys.present? %>
-      <% @user.surveys.first.total_user_score %>
-      <%= link_to members_path,class:'stat' do %>
-      <%#= link_to results_user_path(@user),class:'stat' do %>
-      <%= image_tag("stat.png") %>
+    <div class="box" >
+      <div class="box_item" id="Profile" style="position: absolute;left: 2em;">
+        <%= link_to profile_path(current_user), class:'user' do  %>
+        <%= image_tag("profile.png") %>
       <% end %>
+      <p>Result</p>
+      </div>
 
-    <% end %>
+      <div class="box_item box_right" id="Stat">
+      <p>Ressources</p>
+      <% if @user.surveys.present? %>
+        <% @user.surveys.first.total_user_score %>
+        <%= link_to members_path,class:'stat' do %>
+        <%#= link_to results_user_path(@user),class:'stat' do %>
+        <%= image_tag("stat.png") %>
+        <% end %>
+
+      <% end %>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>
-
 
 
 
