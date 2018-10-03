@@ -13,7 +13,7 @@
     <%# end %>
 
     <div class="box_item box_right" id="Solutions">
-    <p>Eco-actions</p>
+    <p>Knowledge</p>
       <%= link_to eco_actions_path, class:'solutions' do %>
       <%= image_tag("solutions.png") %>
     <% end %>
@@ -31,11 +31,11 @@
       <%= link_to profile_path(current_user), class:'user' do  %>
       <%= image_tag("profile.png") %>
     <% end %>
-    <p>Eco-profile</p>
+    <p>Result</p>
     </div>
 
     <div class="box_item box_right" id="Stat">
-    <p>Community</p>
+    <p>Ressources</p>
     <% if @user.surveys.present? %>
       <% @user.surveys.first.total_user_score %>
       <%= link_to members_path,class:'stat' do %>
