@@ -15,12 +15,6 @@
   height: 50px;
 }
 
-.navbar-wagon-brand :hover {
-  position:relative;
-  left: 5px;
-  transform: scale(1.25);
-}
-
 /* User Avatar */
 .navbar-wagon .avatar {
   height: 35px;
@@ -32,16 +26,14 @@
 .navbar-wagon-right {
   display: flex;
   align-items: center;
-  // justify-content: space-between;
+  justify-content: space-between;
 }
 
-/* Basic navbar item */
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
 }
-
 
 /* Navbar link */
 .navbar-wagon-link {
