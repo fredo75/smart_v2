@@ -34,7 +34,8 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%#= render 'shared/navbar' %>
+    <%= render 'shared/navbar' unless current_page?('/') %>
+    <%= render 'shared/navsession' unless current_page?('/') %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/navigation' unless current_page?('/') %>
