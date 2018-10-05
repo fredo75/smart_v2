@@ -7,9 +7,18 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Result</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Ressources</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Kownledge</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">
+    <%= link_to profile_path(current_user), class:'btn-medium' do  %>
+    Result</a>
+    <% end %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">
+      <%= link_to members_path,class:'btn-medium' do %>
+    Ressources</a>
+    <% end %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">
+    <%= link_to eco_actions_path, class:'btn-medium' do %>
+    Kownledge</a>
+    <% end %>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
