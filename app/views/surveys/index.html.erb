@@ -1,25 +1,25 @@
 <div class= gradient>
 
+  <h1>SMART</h1>
+  <p>Assess your impact !</p>
     <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/paris');">
     <div class="banner-content">
-      <h1>SMART</h1>
-      <p>Assess your impact !</p>
+      <% if current_user.nil? %>
+        <p><%= link_to "start", user_session_path, class: "next_button_style "  %></p>
+    <% else %>
       <!-- <a class="btn btn-primary btn-lg">Start now</a> -->
       <%= image_tag "logo.png", class:'planet small' %>
       <%= link_to "start", user_path(current_user), class: "btn btn-primary btn-lg"  %>
+    <% end %>
     </div>
   </div>
+</div>
 
   <!-- <h1 class="header_form">SMART</h1> -->
 
-  <% if current_user.nil? %>
-    <p><%= link_to "start", user_session_path, class: "next_button_style "  %></p>
-  <% else %>
-  <div style="position:relative;">
+  <!-- <div style="position:relative;"> -->
     <%#= image_tag "logo.png", class:'planet small' %>
    <%#= link_to "start", user_path(current_user), class: "next_button_style homepage"  %>
-  </div>
-  <% end %>
+  <!-- </div> -->
  <!--  <h3 class="carbon-text" style="margin:30px; text-align:center;"> Assess your impact ! </h3> -->
 
-</div>

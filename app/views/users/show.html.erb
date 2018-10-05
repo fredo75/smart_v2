@@ -3,10 +3,7 @@
     <div class="box" style="padding-top:1em;">
 
       <div class="box_item" id="Footprint"  style="position: absolute;left: 2em;margin-top: 2em;">
-          <%= link_to survey_path(@survey), class:'footprint' do   %>
-        <%= image_tag("footprint.png") %>
-        <% end %>
-        <p>Get started !</p>
+          <%= link_to "start", survey_path(@survey), class:'btn btn-primary btn-lg'%>
       </div>
 
       <%#= link_to members_path, class:'back' do %>
@@ -24,7 +21,7 @@
     <div class='box welcome' style="align-items: center; padding-top: 20px;">
 
        <%#= image_tag "earth1.svg", class:'planet small' %>
-      <h1 id="Welcome" align="center" style="margin:6vw;">SMART</h1>
+      <h1 id="Welcome" align="center" style="margin:40vw;">SMART</h1>
     </div>
 
     <div class="box" >

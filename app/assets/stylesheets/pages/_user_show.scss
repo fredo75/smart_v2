@@ -8,7 +8,10 @@
 //   }
 
 // .welcome h1 { animation: disappearingTitle 5s ease-out 1s; }
-
+.container{
+  background-color: rgb(51,51,51);
+  padding:10px;
+}
 
 .box {
   display:flex;
@@ -18,14 +21,18 @@
 
 .box_item {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
 }
 
 .box_right {
   position: absolute;
-  right: 2em;
-  margin-top: 4em;
+  right: 30px;
+  // margin-top:1px;
+}
+h1, p {
+
+  color:white;
 }
 
 
