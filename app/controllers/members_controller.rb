@@ -4,7 +4,7 @@ class MembersController < ApplicationController
   def index
     @user = current_user
     @survey = current_user.surveys.last
-    @users = User.all.sort {|x,y| x.surveys.last&.total_user_score_updated <=> y.surveys.last&.total_user_score_updated }
+    # @users = User.all.sort {|x,y| x.surveys.last&.total_user_score_updated <=> y.surveys.last&.total_user_score_updated }
     if params["type"].present?
       @users = User.global_search(params["type"]).sort {|x,y| x.surveys.last&.total_user_score_updated <=> y.surveys.last&.total_user_score_updated }
     end
