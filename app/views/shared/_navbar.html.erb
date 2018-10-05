@@ -25,7 +25,23 @@
       <div class="dropdown">
         <img src="https://kitt.lewagon.com/placeholder/users/fredo75" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li><a href="#">
+              <div class="general">
+                <div class="part-one">
+                  <% if @user.photo.present? %>
+                    <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.photo, height: 150, width: 150 %>')">
+                    </div>
+                  <% else  %>
+                    <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
+                    </div>
+                    <% end %>
+                  <h3> <%= @user.username %></h3>
+                  <div>
+                    <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
+                    </button>
+                  </div>
+           </div>
+    </div>
           <li><a href="#">Dashboard</a></li>
           <li>
 
@@ -37,16 +53,16 @@
       </div>
     </div>
   </div>
+</div>
 
   <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+<!--   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><a href="#">Host</a></li>
         <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+        <li><a href="#">Messagese</a></li> -->
+      <!-- </ul> -->
+<!--   </div>
+</div> -->

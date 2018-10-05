@@ -1,30 +1,30 @@
-<div class='gradient'>
 
-  <div class="container-tight">
-    <div class="general">
-      <div class="part-one">
-        <% if @user.photo.present? %>
-          <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @user.photo, height: 150, width: 150 %>')">
-          </div>
-        <% else  %>
-          <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
-          </div>
-          <% end %>
-        <h3> <%= @user.username %></h3>
-        <div>
-          <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
+  <!-- <div class="container-tight"> -->
+    <!-- <div class="general">
+      <div class="part-one"> -->
+        <%# if @user.photo.present? %>
+         <!--  <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%#= cl_image_path @user.photo, height: 150, width: 150 %>')">
+          </div> -->
+        <%# else  %>
+          <!-- <div class="avatar-small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%#= image_path 'photo_icon_2.jpg', height: 150, width: 150 %>')">
+          </div> -->
+          <%# end %>
+        <!-- <h3> <%#= @user.username %></h3> -->
+        <!-- <div> -->
+      </div>
+      <!--     <button class="button-small" data-toggle="modal" data-target="#edit-user-profile"><i class="fas fa-pencil-alt"></i>
           </button>
-        </div>
-        </div>
+        </div> -->
+        <!-- </div> -->
 
-    </div>
     <%= render 'form', user: @user %>
 
-  <div>
+<div class='container'>
     <div style="display:flex; text-align:center; align-items: center; justify-content: center;">
       <div id="camembert1">
         <canvas id="myChart" align="center" data-points="<%= @points.to_json %>">
         </canvas>
+
       </div>
 
       <div style="display:flex; flex-direction:column; justify-content: center;"">
@@ -32,36 +32,38 @@
           <div style="display:flex; width:110px; text-align:center">
             <div class="color-box" style="background-color: #f79256"></div>
             <div style="display:flex; width:80px; text-align:center; padding:5px;">
-            <p style="font-size:16px;">food</p>
+            <p style="font-size:16px;">social</p>
             </div>
           </div>
           <div style="display:flex; width:110px; text-align:center">
             <div class="color-box" style="background-color: #fbd1a2"></div>
             <div style="display:flex; width:80px; text-align:center; padding:5px;">
-            <p style="font-size:16px;">transport</p>
+            <p style="font-size:16px;">environement</p>
             </div>
           </div>
           <div style="display:flex; width:110px; text-align:center">
             <div class="color-box" style="background-color: #7dcfb6"></div>
             <div style="display:flex; width:80px; text-align:center; padding:5px;">
-            <p style="font-size:16px;">waste</p>
+            <p style="font-size:16px;">##</p>
             </div>
           </div>
           <div style="display:flex; width:110px; text-align:center">
             <div class="color-box" style="background-color: #00b2ca"></div>
             <div style="display:flex; width:80px; text-align:center; padding:5px;">
-            <p style="font-size:16px;">energy</p></div>
+            <p style="font-size:16px;">##</p></div>
           </div>
         </div>
       </div>
 
-      </div>
         <div style=" display:flex; align-items:center; justify-content: center;">
           <div class="print">Your print</div>
           <div style="font-size: 25px; margin-left: 15px; font-weight: bold;"><%= @final_score %> Tco2</div>
         </div>
 
+
+
       </div>
+      <p>SROI RATIO = 1.2 €</p>
 
    <%# if @survey.food_score.nil? %>
    <%# else %>
@@ -75,28 +77,30 @@
 
 
 
-    <div class="average">
+<!--     <div class="average">
       <div id="camembert2">
         <canvas id="myChart2" align="center">
         </canvas>
       </div >
     <div>
-        <p class="national_average"> National average <span class=style="font-size: 16px; opacity: 0.8; font-weight: bold"><%= 22.16 %>  Tco2</span></p>
+        <p class="national_average"> National average <span class=style="font-size: 16px; opacity: 0.8; font-weight: bold"><%#= 22.16 %>  Tco2</span></p>
 
       </div>
-    </div>
+    </div> -->
 
-    <div style="text-align: center; font-size: 15px; margin-top:20px;">
+  <!--   <div style="text-align: center; font-size: 15px; margin-top:20px;">
       <p>Add EcoActions to reduce your impact!</p>
-      <%= link_to eco_actions_path, class:'button' do %>
+      <%#= link_to eco_actions_path, class:'button' do %>
         Take action!
-      <% end %>
-    </div>
+      <%# end %>
+    </div> -->
 
   </div>
 
 
+  </div>
 </div>
+<div>
 
 
 
