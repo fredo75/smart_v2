@@ -2,6 +2,7 @@ class MembersController < ApplicationController
   skip_after_action :verify_policy_scoped, only: :index
 
   def index
+    @user = current_user
     @survey = current_user.surveys.last
     @users = User.all.sort {|x,y| x.surveys.last&.total_user_score_updated <=> y.surveys.last&.total_user_score_updated }
     if params["type"].present?
