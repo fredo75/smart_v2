@@ -46,6 +46,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1/edit
   def edit
+    @user = current_user
     authorize @survey
 
   end
