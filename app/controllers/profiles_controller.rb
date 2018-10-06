@@ -1,5 +1,10 @@
 class ProfilesController < ApplicationController
 
+  def index
+    raise
+    @user = User.find(params[:id])
+  end
+
   def show
     @survey = current_user.surveys.last
     @user = User.find(params[:id])

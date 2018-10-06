@@ -3,20 +3,25 @@
  <!--  <a href="/" class="navsession-wagon-brand">
     <img src="images/logo.png" alt="logo">
   </a> -->
-
   <!-- Right Navigation -->
   <div class="navsession-wagon-right hidden-xs hidden-sm">
 
     <a href="" class="navsession-wagon-item navsession-wagon-link">
-    <%= link_to "Input", survey_path(@survey), class:'navsession-wagon-item navsession-wagon-link'%>
-    </a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Activities</a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Output</a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Outcomes</a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Impact claim</a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Indicators</a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Valuation</a>
-    <a href="" class="navsession-wagon-item navsession-wagon-link">Additional metrics</a>
+      <% if @user.present? %>
+        <% link_to user_session_path %>
+      <% else %>
+<% raise %>
+        <%= link_to "Input", survey_path(@survey), class:'navsession-wagon-item navsession-wagon-link'%>
+        </a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Activities</a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Output</a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Outcomes</a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Impact claim</a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Indicators</a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Valuation</a>
+        <a href="" class="navsession-wagon-item navsession-wagon-link">Additional metrics</a>
+
+    <% end %>
 
 
 
